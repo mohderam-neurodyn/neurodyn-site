@@ -1,102 +1,365 @@
-import Image from "next/image";
+"use client";
 
-export default function Home() {
+import React, { useMemo } from "react";
+import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import {
+  Cpu,
+  Brain,
+  ShieldCheck,
+  Cog,
+  SunMedium,
+  Boxes,
+  Rocket,
+  Phone,
+  Mail,
+  Globe2,
+} from "lucide-react";
+
+export default function NeuroDynSite() {
+  const brand = useMemo(
+    () => ({
+      name: "NeuroDyn Technologies",
+      tagline: "Where Intelligence Meets Technologies",
+      primary: "#1B2B50", // Deep Blue
+      accent: "#3ECF8E", // Electric Green
+      muted: "#A0A0A0", // Silver
+    }),
+    []
+  );
+
+  const services = [
+    {
+      icon: <Cpu className="h-6 w-6" />,
+      title: "Software Solutions",
+      desc: "Custom web & mobile apps, integrations, cloud-native builds, and automation.",
+    },
+    {
+      icon: <Brain className="h-6 w-6" />,
+      title: "AI & Automation",
+      desc: "Practical AI workflows, chatbots, predictive analytics, RPA for SMEs.",
+    },
+    {
+      icon: <ShieldCheck className="h-6 w-6" />,
+      title: "IT Services & Security",
+      desc: "Managed IT, networking, cybersecurity basics, audits, and support SLAs.",
+    },
+    {
+      icon: <Boxes className="h-6 w-6" />,
+      title: "Components Supply",
+      desc: "Semiconductors, IoT modules, embedded boards, and peripherals for projects.",
+    },
+    {
+      icon: <SunMedium className="h-6 w-6" />,
+      title: "Energy & Electronics",
+      desc: "Solar solutions, smart energy management, and electronics prototyping.",
+    },
+    {
+      icon: <Cog className="h-6 w-6" />,
+      title: "R&D & Consultancy",
+      desc: "Architecture reviews, technology roadmaps, and proof-of-concept builds.",
+    },
+  ];
+
+  const industries = [
+    "IT & SaaS",
+    "Manufacturing",
+    "Retail & eCommerce",
+    "Healthcare",
+    "Education",
+    "Energy & Utilities",
+  ];
+
+  function handleContact(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    const form = e.currentTarget as HTMLFormElement;
+    const data = new FormData(form);
+    const name = (data.get("name") as string) || "";
+    const email = (data.get("email") as string) || "";
+    const message = (data.get("message") as string) || "";
+    const subject = encodeURIComponent(`New enquiry — ${name}`);
+    const body = encodeURIComponent(`${message}\n\nFrom: ${name} <${email}>`);
+    window.location.href = `mailto:info@neurodyn.in?subject=${subject}&body=${body}`;
+  }
+
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
+    <div
+      className="min-h-screen w-full text-white"
+      style={{
+        background: `radial-gradient(1200px 600px at 10% 0%, rgba(62,207,142,0.15), transparent 60%), radial-gradient(1000px 600px at 90% 10%, rgba(27,43,80,0.5), transparent 60%), linear-gradient(180deg, #0b1220 0%, #0b1220 100%)`,
+      }}
+    >
+      {/* Nav */}
+      <header className="sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-white/5 bg-white/5 border-b border-white/10">
+        <div className="mx-auto max-w-7xl px-4 py-3 flex items-center justify-between">
+          <a href="#home" className="flex items-center gap-3">
+            <div
+              className="h-9 w-9 grid place-items-center rounded-2xl shadow-md"
+              style={{ background: brand.accent }}
+            >
+              <Rocket className="h-5 w-5 text-black" />
+            </div>
+            <div>
+              <div className="text-base font-semibold tracking-wide">{brand.name}</div>
+              <div className="text-xs text-white/70 -mt-1">{brand.tagline}</div>
+            </div>
           </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+          <nav className="hidden md:flex items-center gap-6 text-sm text-white/80">
+            <a href="#services" className="hover:text-white transition">
+              Services
+            </a>
+            <a href="#industries" className="hover:text-white transition">
+              Industries
+            </a>
+            <a href="#about" className="hover:text-white transition">
+              About
+            </a>
+            <a href="#contact" className="hover:text-white transition">
+              Contact
+            </a>
+          </nav>
+          <div className="flex items-center gap-2">
+            <Button className="rounded-2xl" asChild>
+              <a href="#contact">Get in touch</a>
+            </Button>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      </header>
+
+      {/* Hero */}
+      <section id="home" className="relative overflow-hidden">
+        <div className="mx-auto max-w-7xl px-4 py-20 grid lg:grid-cols-2 gap-10 items-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <h1 className="text-4xl md:text-5xl font-semibold leading-tight">
+              Build smarter with <span style={{ color: brand.accent }}>NeuroDyn</span>
+            </h1>
+            <p className="mt-4 text-white/80 text-lg">
+              We deliver intelligent software, practical AI, and reliable components to power your next idea — from
+              prototype to production.
+            </p>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Button className="rounded-2xl" asChild>
+                <a href="#services">Explore our solutions</a>
+              </Button>
+              <Button
+                variant="secondary"
+                className="rounded-2xl bg-white/10 text-white hover:bg-white/20"
+                asChild
+              >
+                <a href="#about">Why us</a>
+              </Button>
+            </div>
+            <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4 text-xs text-white/60">
+              {industries.map((i) => (
+                <div
+                  key={i}
+                  className="rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-center"
+                >
+                  {i}
+                </div>
+              ))}
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <div className="relative">
+              <div className="absolute -inset-2 bg-gradient-to-tr from-emerald-400/20 to-blue-500/10 blur-2xl rounded-3xl" />
+              <Card className="relative rounded-3xl bg-white/5 border-white/10 backdrop-blur">
+                <CardHeader>
+                  <CardTitle className="text-lg">What we do</CardTitle>
+                </CardHeader>
+                <CardContent className="grid sm:grid-cols-2 gap-4">
+                  {services.slice(0, 4).map((s) => (
+                    <div key={s.title} className="flex items-start gap-3">
+                      <div className="rounded-xl bg-white/10 p-2">{s.icon}</div>
+                      <div>
+                        <div className="font-medium">{s.title}</div>
+                        <div className="text-sm text-white/70">{s.desc}</div>
+                      </div>
+                    </div>
+                  ))}
+                </CardContent>
+              </Card>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Services */}
+      <section id="services" className="mx-auto max-w-7xl px-4 py-16">
+        <div className="flex items-end justify-between gap-4 mb-8">
+          <h2 className="text-2xl md:text-3xl font-semibold">Solutions built for real outcomes</h2>
+          <span className="text-sm text-white/60">
+            Flexible engagement • Clear SLAs • Vendor partnerships
+          </span>
+        </div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+          {services.map((s) => (
+            <Card
+              key={s.title}
+              className="rounded-2xl bg-white/5 border-white/10 hover:bg-white/10 transition"
+            >
+              <CardHeader>
+                <div className="flex items-center gap-3">
+                  <div className="rounded-xl bg-white/10 p-2">{s.icon}</div>
+                  <CardTitle className="text-lg">{s.title}</CardTitle>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-white/70">{s.desc}</p>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </section>
+
+      {/* About */}
+      <section id="about" className="mx-auto max-w-7xl px-4 py-16">
+        <div className="grid lg:grid-cols-2 gap-10 items-center">
+          <div>
+            <h2 className="text-2xl md:text-3xl font-semibold">Why choose {brand.name}?</h2>
+            <ul className="mt-6 space-y-3 text-white/80">
+              <li className="flex gap-3">
+                <ShieldCheck className="mt-1 h-5 w-5 text-emerald-400" /> Outcome-first delivery with transparent SLAs.
+              </li>
+              <li className="flex gap-3">
+                <Brain className="mt-1 h-5 w-5 text-emerald-400" /> Practical AI that saves time and money — not hype.
+              </li>
+              <li className="flex gap-3">
+                <Cpu className="mt-1 h-5 w-5 text-emerald-400" /> Full-stack capability: software + components + energy.
+              </li>
+              <li className="flex gap-3">
+                <Globe2 className="mt-1 h-5 w-5 text-emerald-400" /> Global best practices with local support.
+              </li>
+            </ul>
+          </div>
+          <div className="relative">
+            <div className="absolute -inset-2 bg-gradient-to-tr from-emerald-400/20 to-blue-500/10 blur-2xl rounded-3xl" />
+            <Card className="relative rounded-3xl bg-white/5 border-white/10">
+              <CardHeader>
+                <CardTitle className="text-lg">Quick facts</CardTitle>
+              </CardHeader>
+              <CardContent className="grid sm:grid-cols-2 gap-4 text-sm text-white/80">
+                <div className="rounded-xl border border-white/10 bg-white/5 p-3">
+                  Founded by hands-on engineers
+                </div>
+                <div className="rounded-xl border border-white/10 bg-white/5 p-3">
+                  Vendor network for fast sourcing
+                </div>
+                <div className="rounded-xl border border-white/10 bg-white/5 p-3">
+                  Security-first approach
+                </div>
+                <div className="rounded-xl border border-white/10 bg-white/5 p-3">
+                  Flexible engagement models
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Banner */}
+      <section className="mx-auto max-w-7xl px-4 pb-8">
+        <div className="rounded-3xl border border-white/10 bg-gradient-to-r from-white/10 to-white/5 p-8 text-center">
+          <h3 className="text-xl md:text-2xl font-semibold">Ready to turn your idea into reality?</h3>
+          <p className="mt-2 text-white/80">Let’s scope a quick PoC or pilot in 2–4 weeks.</p>
+          <div className="mt-4 flex justify-center gap-3">
+            <Button className="rounded-2xl" asChild>
+              <a href="#contact">Start a conversation</a>
+            </Button>
+            <Button
+              variant="secondary"
+              className="rounded-2xl bg-white/10 text-white hover:bg-white/20"
+              asChild
+            >
+              <a href="#services">View services</a>
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact */}
+      <section id="contact" className="mx-auto max-w-7xl px-4 py-16">
+        <div className="grid lg:grid-cols-2 gap-10">
+          <div>
+            <h2 className="text-2xl md:text-3xl font-semibold">Contact us</h2>
+            <p className="mt-2 text-white/80">
+              Tell us briefly about your project. We usually reply within 1 business day.
+            </p>
+            <div className="mt-6 space-y-3 text-white/80 text-sm">
+              <div className="flex items-center gap-2">
+                <Phone className="h-4 w-4" /> +91-9935232167
+              </div>
+              <div className="flex items-center gap-2">
+                <Mail className="h-4 w-4" /> info@neurodyn.in
+              </div>
+              <div className="flex items-center gap-2">
+                <Globe2 className="h-4 w-4" /> neurodyn.in
+              </div>
+            </div>
+          </div>
+          <Card className="rounded-2xl bg-white/5 border-white/10">
+            <CardHeader>
+              <CardTitle className="text-lg">Send a message</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <form onSubmit={handleContact} className="space-y-4">
+                <Input
+                  name="name"
+                  placeholder="Your name"
+                  required
+                  className="bg-white/10 border-white/20 placeholder:text-white/50"
+                />
+                <Input
+                  name="email"
+                  type="email"
+                  placeholder="Email"
+                  required
+                  className="bg-white/10 border-white/20 placeholder:text-white/50"
+                />
+                <Textarea
+                  name="message"
+                  placeholder="Brief about your requirement"
+                  rows={5}
+                  required
+                  className="bg-white/10 border-white/20 placeholder:text-white/50"
+                />
+                <Button type="submit" className="w-full rounded-2xl">
+                  Send via Email
+                </Button>
+              </form>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="border-t border-white/10">
+        <div className="mx-auto max-w-7xl px-4 py-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-white/60">
+          <div>© {new Date().getFullYear()} {brand.name}. All rights reserved.</div>
+          <div className="flex items-center gap-4">
+            <a href="#services" className="hover:text-white">
+              Services
+            </a>
+            <a href="#about" className="hover:text-white">
+              About
+            </a>
+            <a href="#contact" className="hover:text-white">
+              Contact
+            </a>
+          </div>
+        </div>
       </footer>
     </div>
   );
