@@ -1,9 +1,8 @@
 "use client";
-
 import React, { useMemo } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardHeader, CardContent, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import {
@@ -18,15 +17,15 @@ import {
   Mail,
   Globe2,
 } from "lucide-react";
-
+import Chatbot from "@/components/Chatbot";
 export default function NeuroDynSite() {
   const brand = useMemo(
     () => ({
       name: "NeuroDyn Technologies",
       tagline: "Where Intelligence Meets Technologies",
-      primary: "#1B2B50", // Deep Blue
-      accent: "#3ECF8E", // Electric Green
-      muted: "#A0A0A0", // Silver
+      primary: "#1B2B50",
+      accent: "#3ECF8E",
+      muted: "#A0A0A0",
     }),
     []
   );
@@ -89,7 +88,9 @@ export default function NeuroDynSite() {
     <div
       className="min-h-screen w-full text-white"
       style={{
-        background: `radial-gradient(1200px 600px at 10% 0%, rgba(62,207,142,0.15), transparent 60%), radial-gradient(1000px 600px at 90% 10%, rgba(27,43,80,0.5), transparent 60%), linear-gradient(180deg, #0b1220 0%, #0b1220 100%)`,
+        background: `radial-gradient(1200px 600px at 10% 0%, rgba(62,207,142,0.15), transparent 60%), 
+                     radial-gradient(1000px 600px at 90% 10%, rgba(27,43,80,0.5), transparent 60%), 
+                     linear-gradient(180deg, #0b1220 0%, #0b1220 100%)`,
       }}
     >
       {/* Nav */}
@@ -103,7 +104,9 @@ export default function NeuroDynSite() {
               <Rocket className="h-5 w-5 text-black" />
             </div>
             <div>
-              <div className="text-base font-semibold tracking-wide">{brand.name}</div>
+              <div className="text-base font-semibold tracking-wide">
+                {brand.name}
+              </div>
               <div className="text-xs text-white/70 -mt-1">{brand.tagline}</div>
             </div>
           </a>
@@ -138,11 +141,12 @@ export default function NeuroDynSite() {
             transition={{ duration: 0.6 }}
           >
             <h1 className="text-4xl md:text-5xl font-semibold leading-tight">
-              Build smarter with <span style={{ color: brand.accent }}>NeuroDyn</span>
+              Build smarter with{" "}
+              <span style={{ color: brand.accent }}>NeuroDyn</span>
             </h1>
             <p className="mt-4 text-white/80 text-lg">
-              We deliver intelligent software, practical AI, and reliable components to power your next idea — from
-              prototype to production.
+              We deliver intelligent software, practical AI, and reliable
+              components to power your next idea — from prototype to production.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Button className="rounded-2xl" asChild>
@@ -199,7 +203,9 @@ export default function NeuroDynSite() {
       {/* Services */}
       <section id="services" className="mx-auto max-w-7xl px-4 py-16">
         <div className="flex items-end justify-between gap-4 mb-8">
-          <h2 className="text-2xl md:text-3xl font-semibold">Solutions built for real outcomes</h2>
+          <h2 className="text-2xl md:text-3xl font-semibold">
+            Solutions built for real outcomes
+          </h2>
           <span className="text-sm text-white/60">
             Flexible engagement • Clear SLAs • Vendor partnerships
           </span>
@@ -228,19 +234,25 @@ export default function NeuroDynSite() {
       <section id="about" className="mx-auto max-w-7xl px-4 py-16">
         <div className="grid lg:grid-cols-2 gap-10 items-center">
           <div>
-            <h2 className="text-2xl md:text-3xl font-semibold">Why choose {brand.name}?</h2>
+            <h2 className="text-2xl md:text-3xl font-semibold">
+              Why choose {brand.name}?
+            </h2>
             <ul className="mt-6 space-y-3 text-white/80">
               <li className="flex gap-3">
-                <ShieldCheck className="mt-1 h-5 w-5 text-emerald-400" /> Outcome-first delivery with transparent SLAs.
+                <ShieldCheck className="mt-1 h-5 w-5 text-emerald-400" />{" "}
+                Outcome-first delivery with transparent SLAs.
               </li>
               <li className="flex gap-3">
-                <Brain className="mt-1 h-5 w-5 text-emerald-400" /> Practical AI that saves time and money — not hype.
+                <Brain className="mt-1 h-5 w-5 text-emerald-400" /> Practical AI
+                that saves time and money — not hype.
               </li>
               <li className="flex gap-3">
-                <Cpu className="mt-1 h-5 w-5 text-emerald-400" /> Full-stack capability: software + components + energy.
+                <Cpu className="mt-1 h-5 w-5 text-emerald-400" /> Full-stack
+                capability: software + components + energy.
               </li>
               <li className="flex gap-3">
-                <Globe2 className="mt-1 h-5 w-5 text-emerald-400" /> Global best practices with local support.
+                <Globe2 className="mt-1 h-5 w-5 text-emerald-400" /> Global best
+                practices with local support.
               </li>
             </ul>
           </div>
@@ -272,8 +284,12 @@ export default function NeuroDynSite() {
       {/* CTA Banner */}
       <section className="mx-auto max-w-7xl px-4 pb-8">
         <div className="rounded-3xl border border-white/10 bg-gradient-to-r from-white/10 to-white/5 p-8 text-center">
-          <h3 className="text-xl md:text-2xl font-semibold">Ready to turn your idea into reality?</h3>
-          <p className="mt-2 text-white/80">Let’s scope a quick PoC or pilot in 2–4 weeks.</p>
+          <h3 className="text-xl md:text-2xl font-semibold">
+            Ready to turn your idea into reality?
+          </h3>
+          <p className="mt-2 text-white/80">
+            Let’s scope a quick PoC or pilot in 2–4 weeks.
+          </p>
           <div className="mt-4 flex justify-center gap-3">
             <Button className="rounded-2xl" asChild>
               <a href="#contact">Start a conversation</a>
@@ -295,17 +311,18 @@ export default function NeuroDynSite() {
           <div>
             <h2 className="text-2xl md:text-3xl font-semibold">Contact us</h2>
             <p className="mt-2 text-white/80">
-              Tell us briefly about your project. We usually reply within 1 business day.
+              Tell us briefly about your project. We usually reply within 1
+              business day.
             </p>
             <div className="mt-6 space-y-3 text-white/80 text-sm">
               <div className="flex items-center gap-2">
                 <Phone className="h-4 w-4" /> +91-9935232167
               </div>
               <div className="flex items-center gap-2">
-                <Mail className="h-4 w-4" /> info@neurodyn.in
+                <Mail className="h-4 w-4" /> mohd.eram@gmail.com
               </div>
               <div className="flex items-center gap-2">
-                <Globe2 className="h-4 w-4" /> neurodyn.in
+                <Globe2 className="h-4 w-4" /> www.neurodyn.in
               </div>
             </div>
           </div>
@@ -349,18 +366,17 @@ export default function NeuroDynSite() {
         <div className="mx-auto max-w-7xl px-4 py-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-white/60">
           <div>© {new Date().getFullYear()} {brand.name}. All rights reserved.</div>
           <div className="flex items-center gap-4">
-            <a href="#services" className="hover:text-white">
-              Services
-            </a>
-            <a href="#about" className="hover:text-white">
-              About
-            </a>
-            <a href="#contact" className="hover:text-white">
-              Contact
-            </a>
+            <a href="#services" className="hover:text-white">Services</a>
+            <a href="#about" className="hover:text-white">About</a>
+            <a href="#contact" className="hover:text-white">Contact</a>
           </div>
         </div>
       </footer>
+
+      {/* Floating Chatbot */}
+      <div className="fixed bottom-6 right-6">
+        <Chatbot />
+      </div>
     </div>
   );
 }
