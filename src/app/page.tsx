@@ -21,7 +21,7 @@ import Chatbot from "@/components/Chatbot";
 export default function NeuroDynSite() {
   const brand = useMemo(
     () => ({
-      name: "NeuroDyn Techn Solutions",
+      name: "NeuroDyn Tech Solutions",
       tagline: "Where Intelligence Meets Technology",
       primary: "#1B2B50",
       accent: "#3ECF8E",
