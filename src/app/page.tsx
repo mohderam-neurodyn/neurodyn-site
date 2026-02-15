@@ -21,8 +21,8 @@ import Chatbot from "@/components/Chatbot";
 export default function NeuroDynSite() {
   const brand = useMemo(
     () => ({
-      name: "NeuroDyn Technologies",
-      tagline: "Where Intelligence Meets Technologies",
+      name: "NeuroDyn Techn Solutions",
+      tagline: "Where Intelligence Meets Technology",
       primary: "#1B2B50",
       accent: "#3ECF8E",
       muted: "#A0A0A0",
@@ -48,8 +48,8 @@ export default function NeuroDynSite() {
     },
     {
       icon: <Boxes className="h-6 w-6" />,
-      title: "Components Supply",
-      desc: "Semiconductors, IoT modules, embedded boards, and peripherals for projects.",
+      title: "EV / Mobility Solutions",
+      desc: "Series Hybrid EV architecture development, EV retrofit solutions.",
     },
     {
       icon: <SunMedium className="h-6 w-6" />,
@@ -65,9 +65,9 @@ export default function NeuroDynSite() {
 
   const industries = [
     "IT & SaaS",
-    "Manufacturing",
+    "Cybersecurity",
     "Retail & eCommerce",
-    "Healthcare",
+    "EV / Hybrid",
     "Education",
     "Energy & Utilities",
   ];
