@@ -1,10 +1,14 @@
 "use client";
 import React, { useMemo } from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardContent, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import Navigation from "@/components/Navigation";
+import Chatbot from "@/components/Chatbot";
+import Logo from "@/components/Logo";
 import {
   Code,
   Smartphone,
@@ -30,16 +34,26 @@ import {
   Server,
   GitBranch,
   Layout,
+  Bot,
+  BarChart3,
+  Monitor,
+  Server as ServerIcon,
 } from "lucide-react";
+
 export default function NeuroDynSite() {
   const brand = useMemo(
     () => ({
-      name: "NeuroDyn",
-      tagline: "Smart IT Solutions for Growing Businesses",
+      name: "NeuroDyn IT Solutions",
+      tagline: "Innovate. Integrate. Elevate.",
+      heroTagline: "SMART SOLUTIONS. STRONGER FUTURE.",
+      heroSubheading: "Empowering Businesses with Innovative IT Solutions & Cutting-Edge Technologies.",
+      impactTagline: "From Idea to Impact - We Build, Host, Scale & Support Your Digital Success.",
       primary: "#0B3C5D",
       accent: "#3B82F6",
       secondary: "#8B5CF6",
       muted: "#64748B",
+      phone: "9935232167",
+      email: "info@neurodyn.in",
     }),
     []
   );
@@ -47,43 +61,46 @@ export default function NeuroDynSite() {
   const services = [
     {
       icon: <Code className="h-6 w-6" />,
-      title: "Custom Software Development",
-      desc: "Tailored software solutions built to your specific business needs with modern technologies and scalable architecture.",
+      title: "Website Development",
+      desc: "Modern, responsive websites built with cutting-edge technologies. From simple landing pages to complex web applications.",
+      features: ["Responsive Design", "SEO Optimized", "Fast Loading", "Cross-browser Compatible"],
+    },
+    {
+      icon: <ServerIcon className="h-6 w-6" />,
+      title: "Web Hosting",
+      desc: "Reliable and secure web hosting solutions with 99.9% uptime guarantee. Shared, VPS, and dedicated hosting available.",
+      features: ["99.9% Uptime", "SSL Certificates", "Daily Backups", "24/7 Support"],
     },
     {
       icon: <Smartphone className="h-6 w-6" />,
-      title: "Web & Mobile App Development",
-      desc: "Responsive web applications and native mobile apps that deliver exceptional user experiences across all devices.",
+      title: "Mobile App Development",
+      desc: "Native and cross-platform mobile applications for Android and iOS. Build apps that users love.",
+      features: ["Android & iOS", "Cross-platform", "User-friendly UI", "App Store Optimization"],
     },
     {
-      icon: <Globe className="h-6 w-6" />,
-      title: "Travel & Booking Solutions",
-      desc: "Specialized booking platforms and travel management systems, including our flagship BusADDA solution for transportation businesses.",
+      icon: <Bot className="h-6 w-6" />,
+      title: "AI Chatbot Development",
+      desc: "Intelligent chatbots powered by AI to automate customer support and enhance user engagement.",
+      features: ["Natural Language Processing", "24/7 Availability", "Multi-language Support", "Custom Training"],
     },
     {
-      icon: <Cloud className="h-6 w-6" />,
-      title: "Cloud & DevOps",
-      desc: "Cloud infrastructure setup, CI/CD pipelines, and DevOps automation to streamline your development and deployment processes.",
+      icon: <BarChart3 className="h-6 w-6" />,
+      title: "Data Analytics Services",
+      desc: "Transform your data into actionable insights. Advanced analytics to drive business decisions.",
+      features: ["Data Visualization", "Predictive Analytics", "Real-time Dashboards", "Custom Reports"],
     },
     {
       icon: <Cog className="h-6 w-6" />,
-      title: "Automation Solutions",
-      desc: "Business process automation, workflow optimization, and custom bot development to increase operational efficiency.",
+      title: "Custom Software Development",
+      desc: "Tailored software solutions designed to meet your unique business requirements and scale with your growth.",
+      features: ["Scalable Architecture", "Modern Tech Stack", "Security First", "Maintenance Support"],
     },
     {
       icon: <Briefcase className="h-6 w-6" />,
-      title: "IT Consulting",
-      desc: "Strategic technology consulting, digital transformation roadmap, and IT infrastructure planning for sustainable growth.",
+      title: "IT Consulting & Support",
+      desc: "Expert IT consulting and ongoing support to optimize your technology infrastructure and operations.",
+      features: ["Strategic Planning", "Infrastructure Audit", "Technical Support", "Cloud Migration"],
     },
-  ];
-
-  const industries = [
-    "Startups",
-    "E-commerce",
-    "Travel & Hospitality",
-    "Healthcare",
-    "Education",
-    "Financial Services",
   ];
 
   const caseStudies = [
@@ -132,29 +149,34 @@ export default function NeuroDynSite() {
 
   const whyChooseUs = [
     {
-      icon: <Zap className="h-6 w-6" />,
-      title: "Fast Delivery",
-      description: "Rapid development cycles with agile methodology for quick time-to-market"
+      icon: <Award className="h-6 w-6" />,
+      title: "Quality Assured",
+      description: "We deliver excellence with rigorous quality standards and best practices"
+    },
+    {
+      icon: <Clock className="h-6 w-6" />,
+      title: "On-Time Delivery",
+      description: "We respect deadlines and deliver projects on schedule, every time"
     },
     {
       icon: <Shield className="h-6 w-6" />,
-      title: "Scalable Architecture",
-      description: "Built to grow with your business from startup to enterprise scale"
+      title: "Secure & Reliable",
+      description: "Your data and systems are protected with enterprise-grade security"
     },
     {
       icon: <Users className="h-6 w-6" />,
-      title: "Dedicated Support",
-      description: "24/7 technical support and maintenance for peace of mind"
+      title: "Client Focused Approach",
+      description: "Your success is our priority with personalized solutions and support"
     },
     {
-      icon: <Award className="h-6 w-6" />,
-      title: "Industry Expertise",
-      description: "Deep domain knowledge across multiple industries and technologies"
+      icon: <Zap className="h-6 w-6" />,
+      title: "Innovative Solutions",
+      description: "Cutting-edge technology and creative approaches to solve your challenges"
     }
   ];
 
   const techStack = [
-    "React", "Node.js", "Flutter", "AWS", "MongoDB", "PostgreSQL", 
+    "React", "Node.js", "Flutter", "AWS", "MongoDB", "PostgreSQL",
     "Docker", "Kubernetes", "TypeScript", "Next.js", "Python", "GraphQL"
   ];
 
@@ -171,47 +193,21 @@ export default function NeuroDynSite() {
   }
 
   function handleWhatsAppClick() {
-    window.open("https://wa.me/919935232167?text=Hi! I'm interested in your IT services", "_blank");
+    window.open("https://wa.me/919935232167?text=Hi, I'm interested in your IT services", "_blank");
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50 dark:from-gray-900 dark:via-blue-950 dark:to-purple-950">
       {/* Background Pattern */}
       <div className="fixed inset-0 -z-10 overflow-hidden">
-        <div className="absolute -top-40 -right-40 h-80 w-80 rounded-full bg-gradient-to-br from-blue-200/30 to-purple-200/30 blur-3xl"></div>
-        <div className="absolute -bottom-40 -left-40 h-80 w-80 rounded-full bg-gradient-to-tr from-blue-300/30 to-indigo-200/30 blur-3xl"></div>
+        <div className="absolute -top-40 -right-40 h-80 w-80 rounded-full bg-gradient-to-br from-blue-200/30 to-purple-200/30 dark:from-blue-900/20 dark:to-purple-900/20 blur-3xl"></div>
+        <div className="absolute -bottom-40 -left-40 h-80 w-80 rounded-full bg-gradient-to-tr from-blue-300/30 to-indigo-200/30 dark:from-blue-800/20 dark:to-indigo-900/20 blur-3xl"></div>
       </div>
-      {/* Navigation */}
-      <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-lg border-b border-gray-200/50">
-        <div className="mx-auto max-w-7xl px-4 py-4 flex items-center justify-between">
-          <a href="#home" className="flex items-center gap-3">
-            <div className="h-10 w-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-xl flex items-center justify-center shadow-lg">
-              <Rocket className="h-6 w-6 text-white" />
-            </div>
-            <div>
-              <div className="text-xl font-bold text-gray-900">
-                {brand.name}
-              </div>
-              <div className="text-sm text-gray-600 -mt-1">{brand.tagline}</div>
-            </div>
-          </a>
-          <nav className="hidden md:flex items-center gap-8 text-gray-700">
-            <a href="#services" className="hover:text-blue-600 transition font-medium">Services</a>
-            <a href="#why-us" className="hover:text-blue-600 transition font-medium">Why Us</a>
-            <a href="#case-studies" className="hover:text-blue-600 transition font-medium">Case Studies</a>
-            <a href="#testimonials" className="hover:text-blue-600 transition font-medium">Testimonials</a>
-            <a href="#contact" className="hover:text-blue-600 transition font-medium">Contact</a>
-          </nav>
-          <div className="flex items-center gap-3">
-            <Button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white rounded-xl px-6" asChild>
-              <a href="#contact">Get Free Consultation</a>
-            </Button>
-          </div>
-        </div>
-      </header>
+
+      <Navigation />
 
       {/* Hero Section */}
-      <section id="home" className="relative py-20 lg:py-32">
+      <section id="home" className="relative pt-32 pb-20 lg:pt-40 lg:pb-32">
         <div className="mx-auto max-w-7xl px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -219,45 +215,48 @@ export default function NeuroDynSite() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <div className="inline-flex items-center gap-2 bg-blue-50 border border-blue-200 rounded-full px-4 py-2 mb-6">
+              <div className="inline-flex items-center gap-2 bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-700 rounded-full px-4 py-2 mb-6">
                 <span className="w-2 h-2 bg-blue-600 rounded-full animate-pulse"></span>
-                <span className="text-sm font-medium text-blue-700">Available for Projects</span>
+                <span className="text-sm font-medium text-blue-700 dark:text-blue-300">Available for Projects</span>
               </div>
-              
-              <h1 className="text-4xl md:text-6xl font-bold text-gray-900 leading-tight mb-6">
-                Build, Scale & Grow Your Business with{" "}
-                <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Smart IT Solutions</span>
+
+              <h1 className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white leading-tight mb-6">
+                {brand.heroTagline}
               </h1>
-              
-              <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                We help startups and enterprises with software development, automation, and scalable digital systems that drive real business growth.
+
+              <p className="text-xl text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
+                {brand.heroSubheading}
               </p>
-              
+
+              <div className="inline-flex items-center gap-2 bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-700 rounded-full px-4 py-2 mb-8">
+                <span className="text-sm font-medium text-blue-700 dark:text-blue-300">{brand.impactTagline}</span>
+              </div>
+
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <Button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white rounded-xl px-8 py-4 text-lg font-medium shadow-lg" asChild>
-                  <a href="#contact">Get Free Consultation</a>
+                  <Link href="/contact">Get Started</Link>
                 </Button>
-                <Button variant="outline" className="border-2 border-gray-300 text-gray-700 hover:bg-gray-50 rounded-xl px-8 py-4 text-lg font-medium" asChild>
-                  <a href="#case-studies">View Our Work</a>
+                <Button variant="outline" className="border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-xl px-8 py-4 text-lg font-medium" asChild>
+                  <Link href="/services">Our Services</Link>
                 </Button>
               </div>
-              
+
               <div className="grid grid-cols-3 gap-6">
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-gray-900">50+</div>
-                  <div className="text-sm text-gray-600">Projects Delivered</div>
+                  <div className="text-2xl font-bold text-gray-900 dark:text-white">50+</div>
+                  <div className="text-sm text-gray-600 dark:text-gray-400">Projects Delivered</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-gray-900">15+</div>
-                  <div className="text-sm text-gray-600">Happy Clients</div>
+                  <div className="text-2xl font-bold text-gray-900 dark:text-white">15+</div>
+                  <div className="text-sm text-gray-600 dark:text-gray-400">Happy Clients</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-gray-900">5+</div>
-                  <div className="text-sm text-gray-600">Years Experience</div>
+                  <div className="text-2xl font-bold text-gray-900 dark:text-white">5+</div>
+                  <div className="text-sm text-gray-600 dark:text-gray-400">Years Experience</div>
                 </div>
               </div>
             </motion.div>
-            
+
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -265,28 +264,28 @@ export default function NeuroDynSite() {
               className="relative"
             >
               <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-purple-400/20 rounded-3xl blur-3xl"></div>
-                <div className="relative bg-white/80 backdrop-blur-lg border border-gray-200/50 rounded-3xl p-8 shadow-2xl">
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-purple-400/20 dark:from-blue-600/20 dark:to-purple-600/20 rounded-3xl blur-3xl"></div>
+                <div className="relative bg-white/80 dark:bg-gray-800/80 backdrop-blur-lg border border-gray-200/50 dark:border-gray-700/50 rounded-3xl p-8 shadow-2xl">
                   <div className="grid grid-cols-2 gap-4">
-                    <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-4 border border-blue-200/50">
-                      <Code className="h-8 w-8 text-blue-600 mb-2" />
-                      <div className="font-semibold text-gray-900">Custom Development</div>
-                      <div className="text-sm text-gray-600">Tailored solutions</div>
+                    <div className="bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/30 dark:to-blue-800/30 rounded-2xl p-4 border border-blue-200/50 dark:border-blue-700/50">
+                      <Code className="h-8 w-8 text-blue-600 dark:text-blue-400 mb-2" />
+                      <div className="font-semibold text-gray-900 dark:text-white">Website Development</div>
+                      <div className="text-sm text-gray-600 dark:text-gray-400">Modern & responsive</div>
                     </div>
-                    <div className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl p-4 border border-purple-200/50">
-                      <Cloud className="h-8 w-8 text-purple-600 mb-2" />
-                      <div className="font-semibold text-gray-900">Cloud Solutions</div>
-                      <div className="text-sm text-gray-600">Scalable infrastructure</div>
+                    <div className="bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-900/30 dark:to-purple-800/30 rounded-2xl p-4 border border-purple-200/50 dark:border-purple-700/50">
+                      <ServerIcon className="h-8 w-8 text-purple-600 dark:text-purple-400 mb-2" />
+                      <div className="font-semibold text-gray-900 dark:text-white">Web Hosting</div>
+                      <div className="text-sm text-gray-600 dark:text-gray-400">99.9% uptime</div>
                     </div>
-                    <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-4 border border-green-200/50">
-                      <Smartphone className="h-8 w-8 text-green-600 mb-2" />
-                      <div className="font-semibold text-gray-900">Mobile Apps</div>
-                      <div className="text-sm text-gray-600">Cross-platform</div>
+                    <div className="bg-gradient-to-br from-green-50 to-green-100 dark:from-green-900/30 dark:to-green-800/30 rounded-2xl p-4 border border-green-200/50 dark:border-green-700/50">
+                      <Smartphone className="h-8 w-8 text-green-600 dark:text-green-400 mb-2" />
+                      <div className="font-semibold text-gray-900 dark:text-white">Mobile Apps</div>
+                      <div className="text-sm text-gray-600 dark:text-gray-400">Android & iOS</div>
                     </div>
-                    <div className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-2xl p-4 border border-orange-200/50">
-                      <Globe className="h-8 w-8 text-orange-600 mb-2" />
-                      <div className="font-semibold text-gray-900">BusADDA</div>
-                      <div className="text-sm text-gray-600">Travel solutions</div>
+                    <div className="bg-gradient-to-br from-orange-50 to-orange-100 dark:from-orange-900/30 dark:to-orange-800/30 rounded-2xl p-4 border border-orange-200/50 dark:border-orange-700/50">
+                      <Bot className="h-8 w-8 text-orange-600 dark:text-orange-400 mb-2" />
+                      <div className="font-semibold text-gray-900 dark:text-white">AI Chatbots</div>
+                      <div className="text-sm text-gray-600 dark:text-gray-400">Smart automation</div>
                     </div>
                   </div>
                 </div>
@@ -297,15 +296,15 @@ export default function NeuroDynSite() {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-20 bg-white/50 backdrop-blur-sm">
+      <section id="services" className="py-20 bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm">
         <div className="mx-auto max-w-7xl px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Services</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">Our Services</h2>
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
               Comprehensive IT solutions designed to accelerate your digital transformation and business growth
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <motion.div
@@ -314,15 +313,18 @@ export default function NeuroDynSite() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
-                <Card className="h-full bg-white/80 backdrop-blur-lg border border-gray-200/50 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 rounded-2xl overflow-hidden">
+                <Card className="h-full bg-white/80 dark:bg-gray-800/80 backdrop-blur-lg border border-gray-200/50 dark:border-gray-700/50 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 rounded-2xl overflow-hidden">
                   <CardHeader className="pb-4">
-                    <div className="w-14 h-14 bg-gradient-to-br from-blue-100 to-purple-100 rounded-xl flex items-center justify-center mb-4">
-                      <div className="text-blue-600">{service.icon}</div>
+                    <div className="w-14 h-14 bg-gradient-to-br from-blue-100 to-purple-100 dark:from-blue-900/30 dark:to-purple-900/30 rounded-xl flex items-center justify-center mb-4">
+                      <div className="text-blue-600 dark:text-blue-400">{service.icon}</div>
                     </div>
-                    <CardTitle className="text-xl font-semibold text-gray-900">{service.title}</CardTitle>
+                    <CardTitle className="text-xl font-semibold text-gray-900 dark:text-white">{service.title}</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-gray-600 leading-relaxed">{service.desc}</p>
+                    <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-4">{service.desc}</p>
+                    <Link href="/services" className="text-blue-600 dark:text-blue-400 font-medium hover:underline inline-flex items-center gap-1">
+                      Learn more <ArrowRight className="h-4 w-4" />
+                    </Link>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -335,13 +337,13 @@ export default function NeuroDynSite() {
       <section id="why-us" className="py-20">
         <div className="mx-auto max-w-7xl px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Why Choose NeuroDyn</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">Why Choose NeuroDyn</h2>
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
               We combine technical expertise with business understanding to deliver solutions that drive real results
             </p>
           </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {whyChooseUs.map((item, index) => (
               <motion.div
                 key={item.title}
@@ -353,8 +355,8 @@ export default function NeuroDynSite() {
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
                   <div className="text-white text-2xl">{item.icon}</div>
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">{item.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{item.description}</p>
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">{item.title}</h3>
+                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">{item.description}</p>
               </motion.div>
             ))}
           </div>
@@ -362,15 +364,15 @@ export default function NeuroDynSite() {
       </section>
 
       {/* Case Studies Section */}
-      <section id="case-studies" className="py-20 bg-white/50 backdrop-blur-sm">
+      <section id="case-studies" className="py-20 bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm">
         <div className="mx-auto max-w-7xl px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Success Stories</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">Success Stories</h2>
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
               Real results from real projects that showcase our expertise and commitment to excellence
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 gap-8">
             {caseStudies.map((study, index) => (
               <motion.div
@@ -379,22 +381,22 @@ export default function NeuroDynSite() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
-                <Card className="bg-white/80 backdrop-blur-lg border border-gray-200/50 rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300">
-                  <div className="h-48 bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center">
-                    <div className="text-blue-600 text-4xl">
+                <Card className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-lg border border-gray-200/50 dark:border-gray-700/50 rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300">
+                  <div className="h-48 bg-gradient-to-br from-blue-100 to-purple-100 dark:from-blue-900/30 dark:to-purple-900/30 flex items-center justify-center">
+                    <div className="text-blue-600 dark:text-blue-400 text-4xl">
                       <Layout className="h-16 w-16" />
                     </div>
                   </div>
                   <CardHeader>
-                    <CardTitle className="text-2xl font-bold text-gray-900">{study.title}</CardTitle>
-                    <p className="text-gray-600">{study.description}</p>
+                    <CardTitle className="text-2xl font-bold text-gray-900 dark:text-white">{study.title}</CardTitle>
+                    <p className="text-gray-600 dark:text-gray-300">{study.description}</p>
                   </CardHeader>
                   <CardContent>
                     <div className="grid grid-cols-3 gap-4">
                       {study.metrics.map((metric) => (
                         <div key={metric.label} className="text-center">
-                          <div className="text-2xl font-bold text-blue-600">{metric.value}</div>
-                          <div className="text-sm text-gray-600">{metric.label}</div>
+                          <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">{metric.value}</div>
+                          <div className="text-sm text-gray-600 dark:text-gray-400">{metric.label}</div>
                         </div>
                       ))}
                     </div>
@@ -410,15 +412,15 @@ export default function NeuroDynSite() {
       <section className="py-20">
         <div className="mx-auto max-w-7xl px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Technology Stack</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">Technology Stack</h2>
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
               We use modern, proven technologies to build scalable and maintainable solutions
             </p>
           </div>
-          
+
           <div className="flex flex-wrap justify-center gap-4">
             {techStack.map((tech) => (
-              <div key={tech} className="bg-white/80 backdrop-blur-lg border border-gray-200/50 rounded-full px-6 py-3 text-gray-700 font-medium hover:bg-blue-50 hover:border-blue-200 transition-all duration-300">
+              <div key={tech} className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-lg border border-gray-200/50 dark:border-gray-700/50 rounded-full px-6 py-3 text-gray-700 dark:text-gray-300 font-medium hover:bg-blue-50 dark:hover:bg-blue-900/30 hover:border-blue-200 dark:hover:border-blue-700 transition-all duration-300">
                 {tech}
               </div>
             ))}
@@ -427,15 +429,15 @@ export default function NeuroDynSite() {
       </section>
 
       {/* Testimonials Section */}
-      <section id="testimonials" className="py-20 bg-white/50 backdrop-blur-sm">
+      <section id="testimonials" className="py-20 bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm">
         <div className="mx-auto max-w-7xl px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Client Testimonials</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">Client Testimonials</h2>
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
               What our clients say about working with us
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <motion.div
@@ -444,16 +446,16 @@ export default function NeuroDynSite() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
-                <Card className="bg-white/80 backdrop-blur-lg border border-gray-200/50 rounded-2xl p-6 hover:shadow-xl transition-all duration-300">
+                <Card className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-lg border border-gray-200/50 dark:border-gray-700/50 rounded-2xl p-6 hover:shadow-xl transition-all duration-300">
                   <div className="flex mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
                     ))}
                   </div>
-                  <p className="text-gray-700 mb-6 italic">"{testimonial.content}"</p>
+                  <p className="text-gray-700 dark:text-gray-300 mb-6 italic">"{testimonial.content}"</p>
                   <div>
-                    <div className="font-semibold text-gray-900">{testimonial.name}</div>
-                    <div className="text-sm text-gray-600">{testimonial.company}</div>
+                    <div className="font-semibold text-gray-900 dark:text-white">{testimonial.name}</div>
+                    <div className="text-sm text-gray-600 dark:text-gray-400">{testimonial.company}</div>
                   </div>
                 </Card>
               </motion.div>
@@ -466,11 +468,11 @@ export default function NeuroDynSite() {
       <section className="py-20">
         <div className="mx-auto max-w-7xl px-4">
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl p-12 text-center text-white">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to build your next project?</h2>
-            <p className="text-xl mb-8 opacity-90">Let's discuss how we can help transform your business with smart IT solutions</p>
+            <h2 className="text-3xl md:text-5xl font-bold mb-4">LET'S BUILD SOMETHING GREAT TOGETHER!</h2>
+            <p className="text-xl mb-8 opacity-90">From Idea to Impact - We Build, Host, Scale & Support Your Digital Success</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button className="bg-white text-blue-600 hover:bg-gray-100 rounded-xl px-8 py-4 text-lg font-medium" asChild>
-                <a href="#contact">Book a Call</a>
+                <Link href="/contact">Book a Call</Link>
               </Button>
               <Button className="bg-green-500 hover:bg-green-600 text-white rounded-xl px-8 py-4 text-lg font-medium" onClick={handleWhatsAppClick}>
                 <MessageCircle className="h-5 w-5 mr-2" />
@@ -482,57 +484,57 @@ export default function NeuroDynSite() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 bg-white/50 backdrop-blur-sm">
+      <section id="contact" className="py-20 bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm">
         <div className="mx-auto max-w-7xl px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Get In Touch</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">Get In Touch</h2>
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
               Let's discuss your project requirements and how we can help you achieve your business goals
             </p>
           </div>
-          
+
           <div className="grid lg:grid-cols-2 gap-12">
             <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Contact Information</h3>
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Contact Information</h3>
               <div className="space-y-4">
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
-                    <Phone className="h-6 w-6 text-blue-600" />
+                  <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-xl flex items-center justify-center">
+                    <Phone className="h-6 w-6 text-blue-600 dark:text-blue-400" />
                   </div>
                   <div>
-                    <div className="font-semibold text-gray-900">Phone</div>
-                    <div className="text-gray-600">+91-9935232167</div>
+                    <div className="font-semibold text-gray-900 dark:text-white">Phone</div>
+                    <div className="text-gray-600 dark:text-gray-400">+91-{brand.phone}</div>
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
-                    <Mail className="h-6 w-6 text-blue-600" />
+                  <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-xl flex items-center justify-center">
+                    <Mail className="h-6 w-6 text-blue-600 dark:text-blue-400" />
                   </div>
                   <div>
-                    <div className="font-semibold text-gray-900">Email</div>
-                    <div className="text-gray-600">info@neurodyn.in</div>
+                    <div className="font-semibold text-gray-900 dark:text-white">Email</div>
+                    <div className="text-gray-600 dark:text-gray-400">{brand.email}</div>
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
-                    <MapPin className="h-6 w-6 text-blue-600" />
+                  <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-xl flex items-center justify-center">
+                    <MapPin className="h-6 w-6 text-blue-600 dark:text-blue-400" />
                   </div>
                   <div>
-                    <div className="font-semibold text-gray-900">Location</div>
-                    <div className="text-gray-600">Lucknow, Uttar Pradesh, India</div>
+                    <div className="font-semibold text-gray-900 dark:text-white">Location</div>
+                    <div className="text-gray-600 dark:text-gray-400">Lucknow, Uttar Pradesh, India</div>
                   </div>
                 </div>
               </div>
             </div>
-            
-            <Card className="bg-white/80 backdrop-blur-lg border border-gray-200/50 rounded-2xl p-8">
+
+            <Card className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-lg border border-gray-200/50 dark:border-gray-700/50 rounded-2xl p-8">
               <form onSubmit={handleContact} className="space-y-6">
                 <div>
                   <Input
                     name="name"
                     placeholder="Your Name"
                     required
-                    className="bg-white/50 border-gray-300 placeholder:text-gray-500 rounded-xl px-4 py-3"
+                    className="bg-white/50 dark:bg-gray-700/50 border-gray-300 dark:border-gray-600 placeholder:text-gray-500 dark:placeholder:text-gray-400 rounded-xl px-4 py-3 text-gray-900 dark:text-white"
                   />
                 </div>
                 <div>
@@ -541,7 +543,7 @@ export default function NeuroDynSite() {
                     type="email"
                     placeholder="Email Address"
                     required
-                    className="bg-white/50 border-gray-300 placeholder:text-gray-500 rounded-xl px-4 py-3"
+                    className="bg-white/50 dark:bg-gray-700/50 border-gray-300 dark:border-gray-600 placeholder:text-gray-500 dark:placeholder:text-gray-400 rounded-xl px-4 py-3 text-gray-900 dark:text-white"
                   />
                 </div>
                 <div>
@@ -550,7 +552,7 @@ export default function NeuroDynSite() {
                     placeholder="Tell us about your project"
                     rows={5}
                     required
-                    className="bg-white/50 border-gray-300 placeholder:text-gray-500 rounded-xl px-4 py-3"
+                    className="bg-white/50 dark:bg-gray-700/50 border-gray-300 dark:border-gray-600 placeholder:text-gray-500 dark:placeholder:text-gray-400 rounded-xl px-4 py-3 text-gray-900 dark:text-white"
                   />
                 </div>
                 <Button type="submit" className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white rounded-xl px-6 py-3 font-medium">
@@ -563,56 +565,50 @@ export default function NeuroDynSite() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12">
+      <footer className="bg-gray-900 dark:bg-gray-950 text-white py-12">
         <div className="mx-auto max-w-7xl px-4">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-xl flex items-center justify-center">
-                  <Rocket className="h-6 w-6 text-white" />
-                </div>
-                <div>
-                  <div className="text-xl font-bold">{brand.name}</div>
-                  <div className="text-sm text-gray-400">{brand.tagline}</div>
-                </div>
+              <div className="mb-4">
+                <Logo showTagline={false} />
               </div>
               <p className="text-gray-400 text-sm">
-                Building innovative IT solutions that drive business growth and digital transformation.
+                Innovate. Integrate. Elevate. NeuroDyn IT Solution - Your Trusted Technology Partner.
               </p>
             </div>
-            
+
             <div>
               <h4 className="font-semibold mb-4">Services</h4>
               <ul className="space-y-2 text-gray-400 text-sm">
-                <li><a href="#services" className="hover:text-white transition">Custom Software Development</a></li>
-                <li><a href="#services" className="hover:text-white transition">Web & Mobile Apps</a></li>
-                <li><a href="#services" className="hover:text-white transition">Cloud Solutions</a></li>
-                <li><a href="#services" className="hover:text-white transition">IT Consulting</a></li>
+                <li><Link href="/services" className="hover:text-white transition">Website Development</Link></li>
+                <li><Link href="/services" className="hover:text-white transition">Mobile Apps</Link></li>
+                <li><Link href="/services" className="hover:text-white transition">AI Chatbots</Link></li>
+                <li><Link href="/services" className="hover:text-white transition">IT Consulting</Link></li>
               </ul>
             </div>
-            
+
             <div>
               <h4 className="font-semibold mb-4">Company</h4>
               <ul className="space-y-2 text-gray-400 text-sm">
-                <li><a href="#why-us" className="hover:text-white transition">Why Choose Us</a></li>
-                <li><a href="#case-studies" className="hover:text-white transition">Case Studies</a></li>
-                <li><a href="#testimonials" className="hover:text-white transition">Testimonials</a></li>
-                <li><a href="#contact" className="hover:text-white transition">Contact</a></li>
+                <li><Link href="/about" className="hover:text-white transition">About Us</Link></li>
+                <li><Link href="#why-us" className="hover:text-white transition">Why Choose Us</Link></li>
+                <li><Link href="#testimonials" className="hover:text-white transition">Testimonials</Link></li>
+                <li><Link href="/contact" className="hover:text-white transition">Contact</Link></li>
               </ul>
             </div>
-            
+
             <div>
               <h4 className="font-semibold mb-4">Contact Info</h4>
               <ul className="space-y-2 text-gray-400 text-sm">
-                <li>+91-9935232167</li>
-                <li>info@neurodyn.in</li>
+                <li>+91-{brand.phone}</li>
+                <li>{brand.email}</li>
                 <li>Lucknow, UP, India</li>
               </ul>
             </div>
           </div>
-          
-          <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-gray-400 text-sm">
-            <div>© {new Date().getFullYear()} {brand.name}. All rights reserved.</div>
+
+          <div className="border-t border-gray-800 dark:border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-gray-400 text-sm">
+            <div> {new Date().getFullYear()} {brand.name}. All rights reserved.</div>
             <div className="flex gap-6 mt-4 md:mt-0">
               <a href="#" className="hover:text-white transition">Privacy Policy</a>
               <a href="#" className="hover:text-white transition">Terms of Service</a>
@@ -630,6 +626,9 @@ export default function NeuroDynSite() {
           <MessageCircle className="h-6 w-6" />
         </Button>
       </div>
+
+      {/* AI Chatbot */}
+      <Chatbot />
     </div>
   );
 }
