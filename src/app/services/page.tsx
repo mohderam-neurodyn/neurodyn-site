@@ -6,14 +6,12 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardContent, CardTitle } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
-import Chatbot from "@/components/Chatbot";
 import Logo from "@/components/Logo";
 import { Rocket, MessageCircle, ArrowRight, CheckCircle } from "lucide-react";
 import {
   Code,
   Server as ServerIcon,
   Smartphone,
-  Bot,
   BarChart3,
   Cog,
   Briefcase,
@@ -65,19 +63,6 @@ export default function ServicesPage() {
         "App Store Optimization",
         "Push Notifications",
         "Offline Functionality",
-      ],
-    },
-    {
-      icon: <Bot className="h-8 w-8" />,
-      title: "AI Chatbot Development",
-      description: "Intelligent chatbots powered by AI to automate customer support and enhance user engagement. Our chatbots understand natural language and provide personalized responses.",
-      features: [
-        "Natural Language Processing",
-        "24/7 Automated Support",
-        "Multi-language Support",
-        "Custom Training on Your Data",
-        "Integration with Existing Systems",
-        "Analytics & Insights",
       ],
     },
     {
@@ -233,7 +218,6 @@ export default function ServicesPage() {
               <ul className="space-y-2 text-gray-400 text-sm">
                 <li><Link href="/services" className="hover:text-white transition">Website Development</Link></li>
                 <li><Link href="/services" className="hover:text-white transition">Mobile Apps</Link></li>
-                <li><Link href="/services" className="hover:text-white transition">AI Chatbots</Link></li>
                 <li><Link href="/services" className="hover:text-white transition">IT Consulting</Link></li>
               </ul>
             </div>
@@ -277,9 +261,6 @@ export default function ServicesPage() {
           <MessageCircle className="h-6 w-6" />
         </Button>
       </div>
-
-      {/* AI Chatbot */}
-      <Chatbot />
     </div>
   );
 }

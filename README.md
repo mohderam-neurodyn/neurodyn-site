@@ -8,7 +8,6 @@ A modern, scalable, and high-performance business website for NeuroDyn IT Soluti
 - **Responsive Layout**: Mobile-first, grid-based design that works on all devices
 - **Dark/Light Mode**: Toggle between light and dark themes
 - **Smooth Animations**: Hover effects and scroll transitions using Framer Motion
-- **AI Chatbot**: Floating AI chatbot widget for customer support
 - **WhatsApp Integration**: Floating WhatsApp button with pre-filled message
 - **SEO Optimized**: Proper meta tags and structured data
 - **Fast Loading**: Optimized images and lazy loading
@@ -36,7 +35,6 @@ A modern, scalable, and high-performance business website for NeuroDyn IT Soluti
    - Website Development
    - Web Hosting
    - Mobile App Development (Android & iOS)
-   - AI Chatbot Development
    - Data Analytics Services
    - Custom Software Development
    - IT Consulting & Support
@@ -55,7 +53,6 @@ A modern, scalable, and high-performance business website for NeuroDyn IT Soluti
 - **Animations**: Framer Motion
 - **Icons**: Lucide React
 - **UI Components**: shadcn/ui
-- **AI Integration**: OpenAI API (optional)
 
 ## 🚀 Getting Started
 
@@ -67,12 +64,14 @@ A modern, scalable, and high-performance business website for NeuroDyn IT Soluti
 ### Installation
 
 1. Clone the repository:
+
 ```bash
 git clone <repository-url>
 cd neurodyn-site
 ```
 
 2. Install dependencies:
+
 ```bash
 npm install
 # or
@@ -82,6 +81,7 @@ pnpm install
 ```
 
 3. Run the development server:
+
 ```bash
 npm run dev
 # or
@@ -122,12 +122,9 @@ The built output can be deployed to any platform that supports Node.js or static
 
 ### Environment Variables
 
-Create a `.env.local` file in the root directory:
+Create a `.env.local` file in the root directory (optional):
 
 ```env
-# OpenAI API (optional - for AI chatbot)
-OPENAI_API_KEY=your_openai_api_key_here
-
 # Contact Information (optional - defaults are set in code)
 CONTACT_PHONE=9935232167
 CONTACT_EMAIL=info@neurodyn.in
@@ -157,7 +154,7 @@ neurodyn-site/
 │   │   └── page.tsx
 │   ├── components/
 │   │   ├── Navigation.tsx
-│   │   ├── Chatbot.tsx
+│   │   ├── Logo.tsx
 │   │   └── ui/
 │   └── lib/
 ├── public/
@@ -202,14 +199,6 @@ neurodyn-site/
 - Code splitting
 - Minified production build
 - Optimized bundle size
-
-## 🤖 AI Chatbot Integration
-
-The chatbot is pre-configured with local responses. To enable AI responses:
-
-1. Add your OpenAI API key to `.env.local`
-2. The chatbot will automatically use AI for responses
-3. Custom training data can be added to the API route
 
 ## 📞 Contact Information
 

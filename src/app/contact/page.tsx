@@ -8,7 +8,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import Navigation from "@/components/Navigation";
-import Chatbot from "@/components/Chatbot";
 import Logo from "@/components/Logo";
 import { Rocket, Phone, Mail, MapPin, MessageCircle, Send } from "lucide-react";
 
@@ -262,7 +261,6 @@ export default function ContactPage() {
               <ul className="space-y-2 text-gray-400 text-sm">
                 <li><Link href="/services" className="hover:text-white transition">Website Development</Link></li>
                 <li><Link href="/services" className="hover:text-white transition">Mobile Apps</Link></li>
-                <li><Link href="/services" className="hover:text-white transition">AI Chatbots</Link></li>
                 <li><Link href="/services" className="hover:text-white transition">IT Consulting</Link></li>
               </ul>
             </div>
@@ -306,9 +304,6 @@ export default function ContactPage() {
           <MessageCircle className="h-6 w-6" />
         </Button>
       </div>
-
-      {/* AI Chatbot */}
-      <Chatbot />
     </div>
   );
 }

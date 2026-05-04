@@ -7,7 +7,6 @@ import { Card, CardHeader, CardContent, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import Navigation from "@/components/Navigation";
-import Chatbot from "@/components/Chatbot";
 import Logo from "@/components/Logo";
 import {
   Code,
@@ -34,7 +33,6 @@ import {
   Server,
   GitBranch,
   Layout,
-  Bot,
   BarChart3,
   Monitor,
   Server as ServerIcon,
@@ -76,12 +74,6 @@ export default function NeuroDynSite() {
       title: "Mobile App Development",
       desc: "Native and cross-platform mobile applications for Android and iOS. Build apps that users love.",
       features: ["Android & iOS", "Cross-platform", "User-friendly UI", "App Store Optimization"],
-    },
-    {
-      icon: <Bot className="h-6 w-6" />,
-      title: "AI Chatbot Development",
-      desc: "Intelligent chatbots powered by AI to automate customer support and enhance user engagement.",
-      features: ["Natural Language Processing", "24/7 Availability", "Multi-language Support", "Custom Training"],
     },
     {
       icon: <BarChart3 className="h-6 w-6" />,
@@ -282,10 +274,10 @@ export default function NeuroDynSite() {
                       <div className="font-semibold text-gray-900 dark:text-white">Mobile Apps</div>
                       <div className="text-sm text-gray-600 dark:text-gray-400">Android & iOS</div>
                     </div>
-                    <div className="bg-gradient-to-br from-orange-50 to-orange-100 dark:from-orange-900/30 dark:to-orange-800/30 rounded-2xl p-4 border border-orange-200/50 dark:border-orange-700/50">
-                      <Bot className="h-8 w-8 text-orange-600 dark:text-orange-400 mb-2" />
-                      <div className="font-semibold text-gray-900 dark:text-white">AI Chatbots</div>
-                      <div className="text-sm text-gray-600 dark:text-gray-400">Smart automation</div>
+                    <div className="bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/30 dark:to-blue-800/30 rounded-2xl p-4 border border-blue-200/50 dark:border-blue-700/50">
+                      <Database className="h-8 w-8 text-blue-600 dark:text-blue-400 mb-2" />
+                      <div className="font-semibold text-gray-900 dark:text-white">Data Analytics</div>
+                      <div className="text-sm text-gray-600 dark:text-gray-400">Data-driven decisions</div>
                     </div>
                   </div>
                 </div>
@@ -582,7 +574,6 @@ export default function NeuroDynSite() {
               <ul className="space-y-2 text-gray-400 text-sm">
                 <li><Link href="/services" className="hover:text-white transition">Website Development</Link></li>
                 <li><Link href="/services" className="hover:text-white transition">Mobile Apps</Link></li>
-                <li><Link href="/services" className="hover:text-white transition">AI Chatbots</Link></li>
                 <li><Link href="/services" className="hover:text-white transition">IT Consulting</Link></li>
               </ul>
             </div>
@@ -626,9 +617,6 @@ export default function NeuroDynSite() {
           <MessageCircle className="h-6 w-6" />
         </Button>
       </div>
-
-      {/* AI Chatbot */}
-      <Chatbot />
     </div>
   );
 }
