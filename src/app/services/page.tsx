@@ -1,8 +1,8 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
-import Link from "next/link";
+
+
 import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardContent, CardTitle } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
@@ -123,10 +123,7 @@ export default function ServicesPage() {
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-32">
         <div className="mx-auto max-w-7xl px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+          <div className="scroll-reveal"
             className="text-center max-w-4xl mx-auto"
           >
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white leading-tight mb-6">
@@ -135,7 +132,7 @@ export default function ServicesPage() {
             <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
               Comprehensive IT solutions designed to accelerate your digital transformation and business growth
             </p>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -144,13 +141,10 @@ export default function ServicesPage() {
         <div className="mx-auto max-w-7xl px-4">
           <div className="grid md:grid-cols-2 gap-8">
             {services.map((service, index) => (
-              <motion.div
+              <div className="scroll-reveal"
                 key={service.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
               >
-                <Card className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-lg border border-gray-200/50 dark:border-gray-700/50 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 h-full">
+                <Card className="glass rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 h-full group">
                   <CardHeader className="pb-4">
                     <div className="w-16 h-16 bg-gradient-to-br from-blue-100 to-purple-100 dark:from-blue-900/30 dark:to-purple-900/30 rounded-xl flex items-center justify-center mb-4">
                       <div className="text-blue-600 dark:text-blue-400">{service.icon}</div>
@@ -169,13 +163,13 @@ export default function ServicesPage() {
                       ))}
                     </ul>
                     <Button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white rounded-xl" asChild>
-                      <Link href="/contact">
+                      <a href="/contact">
                         Get Started <ArrowRight className="h-4 w-4 ml-2" />
-                      </Link>
+                      </a>
                     </Button>
                   </CardContent>
                 </Card>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -189,7 +183,7 @@ export default function ServicesPage() {
             <p className="text-xl mb-8 opacity-90">Let's discuss your specific requirements and how we can help</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button className="bg-white text-blue-600 hover:bg-gray-100 rounded-xl px-8 py-4 text-lg font-medium" asChild>
-                <Link href="/contact">Contact Us</Link>
+                <a href="/contact">Contact Us</a>
               </Button>
               <Button className="bg-green-500 hover:bg-green-600 text-white rounded-xl px-8 py-4 text-lg font-medium" onClick={handleWhatsAppClick}>
                 <MessageCircle className="h-5 w-5 mr-2" />
@@ -216,19 +210,19 @@ export default function ServicesPage() {
             <div>
               <h4 className="font-semibold mb-4">Services</h4>
               <ul className="space-y-2 text-gray-400 text-sm">
-                <li><Link href="/services" className="hover:text-white transition">Website Development</Link></li>
-                <li><Link href="/services" className="hover:text-white transition">Mobile Apps</Link></li>
-                <li><Link href="/services" className="hover:text-white transition">IT Consulting</Link></li>
+                <li><a href="/services" className="hover:text-white transition">Website Development</a></li>
+                <li><a href="/services" className="hover:text-white transition">Mobile Apps</a></li>
+                <li><a href="/services" className="hover:text-white transition">IT Consulting</a></li>
               </ul>
             </div>
 
             <div>
               <h4 className="font-semibold mb-4">Company</h4>
               <ul className="space-y-2 text-gray-400 text-sm">
-                <li><Link href="/about" className="hover:text-white transition">About Us</Link></li>
-                <li><Link href="/" className="hover:text-white transition">Why Choose Us</Link></li>
-                <li><Link href="/" className="hover:text-white transition">Testimonials</Link></li>
-                <li><Link href="/contact" className="hover:text-white transition">Contact</Link></li>
+                <li><a href="/about" className="hover:text-white transition">About Us</a></li>
+                <li><a href="/" className="hover:text-white transition">Why Choose Us</a></li>
+                <li><a href="/" className="hover:text-white transition">Testimonials</a></li>
+                <li><a href="/contact" className="hover:text-white transition">Contact</a></li>
               </ul>
             </div>
 

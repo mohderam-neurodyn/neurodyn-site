@@ -1,7 +1,7 @@
 "use client";
 import React, { useMemo } from "react";
-import { motion } from "framer-motion";
-import Link from "next/link";
+
+
 import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardContent, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -202,17 +202,14 @@ export default function NeuroDynSite() {
       <section id="home" className="relative pt-32 pb-20 lg:pt-40 lg:pb-32">
         <div className="mx-auto max-w-7xl px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
+            <div className="scroll-reveal"
             >
               <div className="inline-flex items-center gap-2 bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-700 rounded-full px-4 py-2 mb-6">
                 <span className="w-2 h-2 bg-blue-600 rounded-full animate-pulse"></span>
                 <span className="text-sm font-medium text-blue-700 dark:text-blue-300">Available for Projects</span>
               </div>
 
-              <h1 className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white leading-tight mb-6">
+              <h1 className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-purple-700 dark:from-blue-400 dark:to-purple-500 leading-tight mb-6">
                 {brand.heroTagline}
               </h1>
 
@@ -226,10 +223,10 @@ export default function NeuroDynSite() {
 
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <Button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white rounded-xl px-8 py-4 text-lg font-medium shadow-lg" asChild>
-                  <Link href="/contact">Get Started</Link>
+                  <a href="/contact">Get Started</a>
                 </Button>
                 <Button variant="outline" className="border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-xl px-8 py-4 text-lg font-medium" asChild>
-                  <Link href="/services">Our Services</Link>
+                  <a href="/services">Our Services</a>
                 </Button>
               </div>
 
@@ -247,17 +244,14 @@ export default function NeuroDynSite() {
                   <div className="text-sm text-gray-600 dark:text-gray-400">Years Experience</div>
                 </div>
               </div>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+            <div className="scroll-reveal"
               className="relative"
             >
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-purple-400/20 dark:from-blue-600/20 dark:to-purple-600/20 rounded-3xl blur-3xl"></div>
-                <div className="relative bg-white/80 dark:bg-gray-800/80 backdrop-blur-lg border border-gray-200/50 dark:border-gray-700/50 rounded-3xl p-8 shadow-2xl">
+                <div className="relative glass rounded-3xl p-8">
                   <div className="grid grid-cols-2 gap-4">
                     <div className="bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/30 dark:to-blue-800/30 rounded-2xl p-4 border border-blue-200/50 dark:border-blue-700/50">
                       <Code className="h-8 w-8 text-blue-600 dark:text-blue-400 mb-2" />
@@ -282,7 +276,7 @@ export default function NeuroDynSite() {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -299,13 +293,10 @@ export default function NeuroDynSite() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <motion.div
+              <div className="scroll-reveal"
                 key={service.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
               >
-                <Card className="h-full bg-white/80 dark:bg-gray-800/80 backdrop-blur-lg border border-gray-200/50 dark:border-gray-700/50 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 rounded-2xl overflow-hidden">
+                <Card className="h-full glass hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 rounded-2xl overflow-hidden group">
                   <CardHeader className="pb-4">
                     <div className="w-14 h-14 bg-gradient-to-br from-blue-100 to-purple-100 dark:from-blue-900/30 dark:to-purple-900/30 rounded-xl flex items-center justify-center mb-4">
                       <div className="text-blue-600 dark:text-blue-400">{service.icon}</div>
@@ -314,12 +305,12 @@ export default function NeuroDynSite() {
                   </CardHeader>
                   <CardContent>
                     <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-4">{service.desc}</p>
-                    <Link href="/services" className="text-blue-600 dark:text-blue-400 font-medium hover:underline inline-flex items-center gap-1">
+                    <a href="/services" className="text-blue-600 dark:text-blue-400 font-medium hover:underline inline-flex items-center gap-1">
                       Learn more <ArrowRight className="h-4 w-4" />
-                    </Link>
+                    </a>
                   </CardContent>
                 </Card>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -337,11 +328,8 @@ export default function NeuroDynSite() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {whyChooseUs.map((item, index) => (
-              <motion.div
+              <div className="scroll-reveal"
                 key={item.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="text-center"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
@@ -349,7 +337,7 @@ export default function NeuroDynSite() {
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">{item.title}</h3>
                 <p className="text-gray-600 dark:text-gray-300 leading-relaxed">{item.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -367,13 +355,10 @@ export default function NeuroDynSite() {
 
           <div className="grid md:grid-cols-2 gap-8">
             {caseStudies.map((study, index) => (
-              <motion.div
+              <div className="scroll-reveal"
                 key={study.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
               >
-                <Card className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-lg border border-gray-200/50 dark:border-gray-700/50 rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300">
+                <Card className="glass rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 group">
                   <div className="h-48 bg-gradient-to-br from-blue-100 to-purple-100 dark:from-blue-900/30 dark:to-purple-900/30 flex items-center justify-center">
                     <div className="text-blue-600 dark:text-blue-400 text-4xl">
                       <Layout className="h-16 w-16" />
@@ -394,7 +379,7 @@ export default function NeuroDynSite() {
                     </div>
                   </CardContent>
                 </Card>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -432,13 +417,10 @@ export default function NeuroDynSite() {
 
           <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-              <motion.div
+              <div className="scroll-reveal"
                 key={testimonial.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
               >
-                <Card className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-lg border border-gray-200/50 dark:border-gray-700/50 rounded-2xl p-6 hover:shadow-xl transition-all duration-300">
+                <Card className="glass rounded-2xl p-6 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
                   <div className="flex mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
@@ -450,7 +432,7 @@ export default function NeuroDynSite() {
                     <div className="text-sm text-gray-600 dark:text-gray-400">{testimonial.company}</div>
                   </div>
                 </Card>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -464,13 +446,12 @@ export default function NeuroDynSite() {
             <p className="text-xl mb-8 opacity-90">From Idea to Impact - We Build, Host, Scale & Support Your Digital Success</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button className="bg-white text-blue-600 hover:bg-gray-100 rounded-xl px-8 py-4 text-lg font-medium" asChild>
-                <Link href="/contact">Book a Call</Link>
+                <a href="/contact">Book a Call</a>
               </Button>
-              <Button className="bg-green-500 hover:bg-green-600 text-white rounded-xl px-8 py-4 text-lg font-medium" onClick={handleWhatsAppClick}>
+              <a href="https://wa.me/919935232167?text=Hi,%20I%27m%20interested%20in%20your%20IT%20services" target="_blank" className="bg-green-500 hover:bg-green-600 text-white rounded-xl px-8 py-4 text-lg font-medium inline-flex items-center justify-center">
                 <MessageCircle className="h-5 w-5 mr-2" />
                 WhatsApp Us
-              </Button>
-            </div>
+              </a></div>
           </div>
         </div>
       </section>
@@ -519,8 +500,8 @@ export default function NeuroDynSite() {
               </div>
             </div>
 
-            <Card className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-lg border border-gray-200/50 dark:border-gray-700/50 rounded-2xl p-8">
-              <form onSubmit={handleContact} className="space-y-6">
+            <Card className="glass rounded-2xl p-8">
+              <form action="mailto:info@neurodyn.in" method="GET" enctype="text/plain" className="space-y-6">
                 <div>
                   <Input
                     name="name"
@@ -572,19 +553,19 @@ export default function NeuroDynSite() {
             <div>
               <h4 className="font-semibold mb-4">Services</h4>
               <ul className="space-y-2 text-gray-400 text-sm">
-                <li><Link href="/services" className="hover:text-white transition">Website Development</Link></li>
-                <li><Link href="/services" className="hover:text-white transition">Mobile Apps</Link></li>
-                <li><Link href="/services" className="hover:text-white transition">IT Consulting</Link></li>
+                <li><a href="/services" className="hover:text-white transition">Website Development</a></li>
+                <li><a href="/services" className="hover:text-white transition">Mobile Apps</a></li>
+                <li><a href="/services" className="hover:text-white transition">IT Consulting</a></li>
               </ul>
             </div>
 
             <div>
               <h4 className="font-semibold mb-4">Company</h4>
               <ul className="space-y-2 text-gray-400 text-sm">
-                <li><Link href="/about" className="hover:text-white transition">About Us</Link></li>
-                <li><Link href="#why-us" className="hover:text-white transition">Why Choose Us</Link></li>
-                <li><Link href="#testimonials" className="hover:text-white transition">Testimonials</Link></li>
-                <li><Link href="/contact" className="hover:text-white transition">Contact</Link></li>
+                <li><a href="/about" className="hover:text-white transition">About Us</a></li>
+                <li><a href="#why-us" className="hover:text-white transition">Why Choose Us</a></li>
+                <li><a href="#testimonials" className="hover:text-white transition">Testimonials</a></li>
+                <li><a href="/contact" className="hover:text-white transition">Contact</a></li>
               </ul>
             </div>
 
@@ -610,13 +591,9 @@ export default function NeuroDynSite() {
 
       {/* Floating WhatsApp Button */}
       <div className="fixed bottom-6 right-6 z-50">
-        <Button
-          onClick={handleWhatsAppClick}
-          className="bg-green-500 hover:bg-green-600 text-white rounded-full w-14 h-14 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
-        >
+        <a href="https://wa.me/919935232167?text=Hi,%20I%27m%20interested%20in%20your%20IT%20services" target="_blank" className="bg-green-500 hover:bg-green-600 text-white rounded-xl px-8 py-4 text-lg font-medium inline-flex items-center justify-center">
           <MessageCircle className="h-6 w-6" />
-        </Button>
-      </div>
+        </a></div>
     </div>
   );
 }

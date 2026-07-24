@@ -1,6 +1,6 @@
 import React from "react";
-import Image from "next/image";
-import Link from "next/link";
+
+
 
 interface LogoProps {
   className?: string;
@@ -9,10 +9,10 @@ interface LogoProps {
 
 export default function Logo({ className = "", showTagline = true }: LogoProps) {
   return (
-    <Link href="/" className={`flex items-center gap-3 group ${className}`}>
+    <a href="/" className={`flex items-center gap-3 group ${className}`}>
       {/* Logo Image - Add your logo.png to the public folder */}
       <div className="relative w-12 h-12 bg-gradient-to-br from-blue-600 to-purple-600 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform overflow-hidden">
-        <Image
+        <img
           src="/logo.png"
           alt="NeuroDyn IT Solutions Logo"
           width={48}
@@ -41,6 +41,6 @@ export default function Logo({ className = "", showTagline = true }: LogoProps) 
           </div>
         </div>
       )}
-    </Link>
+    </a>
   );
 }

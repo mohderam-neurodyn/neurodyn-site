@@ -1,0 +1,62 @@
+---
+import '../app/globals.css';
+const { title, description } = Astro.props;
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ITUtility",
+  "name": "NeuroDyn IT Solutions",
+  "url": "https://neurodyn.in",
+  "logo": "https://neurodyn.in/logo.png",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Lucknow",
+    "addressRegion": "Uttar Pradesh",
+    "addressCountry": "IN"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+91-9935232167",
+    "contactType": "customer service"
+  },
+  "sameAs": [
+    "https://www.linkedin.com/company/neurodyn",
+    "https://twitter.com/neurodyn"
+  ]
+};
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description || "NeuroDyn IT Solutions provides cutting-edge web development, mobile apps, data analytics, and custom software."} />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title || "NeuroDyn IT Solutions"}</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  </head>
+  <body class="antialiased" style="font-family: 'Inter', sans-serif;">
+    <slot />
+    <script>
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '-50px' });
+      
+      document.querySelectorAll('.scroll-reveal').forEach((el) => {
+        observer.observe(el);
+      });
+    </script>
+  </body>
+</html>

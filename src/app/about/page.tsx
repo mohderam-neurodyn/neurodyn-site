@@ -1,8 +1,8 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
-import Link from "next/link";
+
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
@@ -61,10 +61,7 @@ export default function AboutPage() {
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-32">
         <div className="mx-auto max-w-7xl px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+          <div className="scroll-reveal"
             className="text-center max-w-4xl mx-auto"
           >
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white leading-tight mb-6">
@@ -73,7 +70,7 @@ export default function AboutPage() {
             <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
               {brand.tagline} We are a team of passionate technologists dedicated to delivering innovative IT solutions that transform businesses and drive sustainable growth.
             </p>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -81,10 +78,7 @@ export default function AboutPage() {
       <section className="py-20 bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm">
         <div className="mx-auto max-w-7xl px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
+            <div className="scroll-reveal"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">Who We Are</h2>
               <p className="text-lg text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
@@ -107,16 +101,13 @@ export default function AboutPage() {
                   <div className="text-sm text-gray-600 dark:text-gray-400">Years</div>
                 </div>
               </div>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
+            </div>
+            <div className="scroll-reveal"
               className="relative"
             >
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-purple-400/20 dark:from-blue-600/20 dark:to-purple-600/20 rounded-3xl blur-3xl"></div>
-                <div className="relative bg-white/80 dark:bg-gray-800/80 backdrop-blur-lg border border-gray-200/50 dark:border-gray-700/50 rounded-3xl p-8 shadow-2xl">
+                <div className="relative glass rounded-3xl p-8">
                   <div className="flex items-center justify-center mb-6">
                     <div className="w-20 h-20 bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl flex items-center justify-center shadow-lg">
                       <Rocket className="h-12 w-12 text-white" />
@@ -127,7 +118,7 @@ export default function AboutPage() {
                   </p>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -143,12 +134,9 @@ export default function AboutPage() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
+            <div className="scroll-reveal"
             >
-              <Card className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-lg border border-gray-200/50 dark:border-gray-700/50 rounded-2xl p-8 hover:shadow-xl transition-all duration-300">
+              <Card className="glass rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
                   <Target className="h-8 w-8 text-white" />
                 </div>
@@ -157,14 +145,11 @@ export default function AboutPage() {
                   To empower businesses with innovative technology solutions that drive growth, efficiency, and competitive advantage. We are committed to delivering exceptional software and services that help our clients achieve their strategic objectives.
                 </p>
               </Card>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+            <div className="scroll-reveal"
             >
-              <Card className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-lg border border-gray-200/50 dark:border-gray-700/50 rounded-2xl p-8 hover:shadow-xl transition-all duration-300">
+              <Card className="glass rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
                   <Eye className="h-8 w-8 text-white" />
                 </div>
@@ -173,7 +158,7 @@ export default function AboutPage() {
                   To be the leading technology partner for businesses worldwide, recognized for our innovation, reliability, and commitment to excellence. We envision a future where every business has access to world-class technology solutions.
                 </p>
               </Card>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -190,11 +175,8 @@ export default function AboutPage() {
 
           <div className="grid md:grid-cols-3 gap-8">
             {coreValues.map((value, index) => (
-              <motion.div
+              <div className="scroll-reveal"
                 key={value.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="text-center"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
@@ -202,7 +184,7 @@ export default function AboutPage() {
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">{value.title}</h3>
                 <p className="text-gray-600 dark:text-gray-300 leading-relaxed">{value.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -220,13 +202,10 @@ export default function AboutPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {coreStrengths.map((strength, index) => (
-              <motion.div
+              <div className="scroll-reveal"
                 key={strength}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
               >
-                <Card className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-lg border border-gray-200/50 dark:border-gray-700/50 rounded-xl p-6 hover:shadow-xl transition-all duration-300">
+                <Card className="glass rounded-xl p-6 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
                   <div className="flex items-start gap-4">
                     <div className="w-8 h-8 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center flex-shrink-0">
                       <CheckCircle className="h-5 w-5 text-blue-600 dark:text-blue-400" />
@@ -234,7 +213,7 @@ export default function AboutPage() {
                     <p className="text-gray-700 dark:text-gray-300">{strength}</p>
                   </div>
                 </Card>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -248,7 +227,7 @@ export default function AboutPage() {
             <p className="text-xl mb-8 opacity-90">Let's discuss how we can help transform your business with smart IT solutions</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button className="bg-white text-blue-600 hover:bg-gray-100 rounded-xl px-8 py-4 text-lg font-medium" asChild>
-                <Link href="/contact">Get In Touch</Link>
+                <a href="/contact">Get In Touch</a>
               </Button>
               <Button className="bg-green-500 hover:bg-green-600 text-white rounded-xl px-8 py-4 text-lg font-medium" onClick={handleWhatsAppClick}>
                 <MessageCircle className="h-5 w-5 mr-2" />
@@ -275,19 +254,19 @@ export default function AboutPage() {
             <div>
               <h4 className="font-semibold mb-4">Services</h4>
               <ul className="space-y-2 text-gray-400 text-sm">
-                <li><Link href="/services" className="hover:text-white transition">Website Development</Link></li>
-                <li><Link href="/services" className="hover:text-white transition">Mobile Apps</Link></li>
-                <li><Link href="/services" className="hover:text-white transition">IT Consulting</Link></li>
+                <li><a href="/services" className="hover:text-white transition">Website Development</a></li>
+                <li><a href="/services" className="hover:text-white transition">Mobile Apps</a></li>
+                <li><a href="/services" className="hover:text-white transition">IT Consulting</a></li>
               </ul>
             </div>
 
             <div>
               <h4 className="font-semibold mb-4">Company</h4>
               <ul className="space-y-2 text-gray-400 text-sm">
-                <li><Link href="/about" className="hover:text-white transition">About Us</Link></li>
-                <li><Link href="/" className="hover:text-white transition">Why Choose Us</Link></li>
-                <li><Link href="/" className="hover:text-white transition">Testimonials</Link></li>
-                <li><Link href="/contact" className="hover:text-white transition">Contact</Link></li>
+                <li><a href="/about" className="hover:text-white transition">About Us</a></li>
+                <li><a href="/" className="hover:text-white transition">Why Choose Us</a></li>
+                <li><a href="/" className="hover:text-white transition">Testimonials</a></li>
+                <li><a href="/contact" className="hover:text-white transition">Contact</a></li>
               </ul>
             </div>
 

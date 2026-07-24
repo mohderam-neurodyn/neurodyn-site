@@ -1,8 +1,8 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+
+
 import { Menu, X, Moon, Sun } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Logo from "@/components/Logo";
@@ -11,7 +11,7 @@ export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [isDark, setIsDark] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const pathname = usePathname();
+  const pathname = typeof window !== "undefined" ? window.location.pathname : "/";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -59,7 +59,7 @@ export default function Navigation() {
                 }`}
               >
                 {link.label}
-              </Link>
+              </a>
             ))}
           </nav>
 
@@ -80,7 +80,7 @@ export default function Navigation() {
               className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white rounded-xl px-6"
               asChild
             >
-              <Link href="/contact">Get Started</Link>
+              <a href="/contact">Get Started</a>
             </Button>
           </div>
 
@@ -128,15 +128,15 @@ export default function Navigation() {
                 onClick={() => setIsOpen(false)}
               >
                 {link.label}
-              </Link>
+              </a>
             ))}
             <Button
               className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white rounded-xl px-6"
               asChild
             >
-              <Link href="/contact" onClick={() => setIsOpen(false)}>
+              <a href="/contact" onClick={() => setIsOpen(false)}>
                 Get Started
-              </Link>
+              </a>
             </Button>
           </nav>
         </div>

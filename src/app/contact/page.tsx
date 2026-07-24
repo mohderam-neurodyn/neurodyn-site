@@ -1,8 +1,8 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
-import Link from "next/link";
+
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -49,10 +49,7 @@ export default function ContactPage() {
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-32">
         <div className="mx-auto max-w-7xl px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+          <div className="scroll-reveal"
             className="text-center max-w-4xl mx-auto"
           >
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white leading-tight mb-6">
@@ -61,7 +58,7 @@ export default function ContactPage() {
             <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
               Have a project in mind? Let's discuss how we can help you achieve your business goals with our IT solutions
             </p>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -70,10 +67,7 @@ export default function ContactPage() {
         <div className="mx-auto max-w-7xl px-4">
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Information */}
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
+            <div className="scroll-reveal"
             >
               <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">Contact Information</h2>
 
@@ -164,13 +158,10 @@ export default function ContactPage() {
                   Scan to contact us on WhatsApp
                 </p>
               </Card>
-            </motion.div>
+            </div>
 
             {/* Contact Form */}
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
+            <div className="scroll-reveal"
             >
               <Card className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-lg border border-gray-200/50 dark:border-gray-700/50 rounded-2xl p-8">
                 <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">Send us a Message</h2>
@@ -238,7 +229,7 @@ export default function ContactPage() {
                   </Button>
                 </form>
               </Card>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -259,19 +250,19 @@ export default function ContactPage() {
             <div>
               <h4 className="font-semibold mb-4">Services</h4>
               <ul className="space-y-2 text-gray-400 text-sm">
-                <li><Link href="/services" className="hover:text-white transition">Website Development</Link></li>
-                <li><Link href="/services" className="hover:text-white transition">Mobile Apps</Link></li>
-                <li><Link href="/services" className="hover:text-white transition">IT Consulting</Link></li>
+                <li><a href="/services" className="hover:text-white transition">Website Development</a></li>
+                <li><a href="/services" className="hover:text-white transition">Mobile Apps</a></li>
+                <li><a href="/services" className="hover:text-white transition">IT Consulting</a></li>
               </ul>
             </div>
 
             <div>
               <h4 className="font-semibold mb-4">Company</h4>
               <ul className="space-y-2 text-gray-400 text-sm">
-                <li><Link href="/about" className="hover:text-white transition">About Us</Link></li>
-                <li><Link href="/" className="hover:text-white transition">Why Choose Us</Link></li>
-                <li><Link href="/" className="hover:text-white transition">Testimonials</Link></li>
-                <li><Link href="/contact" className="hover:text-white transition">Contact</Link></li>
+                <li><a href="/about" className="hover:text-white transition">About Us</a></li>
+                <li><a href="/" className="hover:text-white transition">Why Choose Us</a></li>
+                <li><a href="/" className="hover:text-white transition">Testimonials</a></li>
+                <li><a href="/contact" className="hover:text-white transition">Contact</a></li>
               </ul>
             </div>
 
