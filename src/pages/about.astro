@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Page from '../app/about/page.tsx';
+import AboutPage from '../components/react/AboutPage';
 ---
 <Layout title="About | NeuroDyn">
-  <Page />
+  <AboutPage client:load />
 </Layout>

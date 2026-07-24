@@ -1,6 +1,6 @@
 # NeuroDyn IT Solutions Website
 
-A modern, scalable, and high-performance business website for NeuroDyn IT Solutions, built with Next.js, TypeScript, and Tailwind CSS.
+A modern, scalable, and high-performance business website for NeuroDyn IT Solutions, built with Astro, React, TypeScript, and Tailwind CSS.
 
 ## 🎯 Features
 
@@ -47,10 +47,10 @@ A modern, scalable, and high-performance business website for NeuroDyn IT Soluti
 
 ## 🛠️ Tech Stack
 
-- **Framework**: Next.js 15 (App Router)
+- **Framework**: Astro 7
+- **UI Library**: React 19
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS 4
-- **Animations**: Framer Motion
 - **Icons**: Lucide React
 - **UI Components**: shadcn/ui
 
@@ -133,35 +133,38 @@ CONTACT_EMAIL=info@neurodyn.in
 ### Customization
 
 - **Brand Info**: Update brand details in each page component
-- **Services**: Modify the services array in `src/app/services/page.tsx`
-- **Testimonials**: Update testimonials in `src/app/page.tsx`
-- **Colors**: Modify Tailwind config in `tailwind.config.ts`
+- **Services**: Modify the services array in `src/components/react/ServicesPage.tsx`
+- **Testimonials**: Update testimonials in `src/components/react/HomePage.tsx`
+- **Colors**: Modify Tailwind config in `src/styles/globals.css`
 
 ## 📁 Project Structure
 
 ```
 neurodyn-site/
 ├── src/
-│   ├── app/
-│   │   ├── about/
-│   │   │   └── page.tsx
-│   │   ├── contact/
-│   │   │   └── page.tsx
-│   │   ├── services/
-│   │   │   └── page.tsx
-│   │   ├── globals.css
-│   │   ├── layout.tsx
-│   │   └── page.tsx
 │   ├── components/
+│   │   ├── react/
+│   │   │   ├── HomePage.tsx
+│   │   │   ├── AboutPage.tsx
+│   │   │   ├── ServicesPage.tsx
+│   │   │   └── ContactPage.tsx
 │   │   ├── Navigation.tsx
 │   │   ├── Logo.tsx
 │   │   └── ui/
+│   ├── layouts/
+│   │   └── Layout.astro
+│   ├── pages/
+│   │   ├── index.astro
+│   │   ├── about.astro
+│   │   ├── services.astro
+│   │   └── contact.astro
+│   ├── styles/
+│   │   └── globals.css
 │   └── lib/
 ├── public/
 ├── package.json
 ├── tsconfig.json
-├── tailwind.config.ts
-└── next.config.ts
+└── astro.config.mjs
 ```
 
 ## 🎨 Design System
@@ -194,11 +197,12 @@ neurodyn-site/
 
 ## 🚀 Performance Optimization
 
-- Image optimization with Next.js Image component
+- Static site generation with Astro
 - Lazy loading for images
 - Code splitting
 - Minified production build
 - Optimized bundle size
+- React components loaded on-demand
 
 ## 📞 Contact Information
 
