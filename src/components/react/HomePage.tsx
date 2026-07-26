@@ -50,7 +50,7 @@ export default function NeuroDynSite() {
       accent: "#3B82F6",
       secondary: "#8B5CF6",
       muted: "#64748B",
-      phone: "9935232167",
+      phone: "8004339331",
       email: "info@neurodyn.in",
     }),
     []
@@ -185,7 +185,7 @@ export default function NeuroDynSite() {
   }
 
   function handleWhatsAppClick() {
-    window.open("https://wa.me/919935232167?text=Hi, I'm interested in your IT services", "_blank");
+    window.open("https://wa.me/918004339331?text=Hi, I'm interested in your IT services", "_blank");
   }
 
   return (
@@ -448,7 +448,7 @@ export default function NeuroDynSite() {
               <Button className="bg-white text-blue-600 hover:bg-gray-100 rounded-xl px-8 py-4 text-lg font-medium" asChild>
                 <a href="/contact">Book a Call</a>
               </Button>
-              <a href="https://wa.me/919935232167?text=Hi,%20I%27m%20interested%20in%20your%20IT%20services" target="_blank" className="bg-green-500 hover:bg-green-600 text-white rounded-xl px-8 py-4 text-lg font-medium inline-flex items-center justify-center">
+              <a href="https://wa.me/918004339331?text=Hi,%20I%27m%20interested%20in%20your%20IT%20services" target="_blank" className="bg-green-500 hover:bg-green-600 text-white rounded-xl px-8 py-4 text-lg font-medium inline-flex items-center justify-center">
                 <MessageCircle className="h-5 w-5 mr-2" />
                 WhatsApp Us
               </a></div>
@@ -591,7 +591,7 @@ export default function NeuroDynSite() {
 
       {/* Floating WhatsApp Button */}
       <div className="fixed bottom-6 right-6 z-50">
-        <a href="https://wa.me/919935232167?text=Hi,%20I%27m%20interested%20in%20your%20IT%20services" target="_blank" className="bg-green-500 hover:bg-green-600 text-white rounded-xl px-8 py-4 text-lg font-medium inline-flex items-center justify-center">
+        <a href="https://wa.me/918004339331?text=Hi,%20I%27m%20interested%20in%20your%20IT%20services" target="_blank" className="bg-green-500 hover:bg-green-600 text-white rounded-xl px-8 py-4 text-lg font-medium inline-flex items-center justify-center">
           <MessageCircle className="h-6 w-6" />
         </a></div>
     </div>

@@ -206,7 +206,7 @@ neurodyn-site/
 
 ## 📞 Contact Information
 
-- **Phone**: +91-9935232167
+- **Phone**: +91-8004339331
 - **Email**: info@neurodyn.in
 - **Location**: Lucknow, Uttar Pradesh, India
 
