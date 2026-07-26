@@ -11,8 +11,6 @@ import Logo from "@/components/Logo";
 import {
   Code,
   Smartphone,
-  Globe,
-  Cloud,
   Cog,
   Users,
   Rocket,
@@ -29,13 +27,10 @@ import {
   ArrowRight,
   MessageCircle,
   Briefcase,
-  Database,
-  Server,
-  GitBranch,
-  Layout,
   BarChart3,
-  Monitor,
   Server as ServerIcon,
+  Database,
+  Layout,
 } from "lucide-react";
 
 export default function NeuroDynSite() {

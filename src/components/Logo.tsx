@@ -18,6 +18,8 @@ export default function Logo({ className = "", showTagline = true }: LogoProps) 
           width={48}
           height={48}
           className="object-contain p-1"
+          loading="eager"
+          fetchPriority="high"
           // Remove the line below once you have the logo file
           onError={(e) => {
             // Fallback to text if image not found
