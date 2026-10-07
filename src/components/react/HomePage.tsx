@@ -110,7 +110,7 @@ export default function NeuroDynSite() {
               {/* CTAs */}
               <div className="flex flex-col sm:flex-row gap-3 mb-14">
                 <a
-                  href="https://calendly.com/"
+                  href="https://calendly.com/neurodyn-info"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 bg-white text-zinc-900 hover:bg-zinc-200 text-sm font-semibold px-6 py-3 rounded-md transition-all duration-300"
@@ -326,7 +326,7 @@ export default function NeuroDynSite() {
               Stop losing revenue to manual processes. Let's build a data-driven system that scales with your ambition.
             </p>
             <a
-              href="https://calendly.com/"
+              href="https://calendly.com/neurodyn-info"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-white text-zinc-900 hover:bg-zinc-200 text-sm font-semibold px-8 py-3.5 rounded-md transition-all duration-300"

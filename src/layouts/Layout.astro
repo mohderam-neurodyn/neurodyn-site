@@ -41,6 +41,9 @@ const jsonLd = {
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
+    <!-- Calendly badge widget -->
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
   </head>
   <body class="antialiased" style="font-family: 'Inter', sans-serif;">
     <slot />
@@ -57,6 +60,19 @@ const jsonLd = {
       document.querySelectorAll('.scroll-reveal').forEach((el) => {
         observer.observe(el);
       });
+    </script>
+    <!-- Calendly badge widget -->
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+    <script type="text/javascript">
+      window.onload = function() {
+        Calendly.initBadgeWidget({
+          url: 'https://calendly.com/neurodyn-info',
+          text: 'Schedule time with me',
+          color: '#10b981',
+          textColor: '#ffffff',
+          branding: true
+        });
+      }
     </script>
   </body>
 </html>

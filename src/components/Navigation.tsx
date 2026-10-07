@@ -56,7 +56,7 @@ export default function Navigation() {
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center">
             <a
-              href="https://calendly.com/"
+              href="https://calendly.com/neurodyn-info"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-white text-zinc-900 hover:bg-zinc-200 text-[13px] font-semibold px-5 py-2.5 rounded-md transition-all duration-300"
@@ -98,7 +98,7 @@ export default function Navigation() {
             ))}
             <div className="pt-4">
               <a
-                href="https://calendly.com/"
+                href="https://calendly.com/neurodyn-info"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block text-center bg-white text-zinc-900 hover:bg-zinc-200 text-[13px] font-semibold px-5 py-2.5 rounded-md transition-all duration-300"
