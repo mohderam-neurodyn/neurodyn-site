@@ -1,7 +1,5 @@
 import React from "react";
 
-
-
 interface LogoProps {
   className?: string;
   showTagline?: boolean;
@@ -10,37 +8,19 @@ interface LogoProps {
 export default function Logo({ className = "", showTagline = true }: LogoProps) {
   return (
     <a href="/" className={`flex items-center gap-3 group ${className}`}>
-      {/* Logo Image - Add your logo.png to the public folder */}
-      <div className="relative w-12 h-12 bg-gradient-to-br from-blue-600 to-purple-600 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform overflow-hidden">
-        <img
-          src="/logo.png"
-          alt="NeuroDyn Tech Solutions Logo"
-          width={48}
-          height={48}
-          className="object-contain p-1"
-          loading="eager"
-          fetchPriority="high"
-          // Remove the line below once you have the logo file
-          onError={(e) => {
-            // Fallback to text if image not found
-            const target = e.target as HTMLImageElement;
-            target.style.display = 'none';
-            const parent = target.parentElement;
-            if (parent) {
-              parent.innerHTML = '<span class="text-white font-bold text-xl">N</span>';
-            }
-          }}
-        />
+      <div className="relative w-8 h-8 rounded-md bg-white/[0.04] border border-white/[0.08] flex items-center justify-center overflow-hidden transition-colors group-hover:border-emerald-500/30">
+        <span className="font-mono text-xs font-semibold tracking-wider text-white">N</span>
+        <div className="absolute inset-0 bg-gradient-to-tr from-emerald-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
       </div>
 
       {showTagline && (
-        <div>
-          <div className="text-xl font-bold text-gray-900 dark:text-white">
+        <div className="flex flex-col">
+          <span className="text-sm font-semibold tracking-tight text-white group-hover:text-zinc-200 transition-colors">
             NeuroDyn
-          </div>
-          <div className="text-xs text-gray-600 dark:text-gray-400 -mt-1">
-            IT Solutions
-          </div>
+          </span>
+          <span className="font-mono text-[9px] tracking-[0.2em] uppercase text-zinc-500 -mt-0.5">
+            Intelligent Systems
+          </span>
         </div>
       )}
     </a>

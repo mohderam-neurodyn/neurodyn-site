@@ -6,62 +6,23 @@ import { Textarea } from "@/components/ui/textarea";
 import Navigation from "@/components/Navigation";
 import Logo from "@/components/Logo";
 import {
-  Code,
+  ArrowRight,
+  Play,
   Phone,
   Mail,
   MapPin,
-  Zap,
-  ArrowRight,
   MessageCircle,
-  Database,
-  Server as ServerIcon,
-  Play,
 } from "lucide-react";
 
 export default function NeuroDynSite() {
   const brand = useMemo(
     () => ({
       name: "NeuroDyn Tech Solutions",
-      heroTagline: "We Build AI-Powered Applications & Data Dashboards That Automate Business Operations.",
-      heroSubheading: "Accelerate your workflows with bespoke full-stack web applications, real-time analytics pipelines, and automated CRM systems built in days—not months.",
       phone: "9369479090",
       email: "info@neurodyn.in",
     }),
     []
   );
-
-  const services = [
-    {
-      icon: <Code size={16} />,
-      title: "Custom AI Web Implementations",
-      desc: "Rapid MVP deployment, automated user flows, and secure cloud setups.",
-      features: ["Next.js", "React", "Tailwind", "Supabase"],
-    },
-    {
-      icon: <Database size={16} />,
-      title: "Data Storytelling & Infrastructure",
-      desc: "Clean messy enterprise databases, build live analytics dashboards, and automate custom business reports.",
-      features: ["Python", "SQL", "PowerBI", "Redis"],
-    },
-  ];
-
-  const caseStudies = [
-    {
-      title: "AI-Driven Salon Booking & CRM Engine",
-      problem: "Local appointment-based businesses lose up to 15% of daily revenue due to double-booking errors and manual spreadsheet tracking.",
-      solution: "An isolated, ultra-fast booking workflow built using Next.js for high-speed UI rendering, Supabase (PostgreSQL) for relational data persistence, and a dedicated Redis layer for live appointment slot locking.",
-      videoPlaceholder: "Watch 2-Min System Architecture Walkthrough",
-      videoLink: "#",
-      stack: ["Next.js", "Supabase", "Redis"],
-    },
-  ];
-
-  const heroCards = [
-    { icon: <Code size={16} />, label: "Full-Stack Web", sub: "Next.js & React" },
-    { icon: <ServerIcon size={16} />, label: "Automated CRM", sub: "Supabase & Redis" },
-    { icon: <Zap size={16} />, label: "AI Integrations", sub: "Custom Workflows" },
-    { icon: <Database size={16} />, label: "Data Analytics", sub: "PowerBI & Python" },
-  ];
 
   function handleContact(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -75,415 +36,396 @@ export default function NeuroDynSite() {
   }
 
   return (
-    <div className="min-h-screen bg-[#050508] text-white">
-
-      {/* ── Ambient background glows ── */}
+    <div className="min-h-screen bg-[#08080a] text-white selection:bg-emerald-500/20 selection:text-emerald-300">
+      {/* Background Ambience */}
       <div className="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
-        <div className="absolute top-[-20%] right-[-10%] h-[600px] w-[600px] rounded-full bg-gradient-to-br from-emerald-500/8 to-transparent blur-3xl" />
-        <div className="absolute bottom-[-20%] left-[-10%] h-[500px] w-[500px] rounded-full bg-gradient-to-tr from-indigo-500/6 to-transparent blur-3xl" />
+        <div className="absolute top-[-10%] right-[-5%] w-[600px] h-[600px] bg-emerald-500/[0.04] rounded-full blur-[120px]" />
+        <div className="absolute bottom-[-10%] left-[-5%] w-[600px] h-[600px] bg-indigo-500/[0.03] rounded-full blur-[140px]" />
       </div>
 
       <Navigation />
 
-      {/* ══════════════════════════════
-          HERO SECTION
-      ══════════════════════════════ */}
-      <section id="home" className="relative pt-36 pb-28 lg:pt-44 lg:pb-36">
+      {/* ══════════════════════════════════════════
+          01. HERO SECTION (Stratocope Architecture)
+      ══════════════════════════════════════════ */}
+      <section id="home" className="relative pt-36 pb-32 md:pt-44 md:pb-40 border-b border-white/[0.06]">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="max-w-4xl">
+            {/* Injected Top Tag */}
+            <div>
+              <span className="font-mono text-[10px] tracking-[0.25em] uppercase text-zinc-500">
+                Neurodyn Intelligent Systems
+              </span>
+            </div>
 
-            {/* Left — copy */}
-            <div className="scroll-reveal">
-              {/* Overline label */}
-              <p className="label-mono text-emerald-500 mb-6">
-                Available for Projects
-              </p>
+            {/* Title Refit */}
+            <h1 className="text-5xl md:text-7xl font-sans font-medium tracking-tight text-white mt-6 max-w-4xl leading-[1.08]">
+              We build custom AI applications and automated data pipelines.
+            </h1>
 
-              <h1 className="text-4xl md:text-5xl lg:text-[52px] font-bold tracking-tight leading-[1.12] text-white mb-6">
-                {brand.heroTagline}
-              </h1>
+            {/* Subheadline */}
+            <p className="text-lg md:text-xl text-zinc-400 leading-relaxed max-w-2xl mt-6">
+              Accelerate your workflows with bespoke full-stack web applications, real-time analytics pipelines, and automated CRM systems built in days—not months.
+            </p>
 
-              <p className="text-zinc-400 text-lg leading-relaxed max-w-xl mb-10">
-                {brand.heroSubheading}
-              </p>
+            {/* CTAs */}
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mt-10">
+              <a
+                href="https://calendly.com/neurodyn-info"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-6 py-3 bg-white text-black font-medium text-sm rounded-md transition-all duration-300 hover:bg-zinc-200 inline-flex items-center justify-center gap-2"
+              >
+                Book a Free 15-Min Strategy Call
+                <ArrowRight size={14} />
+              </a>
+              <a
+                href="#case-studies"
+                className="px-6 py-3 border border-white/10 text-zinc-300 hover:border-white/20 hover:text-white font-medium text-sm rounded-md transition-all duration-300 inline-flex items-center justify-center"
+              >
+                View Live MVPs
+              </a>
+            </div>
 
-              {/* CTAs */}
-              <div className="flex flex-col sm:flex-row gap-3 mb-14">
+            {/* Stratocope Architectural Telemetry Matrix */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-16 mt-16 border-t border-white/[0.06]">
+              <div>
+                <span className="font-mono text-[10px] tracking-[0.25em] uppercase text-zinc-500 block mb-2">
+                  00.1 / RAPID MVP DELIVERY
+                </span>
+                <div className="text-xl font-sans font-medium text-white tracking-tight">Days, not months</div>
+                <p className="text-xs text-zinc-500 leading-relaxed mt-1">
+                  Bespoke full-stack web MVPs built for accelerated validation and production deployment.
+                </p>
+              </div>
+
+              <div>
+                <span className="font-mono text-[10px] tracking-[0.25em] uppercase text-zinc-500 block mb-2">
+                  00.2 / ARCHITECTURAL RESILIENCE
+                </span>
+                <div className="text-xl font-sans font-medium text-white tracking-tight">Postgres + Redis</div>
+                <p className="text-xs text-zinc-500 leading-relaxed mt-1">
+                  Isolated relational databases paired with in-memory caching for zero-collision state management.
+                </p>
+              </div>
+
+              <div>
+                <span className="font-mono text-[10px] tracking-[0.25em] uppercase text-zinc-500 block mb-2">
+                  00.3 / PIPELINE AUTOMATION
+                </span>
+                <div className="text-xl font-sans font-medium text-white tracking-tight">Live Analytics</div>
+                <p className="text-xs text-zinc-500 leading-relaxed mt-1">
+                  Automated ETL workflows and custom dashboards replacing manual enterprise spreadsheets.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════════
+          02. STRATOCOPE-STYLE CASE STUDY (Salon App)
+      ══════════════════════════════════════════ */}
+      <section id="case-studies" className="py-28 md:py-36 border-b border-white/[0.06]">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mb-12">
+            <span className="font-mono text-[10px] tracking-[0.25em] uppercase text-zinc-500 block">
+              01 / PROOF OF CONCEPT
+            </span>
+            <h2 className="text-3xl md:text-5xl font-sans font-medium tracking-tight text-white mt-3">
+              Engineered Case Study
+            </h2>
+          </div>
+
+          {/* Stratocope Grid Block Container */}
+          <div className="border border-white/[0.06] bg-zinc-900/20 backdrop-blur-md rounded-xl p-8 md:p-12 relative overflow-hidden">
+            {/* Background Accent Div */}
+            <div className="absolute -top-20 -right-20 w-80 h-80 bg-emerald-500/10 rounded-full blur-[80px] pointer-events-none" />
+
+            {/* Left-Aligned Header with Massive Typographic Display */}
+            <div>
+              <span className="font-mono text-[10px] tracking-[0.25em] uppercase text-emerald-400 block mb-6">
+                01 / SYSTEM INTERACTION
+              </span>
+
+              {/* Massive Typographic Display of the Core Metric */}
+              <div className="mb-8">
+                <div className="text-6xl md:text-8xl font-sans font-light tracking-tighter text-white">
+                  15%
+                </div>
+                <div className="font-mono text-xs text-zinc-400 uppercase tracking-[0.2em] mt-2">
+                  Daily Revenue Leakage Prevented via Live Slot Concurrency
+                </div>
+              </div>
+
+              {/* Title */}
+              <h3 className="text-2xl md:text-4xl font-sans font-medium tracking-tight text-white mb-8">
+                AI-Driven Salon Booking & CRM Engine
+              </h3>
+            </div>
+
+            {/* Architectural Dissection Grid */}
+            <div className="grid md:grid-cols-2 gap-8 pt-8 border-t border-white/[0.06]">
+              {/* Problem */}
+              <div className="space-y-3">
+                <span className="font-mono text-[10px] tracking-[0.25em] uppercase text-zinc-500 block">
+                  01.1 / PROBLEM STATEMENT
+                </span>
+                <p className="text-zinc-400 text-sm md:text-base leading-relaxed">
+                  Local appointment-based businesses lose up to 15% of daily revenue due to double-booking errors and manual spreadsheet tracking.
+                </p>
+              </div>
+
+              {/* Solution */}
+              <div className="space-y-3">
+                <span className="font-mono text-[10px] tracking-[0.25em] uppercase text-emerald-400 block">
+                  01.2 / ENGINEERED SOLUTION
+                </span>
+                <p className="text-zinc-400 text-sm md:text-base leading-relaxed">
+                  An isolated, ultra-fast booking workflow built using Next.js for high-speed UI rendering, Supabase (PostgreSQL) for relational data persistence, and a dedicated Redis layer for live appointment slot locking.
+                </p>
+              </div>
+            </div>
+
+            {/* Technology Stack Tags */}
+            <div className="flex flex-wrap items-center gap-2 pt-8 mt-8 border-t border-white/[0.06]">
+              <span className="font-mono text-[10px] tracking-[0.2em] uppercase text-zinc-500 mr-2">
+                Engineered With:
+              </span>
+              {["Next.js", "Supabase", "Redis"].map((tech) => (
+                <span
+                  key={tech}
+                  className="border border-white/[0.08] bg-white/[0.02] text-zinc-400 px-3 py-1 rounded text-[11px] font-mono tracking-wide"
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
+
+            {/* Video Walkthrough Interactive Strip */}
+            <div className="mt-8 pt-8 border-t border-white/[0.06] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+              <a
+                href="#"
+                className="group inline-flex items-center gap-3 transition-colors"
+              >
+                <div className="w-8 h-8 rounded-full border border-emerald-500/30 bg-emerald-500/10 flex items-center justify-center text-emerald-400 group-hover:bg-emerald-500/20 group-hover:scale-105 transition-all">
+                  <Play size={12} className="ml-0.5 fill-current" />
+                </div>
+                <span className="font-mono text-xs tracking-wider text-zinc-300 group-hover:text-white transition-colors">
+                  Watch 2-Min System Architecture Walkthrough →
+                </span>
+              </a>
+              <span className="font-mono text-[10px] tracking-widest text-zinc-500 uppercase">
+                Interactive Loom Walkthrough
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════════
+          03. VALUE STACK (Core Capabilities)
+      ══════════════════════════════════════════ */}
+      <section id="services" className="py-28 md:py-36 border-b border-white/[0.06]">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mb-12">
+            <span className="font-mono text-[10px] tracking-[0.25em] uppercase text-zinc-500 block">
+              02 / VALUE STACK
+            </span>
+            <h2 className="text-3xl md:text-5xl font-sans font-medium tracking-tight text-white mt-3">
+              Core Capabilities
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Capability 1 */}
+            <div className="border border-white/[0.06] bg-zinc-900/20 backdrop-blur-md rounded-xl p-8 md:p-10 relative overflow-hidden flex flex-col justify-between">
+              <div>
+                <span className="font-mono text-[10px] tracking-[0.25em] uppercase text-zinc-500 block mb-6">
+                  02.1 / CLIENT APPLICATION STACK
+                </span>
+                <h3 className="text-2xl font-sans font-medium tracking-tight text-white mb-4">
+                  Custom AI Web Implementations
+                </h3>
+                <p className="text-zinc-400 text-sm md:text-base leading-relaxed mb-8">
+                  Focus on rapid MVP deployment, automated user flows, and secure cloud setups.
+                </p>
+              </div>
+
+              <div className="pt-6 border-t border-white/[0.06] flex flex-wrap gap-2">
+                {["Next.js", "React", "Tailwind", "Supabase"].map((tech) => (
+                  <span
+                    key={tech}
+                    className="border border-white/[0.08] bg-white/[0.02] text-zinc-400 px-3 py-1 rounded text-[11px] font-mono tracking-wide"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* Capability 2 */}
+            <div className="border border-white/[0.06] bg-zinc-900/20 backdrop-blur-md rounded-xl p-8 md:p-10 relative overflow-hidden flex flex-col justify-between">
+              <div>
+                <span className="font-mono text-[10px] tracking-[0.25em] uppercase text-zinc-500 block mb-6">
+                  02.2 / ENTERPRISE DATA SYSTEMS
+                </span>
+                <h3 className="text-2xl font-sans font-medium tracking-tight text-white mb-4">
+                  Data Storytelling & Infrastructure
+                </h3>
+                <p className="text-zinc-400 text-sm md:text-base leading-relaxed mb-8">
+                  Focus on cleaning messy enterprise databases, building live analytics dashboards, and custom business report automation.
+                </p>
+              </div>
+
+              <div className="pt-6 border-t border-white/[0.06] flex flex-wrap gap-2">
+                {["Python", "SQL", "PowerBI", "Redis"].map((tech) => (
+                  <span
+                    key={tech}
+                    className="border border-white/[0.08] bg-white/[0.02] text-zinc-400 px-3 py-1 rounded text-[11px] font-mono tracking-wide"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════════
+          04. CONSULTING ENGAGEMENT & CONTACT
+      ══════════════════════════════════════════ */}
+      <section id="contact" className="py-28 md:py-36">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="border border-white/[0.06] bg-zinc-900/20 backdrop-blur-md rounded-xl p-8 md:p-12 relative overflow-hidden">
+            <div className="grid lg:grid-cols-2 gap-12 items-start">
+              {/* Left Column: Direct Calendly & Telemetry */}
+              <div>
+                <span className="font-mono text-[10px] tracking-[0.25em] uppercase text-zinc-500 block mb-4">
+                  03 / INITIATION
+                </span>
+                <h2 className="text-3xl md:text-4xl font-sans font-medium tracking-tight text-white mb-4">
+                  Start your technical consultation.
+                </h2>
+                <p className="text-zinc-400 text-base leading-relaxed mb-8 max-w-md">
+                  Discuss your pipeline architecture or schedule an immediate 15-minute briefing session.
+                </p>
+
+                <div className="space-y-4 mb-8">
+                  <div className="flex items-center gap-3 text-sm text-zinc-300">
+                    <Phone size={14} className="text-emerald-400" />
+                    <span>+91-{brand.phone}</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-sm text-zinc-300">
+                    <Mail size={14} className="text-emerald-400" />
+                    <span>{brand.email}</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-sm text-zinc-300">
+                    <MapPin size={14} className="text-emerald-400" />
+                    <span>Lucknow, Uttar Pradesh, India</span>
+                  </div>
+                </div>
+
                 <a
                   href="https://calendly.com/neurodyn-info"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 bg-white text-zinc-900 hover:bg-zinc-200 text-sm font-semibold px-6 py-3 rounded-md transition-all duration-300"
+                  className="px-6 py-3 bg-white text-black font-medium text-sm rounded-md transition-all duration-300 hover:bg-zinc-200 inline-flex items-center gap-2"
                 >
                   Book a Free 15-Min Strategy Call
                   <ArrowRight size={14} />
                 </a>
-                <a
-                  href="#case-studies"
-                  className="inline-flex items-center justify-center gap-2 border border-white/10 text-zinc-300 hover:border-white/20 hover:text-white text-sm font-medium px-6 py-3 rounded-md transition-all duration-300"
-                >
-                  View Live MVPs
-                </a>
               </div>
 
-              {/* Stats strip */}
-              <div className="flex gap-10 border-t border-white/[0.06] pt-8">
-                {[
-                  { value: "Fast", label: "MVP Delivery" },
-                  { value: "100%", label: "Data Driven" },
-                  { value: "Automated", label: "Workflows" },
-                ].map((stat) => (
-                  <div key={stat.label}>
-                    <div className="text-xl font-bold text-white tracking-tight">{stat.value}</div>
-                    <div className="label-mono mt-1">{stat.label}</div>
-                  </div>
-                ))}
-              </div>
-            </div>
+              {/* Right Column: Clean Form */}
+              <div className="border-t lg:border-t-0 lg:border-l border-white/[0.06] pt-8 lg:pt-0 lg:pl-12">
+                <span className="font-mono text-[10px] tracking-[0.25em] uppercase text-zinc-500 block mb-6">
+                  DIRECT PROJECT DISPATCH
+                </span>
 
-            {/* Right — capability grid */}
-            <div className="scroll-reveal relative">
-              {/* Ambient glow behind card */}
-              <div className="absolute inset-0 bg-gradient-to-tr from-emerald-500/10 to-indigo-500/10 blur-3xl rounded-3xl" />
-              <div className="relative glass rounded-2xl p-6">
-                <div className="grid grid-cols-2 gap-3">
-                  {heroCards.map((card) => (
-                    <div
-                      key={card.label}
-                      className="bg-white/[0.03] border border-white/[0.06] rounded-xl p-4 hover:border-emerald-500/20 hover:bg-white/[0.05] transition-all duration-300"
-                    >
-                      <div className="w-7 h-7 rounded-md bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 mb-3">
-                        {card.icon}
-                      </div>
-                      <div className="text-sm font-semibold text-white mb-0.5">{card.label}</div>
-                      <div className="text-[12px] text-zinc-500">{card.sub}</div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      {/* ══════════════════════════════
-          CORE CAPABILITIES
-      ══════════════════════════════ */}
-      <section id="services" className="py-28 lg:py-36 relative">
-        {/* Section glow */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mb-16 max-w-xl">
-            <p className="label-mono text-emerald-500 mb-4">What We Do</p>
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-white">
-              Core Capabilities
-            </h2>
-            <p className="mt-4 text-zinc-400 leading-relaxed">
-              Premium data-driven engineering that scales your business.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-6 max-w-5xl">
-            {services.map((service) => (
-              <div className="scroll-reveal relative" key={service.title}>
-                {/* Card ambient */}
-                <div className="absolute inset-0 bg-gradient-to-tr from-emerald-500/5 to-transparent blur-2xl rounded-2xl" />
-                <div className="relative glass rounded-xl p-8 h-full hover:border-white/10 transition-all duration-300 group">
-                  {/* Icon */}
-                  <div className="w-8 h-8 rounded-md bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 mb-6">
-                    {service.icon}
-                  </div>
-                  <h3 className="text-lg font-semibold tracking-tight text-white mb-3">
-                    {service.title}
-                  </h3>
-                  <p className="text-zinc-400 text-sm leading-relaxed mb-6">
-                    {service.desc}
-                  </p>
-                  {/* Stack tags */}
-                  <div className="flex flex-wrap gap-2">
-                    {service.features.map((feat) => (
-                      <span
-                        key={feat}
-                        className="border border-white/[0.07] text-zinc-400 px-3 py-1 rounded-md text-[11px] font-mono tracking-wide bg-white/[0.02]"
-                      >
-                        {feat}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ══════════════════════════════
-          CASE STUDY
-      ══════════════════════════════ */}
-      <section id="case-studies" className="py-28 lg:py-36 relative">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mb-16 max-w-xl">
-            <p className="label-mono text-emerald-500 mb-4">Proof of Concept</p>
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-white">
-              Featured Build
-            </h2>
-            <p className="mt-4 text-zinc-400 leading-relaxed">
-              Real-world implementations of our high-speed, data-driven architecture.
-            </p>
-          </div>
-
-          <div className="max-w-4xl">
-            {caseStudies.map((study) => (
-              <div className="scroll-reveal" key={study.title}>
-                <div className="relative glass rounded-2xl overflow-hidden">
-                  {/* Ambient glow */}
-                  <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-emerald-500/8 to-transparent blur-3xl pointer-events-none" />
-
-                  {/* Video placeholder */}
-                  <div className="h-64 bg-gradient-to-br from-zinc-900 to-[#050508] flex flex-col items-center justify-center relative overflow-hidden border-b border-white/[0.05]">
-                    <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(ellipse_at_center,_white_1px,_transparent_1px)] bg-[size:24px_24px]" />
-                    <a
-                      href={study.videoLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="z-10 flex flex-col items-center gap-5 group"
-                    >
-                      <div className="w-14 h-14 glow-emerald bg-emerald-500/10 border border-emerald-500/30 rounded-full flex items-center justify-center text-emerald-400 hover:bg-emerald-500/20 transition-all duration-300">
-                        <Play size={16} className="ml-0.5 fill-current" />
-                      </div>
-                      <span className="label-mono text-zinc-400 group-hover:text-zinc-200 transition-colors">
-                        {study.videoPlaceholder}
-                      </span>
-                    </a>
-                  </div>
-
-                  {/* Content */}
-                  <div className="p-8 lg:p-12">
-                    <h3 className="text-2xl font-bold tracking-tight text-white mb-8">
-                      {study.title}
-                    </h3>
-
-                    <div className="space-y-5">
-                      {/* Problem */}
-                      <div className="border border-white/[0.05] bg-white/[0.02] rounded-xl p-5">
-                        <div className="flex items-center gap-2 mb-3">
-                          <span className="w-1.5 h-1.5 rounded-full bg-rose-400" />
-                          <span className="label-mono text-rose-400">Problem</span>
-                        </div>
-                        <p className="text-zinc-400 text-sm leading-relaxed">{study.problem}</p>
-                      </div>
-
-                      {/* Solution */}
-                      <div className="border border-emerald-500/10 bg-emerald-500/[0.03] rounded-xl p-5">
-                        <div className="flex items-center gap-2 mb-3">
-                          <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
-                          <span className="label-mono text-emerald-400">Engineered Solution</span>
-                        </div>
-                        <p className="text-zinc-400 text-sm leading-relaxed">{study.solution}</p>
-                      </div>
-                    </div>
-
-                    {/* Stack */}
-                    <div className="flex flex-wrap items-center gap-2 mt-8 pt-6 border-t border-white/[0.05]">
-                      <span className="label-mono mr-2">Stack</span>
-                      {study.stack.map((tech) => (
-                        <span
-                          key={tech}
-                          className="border border-white/[0.07] text-zinc-400 px-3 py-1 rounded-md text-[11px] font-mono tracking-wide bg-white/[0.02]"
-                        >
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ══════════════════════════════
-          CTA BAND
-      ══════════════════════════════ */}
-      <section className="py-28 lg:py-36 relative">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="relative glass rounded-2xl px-8 py-16 lg:px-16 text-center overflow-hidden">
-            {/* Ambient */}
-            <div className="absolute inset-0 bg-gradient-to-tr from-emerald-500/8 via-transparent to-indigo-500/6 pointer-events-none" />
-
-            <p className="label-mono text-emerald-500 mb-6">Ready to Start?</p>
-            <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-white mb-5 max-w-2xl mx-auto">
-              Ready to Automate Your Business Operations?
-            </h2>
-            <p className="text-zinc-400 text-lg max-w-xl mx-auto mb-10">
-              Stop losing revenue to manual processes. Let's build a data-driven system that scales with your ambition.
-            </p>
-            <a
-              href="https://calendly.com/neurodyn-info"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-white text-zinc-900 hover:bg-zinc-200 text-sm font-semibold px-8 py-3.5 rounded-md transition-all duration-300"
-            >
-              Book a Free 15-Min Strategy Call
-              <ArrowRight size={14} />
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* ══════════════════════════════
-          CONTACT
-      ══════════════════════════════ */}
-      <section id="contact" className="py-28 lg:py-36 relative">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mb-16 max-w-xl">
-            <p className="label-mono text-emerald-500 mb-4">Contact</p>
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-white">
-              Get In Touch
-            </h2>
-            <p className="mt-4 text-zinc-400 leading-relaxed">
-              Let's discuss your project requirements and how we can help you achieve your business goals.
-            </p>
-          </div>
-
-          <div className="grid lg:grid-cols-2 gap-12 max-w-5xl">
-            {/* Contact info */}
-            <div className="space-y-5">
-              {[
-                { icon: <Phone size={16} />, label: "Phone", value: `+91-${brand.phone}` },
-                { icon: <Mail size={16} />, label: "Email", value: brand.email },
-                { icon: <MapPin size={16} />, label: "Location", value: "Lucknow, Uttar Pradesh, India" },
-              ].map((item) => (
-                <div key={item.label} className="flex items-start gap-4">
-                  <div className="w-8 h-8 rounded-md bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 shrink-0 mt-0.5">
-                    {item.icon}
+                <form onSubmit={handleContact} className="space-y-4">
+                  <div>
+                    <Input
+                      name="name"
+                      placeholder="Your Name"
+                      required
+                      className="bg-white/[0.02] border-white/[0.08] text-white placeholder:text-zinc-600 rounded-md focus:border-emerald-500/40 focus:ring-0 focus-visible:ring-0 focus-visible:ring-offset-0 text-sm h-11"
+                    />
                   </div>
                   <div>
-                    <div className="label-mono mb-1">{item.label}</div>
-                    <div className="text-sm text-zinc-300">{item.value}</div>
+                    <Input
+                      name="email"
+                      type="email"
+                      placeholder="Work Email"
+                      required
+                      className="bg-white/[0.02] border-white/[0.08] text-white placeholder:text-zinc-600 rounded-md focus:border-emerald-500/40 focus:ring-0 focus-visible:ring-0 focus-visible:ring-offset-0 text-sm h-11"
+                    />
                   </div>
-                </div>
-              ))}
-            </div>
-
-            {/* Contact form */}
-            <div className="relative glass rounded-xl p-8">
-              <form onSubmit={handleContact} className="space-y-4">
-                <Input
-                  name="name"
-                  placeholder="Your Name"
-                  required
-                  className="bg-white/[0.03] border-white/[0.07] text-white placeholder:text-zinc-600 rounded-md focus:border-emerald-500/40 focus:ring-0 focus-visible:ring-0 focus-visible:ring-offset-0 transition-colors"
-                />
-                <Input
-                  name="email"
-                  type="email"
-                  placeholder="Email Address"
-                  required
-                  className="bg-white/[0.03] border-white/[0.07] text-white placeholder:text-zinc-600 rounded-md focus:border-emerald-500/40 focus:ring-0 focus-visible:ring-0 focus-visible:ring-offset-0 transition-colors"
-                />
-                <Textarea
-                  name="message"
-                  placeholder="Tell us about your project"
-                  rows={5}
-                  required
-                  className="bg-white/[0.03] border-white/[0.07] text-white placeholder:text-zinc-600 rounded-md focus:border-emerald-500/40 focus:ring-0 focus-visible:ring-0 focus-visible:ring-offset-0 transition-colors resize-none"
-                />
-                <button
-                  type="submit"
-                  className="w-full bg-white text-zinc-900 hover:bg-zinc-200 text-sm font-semibold py-3 rounded-md transition-all duration-300"
-                >
-                  Send Message
-                </button>
-              </form>
+                  <div>
+                    <Textarea
+                      name="message"
+                      placeholder="Describe your AI or data architecture scope..."
+                      rows={4}
+                      required
+                      className="bg-white/[0.02] border-white/[0.08] text-white placeholder:text-zinc-600 rounded-md focus:border-emerald-500/40 focus:ring-0 focus-visible:ring-0 focus-visible:ring-offset-0 text-sm resize-none"
+                    />
+                  </div>
+                  <button
+                    type="submit"
+                    className="w-full py-3 border border-white/10 hover:border-white/20 bg-white/[0.04] hover:bg-white/[0.08] text-white font-medium text-sm rounded-md transition-all duration-300"
+                  >
+                    Transmit Inquiry
+                  </button>
+                </form>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ══════════════════════════════
+      {/* ══════════════════════════════════════════
           FOOTER
-      ══════════════════════════════ */}
-      <footer className="border-t border-white/[0.05] py-14">
+      ══════════════════════════════════════════ */}
+      <footer className="border-t border-white/[0.06] py-12">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="grid md:grid-cols-4 gap-10 mb-12">
-            <div>
-              <div className="mb-4">
-                <Logo showTagline={false} />
-              </div>
-              <p className="text-zinc-500 text-[13px] leading-relaxed">
-                AI & Data Analytics boutique. Building the systems that scale your business.
-              </p>
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+            <div className="flex items-center gap-4">
+              <Logo showTagline={true} />
             </div>
 
-            <div>
-              <p className="label-mono mb-5">Services</p>
-              <ul className="space-y-3">
-                {["AI Web Implementations", "Data Dashboards", "CRM Automation"].map((s) => (
-                  <li key={s}>
-                    <a href="/services" className="text-zinc-500 hover:text-zinc-200 text-[13px] transition-colors">{s}</a>
-                  </li>
-                ))}
-              </ul>
+            <div className="flex flex-wrap gap-8 text-xs font-mono text-zinc-500">
+              <a href="/services" className="hover:text-zinc-300 transition-colors">
+                Capabilities
+              </a>
+              <a href="#case-studies" className="hover:text-zinc-300 transition-colors">
+                Proof of Concept
+              </a>
+              <a href="/contact" className="hover:text-zinc-300 transition-colors">
+                Contact
+              </a>
+              <a href="https://calendly.com/neurodyn-info" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-400 transition-colors">
+                Calendly
+              </a>
             </div>
 
-            <div>
-              <p className="label-mono mb-5">Company</p>
-              <ul className="space-y-3">
-                {[
-                  { label: "About Us", href: "/about" },
-                  { label: "Core Capabilities", href: "/services" },
-                  { label: "Case Studies", href: "#case-studies" },
-                  { label: "Contact", href: "/contact" },
-                ].map((l) => (
-                  <li key={l.label}>
-                    <a href={l.href} className="text-zinc-500 hover:text-zinc-200 text-[13px] transition-colors">{l.label}</a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div>
-              <p className="label-mono mb-5">Contact</p>
-              <ul className="space-y-3 text-zinc-500 text-[13px]">
-                <li>+91-{brand.phone}</li>
-                <li>{brand.email}</li>
-                <li>Lucknow, UP, India</li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="border-t border-white/[0.05] pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-            <div className="text-zinc-600 text-[12px]">
-              © {new Date().getFullYear()} {brand.name}. All rights reserved.
-            </div>
-            <div className="flex gap-6">
-              <a href="#" className="text-zinc-600 hover:text-zinc-300 text-[12px] transition-colors">Privacy Policy</a>
-              <a href="#" className="text-zinc-600 hover:text-zinc-300 text-[12px] transition-colors">Terms of Service</a>
+            <div className="text-xs font-mono text-zinc-600">
+              © {new Date().getFullYear()} {brand.name}.
             </div>
           </div>
         </div>
       </footer>
 
-      {/* ── WhatsApp FAB ── */}
+      {/* Subtle Floating WhatsApp Connector */}
       <div className="fixed bottom-6 right-6 z-50">
         <a
           href={`https://wa.me/91${brand.phone}?text=Hi,%20I%27m%20interested%20in%20your%20services`}
           target="_blank"
           rel="noopener noreferrer"
-          className="w-12 h-12 bg-emerald-500 hover:bg-emerald-400 text-white rounded-full flex items-center justify-center shadow-lg shadow-emerald-500/20 transition-all duration-300"
-          aria-label="Chat on WhatsApp"
+          className="w-11 h-11 bg-zinc-900/90 border border-white/10 hover:border-emerald-500/40 text-emerald-400 rounded-full flex items-center justify-center shadow-2xl backdrop-blur-md transition-all duration-300 hover:scale-105"
+          aria-label="Direct WhatsApp Transmission"
         >
-          <MessageCircle size={18} />
+          <MessageCircle size={16} />
         </a>
       </div>
     </div>
