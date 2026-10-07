@@ -1,30 +1,19 @@
 "use client";
 
 import { useState, useEffect } from "react";
-
-
-import { Menu, X, Moon, Sun } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Menu, X } from "lucide-react";
 import Logo from "@/components/Logo";
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isDark, setIsDark] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const pathname = typeof window !== "undefined" ? window.location.pathname : "/";
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
+    const handleScroll = () => setIsScrolled(window.scrollY > 20);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  const toggleDarkMode = () => {
-    setIsDark(!isDark);
-    document.documentElement.classList.toggle("dark");
-  };
 
   const navLinks = [
     { href: "/", label: "Home" },
@@ -35,14 +24,15 @@ export default function Navigation() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled
-          ? "bg-white/80 dark:bg-gray-900/80 backdrop-blur-lg shadow-lg border-b border-gray-200/50 dark:border-gray-700/50"
+          ? "bg-[#050508]/90 backdrop-blur-xl border-b border-white/[0.05]"
           : "bg-transparent"
       }`}
     >
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="flex items-center justify-between h-[72px]">
+
           {/* Logo */}
           <Logo />
 
@@ -52,10 +42,10 @@ export default function Navigation() {
               <a
                 key={link.href}
                 href={link.href}
-                className={`text-sm font-medium transition-colors hover:text-blue-600 dark:hover:text-blue-400 ${
+                className={`text-[13px] font-medium tracking-wide transition-colors duration-200 ${
                   pathname === link.href
-                    ? "text-blue-600 dark:text-blue-400"
-                    : "text-gray-700 dark:text-gray-300"
+                    ? "text-emerald-400"
+                    : "text-zinc-400 hover:text-zinc-100"
                 }`}
               >
                 {link.label}
@@ -63,50 +53,26 @@ export default function Navigation() {
             ))}
           </nav>
 
-          {/* Desktop Actions */}
-          <div className="hidden md:flex items-center gap-4">
-            <button
-              onClick={toggleDarkMode}
-              className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
-              aria-label="Toggle dark mode"
+          {/* Desktop CTA */}
+          <div className="hidden md:flex items-center">
+            <a
+              href="https://calendly.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-white text-zinc-900 hover:bg-zinc-200 text-[13px] font-semibold px-5 py-2.5 rounded-md transition-all duration-300"
             >
-              {isDark ? (
-                <Sun className="h-5 w-5 text-gray-700 dark:text-gray-300" />
-              ) : (
-                <Moon className="h-5 w-5 text-gray-700 dark:text-gray-300" />
-              )}
-            </button>
-            <Button
-              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white rounded-xl px-6"
-              asChild
-            >
-              <a href="/contact">Get Started</a>
-            </Button>
+              Book a Call
+            </a>
           </div>
 
-          {/* Mobile Menu Button */}
-          <div className="md:hidden flex items-center gap-2">
-            <button
-              onClick={toggleDarkMode}
-              className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
-              aria-label="Toggle dark mode"
-            >
-              {isDark ? (
-                <Sun className="h-5 w-5 text-gray-700 dark:text-gray-300" />
-              ) : (
-                <Moon className="h-5 w-5 text-gray-700 dark:text-gray-300" />
-              )}
-            </button>
+          {/* Mobile Hamburger */}
+          <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+              className="p-2 rounded-md text-zinc-400 hover:text-zinc-100 hover:bg-white/5 transition-colors"
               aria-label="Toggle menu"
             >
-              {isOpen ? (
-                <X className="h-6 w-6 text-gray-700 dark:text-gray-300" />
-              ) : (
-                <Menu className="h-6 w-6 text-gray-700 dark:text-gray-300" />
-              )}
+              {isOpen ? <X size={18} /> : <Menu size={18} />}
             </button>
           </div>
         </div>
@@ -114,30 +80,33 @@ export default function Navigation() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700 shadow-lg">
-          <nav className="px-4 py-6 space-y-4">
+        <div className="md:hidden bg-[#0a0a0e] border-t border-white/[0.05]">
+          <nav className="px-6 py-6 space-y-1">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className={`block text-sm font-medium transition-colors hover:text-blue-600 dark:hover:text-blue-400 ${
+                className={`block text-[13px] font-medium py-2.5 tracking-wide transition-colors duration-200 ${
                   pathname === link.href
-                    ? "text-blue-600 dark:text-blue-400"
-                    : "text-gray-700 dark:text-gray-300"
+                    ? "text-emerald-400"
+                    : "text-zinc-400 hover:text-zinc-100"
                 }`}
                 onClick={() => setIsOpen(false)}
               >
                 {link.label}
               </a>
             ))}
-            <Button
-              className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white rounded-xl px-6"
-              asChild
-            >
-              <a href="/contact" onClick={() => setIsOpen(false)}>
-                Get Started
+            <div className="pt-4">
+              <a
+                href="https://calendly.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block text-center bg-white text-zinc-900 hover:bg-zinc-200 text-[13px] font-semibold px-5 py-2.5 rounded-md transition-all duration-300"
+                onClick={() => setIsOpen(false)}
+              >
+                Book a Call
               </a>
-            </Button>
+            </div>
           </nav>
         </div>
       )}
