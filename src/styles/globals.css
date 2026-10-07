@@ -119,10 +119,10 @@
     @apply border-border outline-ring/50;
   }
   html {
-    /* Force dark by default — obsidian aesthetic */
-    @apply dark;
+    /* Force obsidian dark by default */
+    color-scheme: dark;
   }
-  body {
+  html, body {
     @apply bg-[#050508] text-foreground antialiased;
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
   }
