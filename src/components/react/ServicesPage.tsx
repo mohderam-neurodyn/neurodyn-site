@@ -19,9 +19,9 @@ import {
 
 export default function ServicesPage() {
   const brand = {
-    name: "NeuroDyn IT Solutions",
+    name: "NeuroDyn Tech Solutions",
     tagline: "Innovate. Integrate. Elevate.",
-    phone: "8004339331",
+    phone: "9369479090",
     email: "info@neurodyn.in",
   };
 
@@ -107,7 +107,7 @@ export default function ServicesPage() {
   ];
 
   function handleWhatsAppClick() {
-    window.open("https://wa.me/918004339331?text=Hi, I'm interested in your IT services", "_blank");
+    window.open("https://wa.me/919369479090?text=Hi, I'm interested in your IT services", "_blank");
   }
 
   return (
@@ -203,7 +203,7 @@ export default function ServicesPage() {
                 <Logo showTagline={false} />
               </div>
               <p className="text-gray-400 text-sm">
-                Innovate. Integrate. Elevate. NeuroDyn IT Solution - Your Trusted Technology Partner.
+                Innovate. Integrate. Elevate. NeuroDyn Tech Solution - Your Trusted Technology Partner.
               </p>
             </div>
 

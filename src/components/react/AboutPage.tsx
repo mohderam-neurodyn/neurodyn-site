@@ -11,9 +11,9 @@ import { Rocket, Target, Eye, Users, Award, Zap, CheckCircle, ArrowRight, Messag
 
 export default function AboutPage() {
   const brand = {
-    name: "NeuroDyn IT Solutions",
+    name: "NeuroDyn Tech Solutions",
     tagline: "Innovate. Integrate. Elevate.",
-    phone: "8004339331",
+    phone: "9369479090",
     email: "info@neurodyn.in",
   };
 
@@ -45,7 +45,7 @@ export default function AboutPage() {
   ];
 
   function handleWhatsAppClick() {
-    window.open("https://wa.me/918004339331?text=Hi, I'm interested in your IT services", "_blank");
+    window.open("https://wa.me/919369479090?text=Hi, I'm interested in your IT services", "_blank");
   }
 
   return (
@@ -82,7 +82,7 @@ export default function AboutPage() {
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">Who We Are</h2>
               <p className="text-lg text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
-                NeuroDyn IT Solutions is a premier technology company specializing in custom software development, web and mobile applications, AI solutions, and IT consulting. Founded with a vision to bridge the gap between business needs and technology, we have grown into a trusted partner for businesses looking to digitalize and scale.
+                NeuroDyn Tech Solutions is a premier technology company specializing in custom software development, web and mobile applications, AI solutions, and IT consulting. Founded with a vision to bridge the gap between business needs and technology, we have grown into a trusted partner for businesses looking to digitalize and scale.
               </p>
               <p className="text-lg text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
                 Our team consists of experienced developers, designers, and consultants who bring a wealth of knowledge across various industries. We believe in building long-term relationships with our clients by delivering exceptional value and consistently exceeding expectations.
@@ -247,7 +247,7 @@ export default function AboutPage() {
                 <Logo showTagline={false} />
               </div>
               <p className="text-gray-400 text-sm">
-                Innovate. Integrate. Elevate. NeuroDyn IT Solution - Your Trusted Technology Partner.
+                Innovate. Integrate. Elevate. NeuroDyn Tech Solution - Your Trusted Technology Partner.
               </p>
             </div>
 

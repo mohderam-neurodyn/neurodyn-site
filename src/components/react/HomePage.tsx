@@ -36,7 +36,7 @@ import {
 export default function NeuroDynSite() {
   const brand = useMemo(
     () => ({
-      name: "NeuroDyn IT Solutions",
+      name: "NeuroDyn Tech Solutions",
       tagline: "High-Conversion AI & Data Analytics",
       heroTagline: "We Build AI-Powered Applications & Data Dashboards That Automate Business Operations.",
       heroSubheading: "Accelerate your workflows with bespoke full-stack web applications, real-time analytics pipelines, and automated CRM systems built in days—not months.",
@@ -45,7 +45,7 @@ export default function NeuroDynSite() {
       accent: "#3B82F6",
       secondary: "#8B5CF6",
       muted: "#64748B",
-      phone: "8004339331",
+      phone: "9369479090",
       email: "info@neurodyn.in",
     }),
     []
@@ -427,7 +427,7 @@ export default function NeuroDynSite() {
 
       {/* Floating WhatsApp Button */}
       <div className="fixed bottom-6 right-6 z-50">
-        <a href="https://wa.me/918004339331?text=Hi,%20I%27m%20interested%20in%20your%20IT%20services" target="_blank" rel="noopener noreferrer" className="bg-green-500 hover:bg-green-600 text-white rounded-xl px-8 py-4 text-lg font-medium inline-flex items-center justify-center">
+        <a href="https://wa.me/919369479090?text=Hi,%20I%27m%20interested%20in%20your%20IT%20services" target="_blank" rel="noopener noreferrer" className="bg-green-500 hover:bg-green-600 text-white rounded-xl px-8 py-4 text-lg font-medium inline-flex items-center justify-center">
           <MessageCircle className="h-6 w-6" />
         </a>
       </div>

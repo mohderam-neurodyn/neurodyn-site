@@ -14,7 +14,7 @@ export default function Logo({ className = "", showTagline = true }: LogoProps) 
       <div className="relative w-12 h-12 bg-gradient-to-br from-blue-600 to-purple-600 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform overflow-hidden">
         <img
           src="/logo.png"
-          alt="NeuroDyn IT Solutions Logo"
+          alt="NeuroDyn Tech Solutions Logo"
           width={48}
           height={48}
           className="object-contain p-1"
