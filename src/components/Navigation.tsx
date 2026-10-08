@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Sparkles } from "lucide-react";
 import Logo from "@/components/Logo";
 
 export default function Navigation() {
@@ -18,7 +18,7 @@ export default function Navigation() {
   const navLinks = [
     { href: "/", label: "Home" },
     { href: "/about", label: "About" },
-    { href: "/services", label: "Services" },
+    { href: "/services", label: "Services & Solutions" },
     { href: "/contact", label: "Contact" },
   ];
 
@@ -26,42 +26,46 @@ export default function Navigation() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled
-          ? "bg-[#08080a]/90 backdrop-blur-xl border-b border-white/[0.05]"
+          ? "bg-[#140b07]/92 backdrop-blur-xl border-b border-[#d4af37]/20 shadow-[0_4px_30px_rgba(0,0,0,0.7)]"
           : "bg-transparent"
       }`}
     >
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="flex items-center justify-between h-[72px]">
+        <div className="flex items-center justify-between h-[76px]">
 
           {/* Logo */}
           <Logo />
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden md:flex items-center gap-9">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className={`text-[13px] font-medium tracking-wide transition-colors duration-200 ${
+                className={`text-[13px] font-medium tracking-wide transition-all duration-200 relative py-1 ${
                   pathname === link.href
-                    ? "text-emerald-400"
-                    : "text-zinc-400 hover:text-zinc-100"
+                    ? "text-[#f5d77f] font-semibold"
+                    : "text-[#d1c2a5] hover:text-[#fae8b2]"
                 }`}
               >
                 {link.label}
+                {pathname === link.href && (
+                  <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#d4af37] to-transparent rounded-full" />
+                )}
               </a>
             ))}
           </nav>
 
           {/* Desktop CTA */}
-          <div className="hidden md:flex items-center">
+          <div className="hidden md:flex items-center gap-4">
             <a
               href="https://calendly.com/neurodyn-info"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-white text-zinc-900 hover:bg-zinc-200 text-[13px] font-semibold px-5 py-2.5 rounded-md transition-all duration-300"
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-[#d4af37] via-[#f5d77f] to-[#c59b27] text-[#120a06] hover:brightness-110 text-[13px] font-bold px-5 py-2.5 rounded-lg shadow-[0_2px_14px_rgba(212,175,55,0.35)] hover:shadow-[0_4px_22px_rgba(212,175,55,0.5)] transition-all duration-300"
             >
-              Book a Call
+              <Sparkles size={14} className="text-[#120a06]" />
+              Book a Strategy Call
             </a>
           </div>
 
@@ -69,10 +73,10 @@ export default function Navigation() {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="p-2 rounded-md text-zinc-400 hover:text-zinc-100 hover:bg-white/5 transition-colors"
+              className="p-2.5 rounded-lg text-[#fae8b2] hover:bg-[#25150d] border border-[#d4af37]/20 transition-colors"
               aria-label="Toggle menu"
             >
-              {isOpen ? <X size={18} /> : <Menu size={18} />}
+              {isOpen ? <X size={20} /> : <Menu size={20} />}
             </button>
           </div>
         </div>
@@ -80,16 +84,16 @@ export default function Navigation() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-[#0a0a0e] border-t border-white/[0.05]">
-          <nav className="px-6 py-6 space-y-1">
+        <div className="md:hidden bg-[#180e08]/98 backdrop-blur-2xl border-b border-[#d4af37]/25 shadow-2xl">
+          <nav className="px-6 py-6 space-y-2">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className={`block text-[13px] font-medium py-2.5 tracking-wide transition-colors duration-200 ${
+                className={`block text-[14px] font-medium py-3 px-3 rounded-md tracking-wide transition-colors duration-200 ${
                   pathname === link.href
-                    ? "text-emerald-400"
-                    : "text-zinc-400 hover:text-zinc-100"
+                    ? "text-[#fae8b2] bg-[#2d180f] font-semibold border-l-2 border-[#d4af37]"
+                    : "text-[#d1c2a5] hover:text-[#fae8b2] hover:bg-[#22130d]"
                 }`}
                 onClick={() => setIsOpen(false)}
               >
@@ -101,10 +105,11 @@ export default function Navigation() {
                 href="https://calendly.com/neurodyn-info"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block text-center bg-white text-zinc-900 hover:bg-zinc-200 text-[13px] font-semibold px-5 py-2.5 rounded-md transition-all duration-300"
+                className="flex items-center justify-center gap-2 text-center bg-gradient-to-r from-[#d4af37] via-[#f5d77f] to-[#c59b27] text-[#120a06] text-[13px] font-bold px-5 py-3 rounded-lg shadow-lg shadow-amber-950/60"
                 onClick={() => setIsOpen(false)}
               >
-                Book a Call
+                <Sparkles size={15} />
+                Book a Strategy Call
               </a>
             </div>
           </nav>

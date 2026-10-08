@@ -43,75 +43,75 @@
   --radius-xl: calc(var(--radius) + 4px);
 }
 
-/* ─── Light mode tokens (kept for completeness, site defaults to dark) ─── */
+/* ─── Light mode tokens (Warm Cream & Dark Chocolate) ─── */
 :root {
   --radius: 0.5rem;
-  --background: oklch(0.98 0 0);
-  --foreground: oklch(0.14 0.005 285.8);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.14 0.005 285.8);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.14 0.005 285.8);
-  --primary: oklch(0.21 0.006 285.9);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.967 0.001 286.4);
-  --secondary-foreground: oklch(0.21 0.006 285.9);
-  --muted: oklch(0.967 0.001 286.4);
-  --muted-foreground: oklch(0.55 0.016 285.9);
-  --accent: oklch(0.967 0.001 286.4);
-  --accent-foreground: oklch(0.21 0.006 285.9);
-  --destructive: oklch(0.577 0.245 27.3);
-  --border: oklch(0.92 0.004 286.3);
-  --input: oklch(0.92 0.004 286.3);
-  --ring: oklch(0.705 0.015 286.1);
-  --chart-1: oklch(0.646 0.222 41.1);
-  --chart-2: oklch(0.6 0.118 184.7);
-  --chart-3: oklch(0.398 0.07 227.4);
-  --chart-4: oklch(0.828 0.189 84.4);
-  --chart-5: oklch(0.769 0.188 70.1);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.14 0.005 285.8);
-  --sidebar-primary: oklch(0.21 0.006 285.9);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.967 0.001 286.4);
-  --sidebar-accent-foreground: oklch(0.21 0.006 285.9);
-  --sidebar-border: oklch(0.92 0.004 286.3);
-  --sidebar-ring: oklch(0.705 0.015 286.1);
+  --background: #fbf7ee;
+  --foreground: #1c100a;
+  --card: #ffffff;
+  --card-foreground: #1c100a;
+  --popover: #ffffff;
+  --popover-foreground: #1c100a;
+  --primary: #d4af37;
+  --primary-foreground: #120a06;
+  --secondary: #f3ebd7;
+  --secondary-foreground: #2d180f;
+  --muted: #f3ebd7;
+  --muted-foreground: #7d6556;
+  --accent: #d4af37;
+  --accent-foreground: #120a06;
+  --destructive: #b91c1c;
+  --border: rgba(212, 175, 55, 0.25);
+  --input: rgba(212, 175, 55, 0.2);
+  --ring: #d4af37;
+  --chart-1: #d4af37;
+  --chart-2: #c59b27;
+  --chart-3: #996515;
+  --chart-4: #e5c158;
+  --chart-5: #f5d77f;
+  --sidebar: #fbf7ee;
+  --sidebar-foreground: #1c100a;
+  --sidebar-primary: #d4af37;
+  --sidebar-primary-foreground: #120a06;
+  --sidebar-accent: #f3ebd7;
+  --sidebar-accent-foreground: #1c100a;
+  --sidebar-border: rgba(212, 175, 55, 0.2);
+  --sidebar-ring: #d4af37;
 }
 
-/* ─── Dark / Obsidian mode (primary visual language of the site) ─── */
+/* ─── Dark Chocolate & Imperial Gold Theme (Primary visual language) ─── */
 .dark {
-  --background: oklch(0.09 0.003 260);      /* #08080a — deep matte obsidian */
-  --foreground: oklch(0.97 0 0);             /* near white */
-  --card: oklch(0.12 0.006 260);            /* #0d0d12 — very dark card */
-  --card-foreground: oklch(0.97 0 0);
-  --popover: oklch(0.12 0.006 260);
-  --popover-foreground: oklch(0.97 0 0);
-  --primary: oklch(0.97 0 0);
-  --primary-foreground: oklch(0.12 0.006 260);
-  --secondary: oklch(0.18 0.006 260);
-  --secondary-foreground: oklch(0.97 0 0);
-  --muted: oklch(0.18 0.006 260);
-  --muted-foreground: oklch(0.55 0.01 260);
-  --accent: oklch(0.18 0.006 260);
-  --accent-foreground: oklch(0.97 0 0);
-  --destructive: oklch(0.704 0.191 22.2);
-  --border: oklch(1 0 0 / 6%);
-  --input: oklch(1 0 0 / 8%);
-  --ring: oklch(0.6 0.22 162);              /* emerald ring */
-  --chart-1: oklch(0.6 0.22 162);
-  --chart-2: oklch(0.7 0.17 162.5);
-  --chart-3: oklch(0.769 0.188 70.1);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.4);
-  --sidebar: oklch(0.10 0.005 260);
-  --sidebar-foreground: oklch(0.97 0 0);
-  --sidebar-primary: oklch(0.6 0.22 162);
-  --sidebar-primary-foreground: oklch(0.97 0 0);
-  --sidebar-accent: oklch(0.18 0.006 260);
-  --sidebar-accent-foreground: oklch(0.97 0 0);
-  --sidebar-border: oklch(1 0 0 / 6%);
-  --sidebar-ring: oklch(0.6 0.22 162);
+  --background: #120a06;                    /* Deep cacao roast / dark chocolate */
+  --foreground: #fcf8ee;                    /* Warm ivory cream */
+  --card: #1c100b;                          /* Rich dark chocolate card surface */
+  --card-foreground: #fcf8ee;
+  --popover: #1c100b;
+  --popover-foreground: #fcf8ee;
+  --primary: #d4af37;                       /* Polished imperial gold */
+  --primary-foreground: #120a06;            /* Deep dark chocolate on gold */
+  --secondary: #27160e;                     /* Warm espresso */
+  --secondary-foreground: #f5efe6;
+  --muted: #22130d;
+  --muted-foreground: #bda692;              /* Warm mocha champagne */
+  --accent: #331d13;
+  --accent-foreground: #f5d77f;             /* Light gold */
+  --destructive: #e11d48;
+  --border: rgba(212, 175, 55, 0.16);       /* Delicate gold hairline border */
+  --input: rgba(212, 175, 55, 0.12);
+  --ring: #d4af37;                          /* Radiant gold ring */
+  --chart-1: #d4af37;
+  --chart-2: #f5d77f;
+  --chart-3: #c59b27;
+  --chart-4: #e5c158;
+  --chart-5: #b8860b;
+  --sidebar: #150c07;
+  --sidebar-foreground: #fcf8ee;
+  --sidebar-primary: #d4af37;
+  --sidebar-primary-foreground: #120a06;
+  --sidebar-accent: #27160e;
+  --sidebar-accent-foreground: #f5d77f;
+  --sidebar-border: rgba(212, 175, 55, 0.16);
+  --sidebar-ring: #d4af37;
 }
 
 @layer base {
@@ -119,37 +119,75 @@
     @apply border-border outline-ring/50;
   }
   html {
-    /* Force obsidian dark by default */
     color-scheme: dark;
   }
   html, body {
-    @apply bg-[#08080a] text-foreground antialiased;
+    @apply bg-[#120a06] text-[#fcf8ee] antialiased;
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
   }
 }
 
 @layer utilities {
-  /* Premium glass card — barely-there surface */
+  /* Premium Dark Chocolate Glassmorphism */
   .glass {
-    background: oklch(1 0 0 / 3%);
-    backdrop-filter: blur(12px) saturate(160%);
-    -webkit-backdrop-filter: blur(12px) saturate(160%);
-    border: 1px solid oklch(1 0 0 / 5%);
-    box-shadow: 0 0 0 0.5px oklch(1 0 0 / 4%), 0 8px 32px oklch(0 0 0 / 40%);
+    background: rgba(28, 16, 11, 0.65);
+    backdrop-filter: blur(14px) saturate(170%);
+    -webkit-backdrop-filter: blur(14px) saturate(170%);
+    border: 1px solid rgba(212, 175, 55, 0.18);
+    box-shadow: 0 4px 24px -1px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(212, 175, 55, 0.08) inset;
   }
 
-  /* Emerald accent glow — the single brand colour */
-  .glow-emerald {
-    box-shadow: 0 0 40px oklch(0.6 0.22 162 / 20%), 0 0 80px oklch(0.6 0.22 162 / 8%);
+  .glass-card {
+    background: linear-gradient(145deg, rgba(34, 20, 13, 0.8) 0%, rgba(20, 11, 7, 0.9) 100%);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(212, 175, 55, 0.18);
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.6), 0 0 30px rgba(212, 175, 55, 0.04);
   }
 
-  /* Mono label — section overlines */
+  /* Luxurious Gold Glow */
+  .glow-gold {
+    box-shadow: 0 0 40px rgba(212, 175, 55, 0.25), 0 0 80px rgba(212, 175, 55, 0.10);
+  }
+
+  .glow-gold-sm {
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
+  }
+
+  /* Radiant Polished Gold Text Gradient */
+  .text-gradient-gold {
+    background: linear-gradient(135deg, #fae8b2 0%, #d4af37 50%, #c59b27 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .text-gradient-gold-bright {
+    background: linear-gradient(135deg, #ffffff 0%, #fae8b2 40%, #d4af37 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* Rich Gold Button */
+  .btn-gold {
+    background: linear-gradient(135deg, #f5d77f 0%, #d4af37 50%, #b8860b 100%);
+    color: #120a06;
+    font-weight: 600;
+    box-shadow: 0 4px 18px rgba(212, 175, 55, 0.3);
+    transition: all 0.3s ease;
+  }
+  .btn-gold:hover {
+    background: linear-gradient(135deg, #fae8b2 0%, #e5c158 50%, #c59b27 100%);
+    box-shadow: 0 6px 24px rgba(212, 175, 55, 0.45);
+    transform: translateY(-1px);
+  }
+
+  /* Mono label — luxurious gold overlines */
   .label-mono {
     font-family: ui-monospace, "SFMono-Regular", "Fira Code", monospace;
     font-size: 11px;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.22em;
     text-transform: uppercase;
-    color: oklch(0.55 0.01 260);
+    color: #d4af37;
   }
 }
 
