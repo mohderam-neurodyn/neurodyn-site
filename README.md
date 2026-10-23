@@ -126,7 +126,7 @@ Create a `.env.local` file in the root directory (optional):
 
 ```env
 # Contact Information (optional - defaults are set in code)
-CONTACT_PHONE=9935232167
+CONTACT_PHONE=8004339331
 CONTACT_EMAIL=info@neurodyn.in
 ```
 

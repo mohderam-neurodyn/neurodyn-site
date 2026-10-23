@@ -21,7 +21,7 @@ export default function ServicesPage() {
   const brand = {
     name: "NeuroDyn Tech Solutions",
     tagline: "Custom Travel Technology, Intelligent AI & Data Systems",
-    phone: "9369479090",
+    phone: "8004339331",
     email: "info@neurodyn.in",
   };
 
@@ -126,7 +126,7 @@ export default function ServicesPage() {
 
   function handleWhatsAppClick() {
     window.open(
-      "https://wa.me/919369479090?text=Hi%20NeuroDyn,%20I'm%20interested%20in%20your%20custom%20travel%20engine%20and%20tech%20services",
+      "https://wa.me/918004339331?text=Hi%20NeuroDyn,%20I'm%20interested%20in%20your%20custom%20travel%20engine%20and%20tech%20services",
       "_blank"
     );
   }

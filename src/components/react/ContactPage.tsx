@@ -23,7 +23,7 @@ export default function ContactPage() {
   const brand = {
     name: "NeuroDyn Tech Solutions",
     tagline: "Innovate. Integrate. Elevate.",
-    phone: "9369479090",
+    phone: "8004339331",
     email: "info@neurodyn.in",
   };
 

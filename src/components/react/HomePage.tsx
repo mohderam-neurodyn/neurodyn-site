@@ -28,7 +28,7 @@ export default function NeuroDynSite() {
   const brand = useMemo(
     () => ({
       name: "NeuroDyn Tech Solutions",
-      phone: "9369479090",
+      phone: "8004339331",
       email: "info@neurodyn.in",
     }),
     []
@@ -581,6 +581,59 @@ export default function NeuroDynSite() {
 
           </div>
 
+        </div>
+      </section>
+
+      <section id="products" className="py-24 md:py-32 border-b border-[#d4af37]/15">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mb-14">
+            <span className="font-mono text-[11px] tracking-[0.25em] uppercase text-[#d4af37] block">
+              OUR PRODUCTS
+            </span>
+            <h2 className="text-3xl md:text-5xl font-serif font-normal text-[#fdfbf7] mt-3">
+              Purpose-Built Products for Growing Businesses
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            <article className="rounded-2xl border border-[#d4af37]/25 bg-gradient-to-br from-[#1c100a] to-[#120a06] p-7 md:p-8 shadow-xl group">
+              <div className="rounded-xl overflow-hidden aspect-[16/9] border border-[#d4af37]/20 mb-6">
+                <img
+                  src="/images/salon-crm.jpg"
+                  alt="GrooMe salon CRM and booking product"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+              </div>
+              <span className="font-mono text-[10px] uppercase tracking-wider text-[#d4af37]">
+                Salon Management
+              </span>
+              <h3 className="text-2xl font-serif font-semibold text-[#fdfbf7] mt-2">
+                GrooMe - Salon CRM
+              </h3>
+              <p className="text-sm text-[#bda692] leading-relaxed mt-3">
+                Manage salon appointments, staff schedules, customer relationships, and WhatsApp reminders in one booking and CRM platform.
+              </p>
+            </article>
+
+            <article className="rounded-2xl border border-[#d4af37]/25 bg-gradient-to-br from-[#1c100a] to-[#120a06] p-7 md:p-8 shadow-xl group">
+              <div className="rounded-xl overflow-hidden aspect-[16/9] border border-[#d4af37]/20 mb-6">
+                <img
+                  src="/images/travel-mobile.jpg"
+                  alt="Toorbook travel booking app"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+              </div>
+              <span className="font-mono text-[10px] uppercase tracking-wider text-[#d4af37]">
+                Travel Technology
+              </span>
+              <h3 className="text-2xl font-serif font-semibold text-[#fdfbf7] mt-2">
+                Toorbook - Travel Booking App
+              </h3>
+              <p className="text-sm text-[#bda692] leading-relaxed mt-3">
+                Give travelers a streamlined way to discover and book trips with a branded travel booking experience for web and mobile.
+              </p>
+            </article>
+          </div>
         </div>
       </section>
 
