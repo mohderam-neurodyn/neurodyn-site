@@ -15,31 +15,50 @@ import {
   Shield,
   Layers,
   MessageCircle,
+  Network,
+  Building2,
+  RefreshCw,
 } from "lucide-react";
 
 export default function ServicesPage() {
   const brand = {
     name: "NeuroDyn Tech Solutions",
-    tagline: "Custom Travel Technology, Intelligent AI & Data Systems",
+    tagline: "B2B Travel Technology Aggregator, Custom Engines & Intelligent AI",
     phone: "8004339331",
     email: "info@neurodyn.in",
   };
 
   const services = [
     {
+      icon: <Network className="h-7 w-7" />,
+      title: "B2B Travel Tech Aggregator & API Normalization",
+      image: "/images/travel-engine.jpg",
+      badge: "FLAGSHIP AGGREGATOR PLATFORM",
+      description:
+        "Enterprise-grade B2B travel aggregation engine normalizing heterogeneous wholesale feeds into unified RESTful APIs. Built specifically for seamless integration with direct airline NDC aggregators (Verteil) and global wholesale suppliers (TBO).",
+      features: [
+        "Verteil NDC airline connect (IATA NDC 17.2/21.3) with rich ancillaries",
+        "TBO wholesale feed integration (1M+ hotels, flights & transfers)",
+        "Look-to-Book (L2B) ratio optimization with multi-tier Redis caching",
+        "Canonical RESTful JSON schema eliminating multi-supplier mapping friction",
+        "Downstream distribution to independent OTAs, sub-agents & corporate desks",
+        "High-throughput XML/JSON parsing, session pooling & 99.95% uptime SLA",
+      ],
+    },
+    {
       icon: <Plane className="h-7 w-7" />,
       title: "Custom Travel Booking Engine (B2B & B2C)",
-      image: "/images/travel-engine.jpg",
-      badge: "FLAGSHIP SPECIALIZATION",
+      image: "/images/luxury-destination.jpg",
+      badge: "TURNKEY TRAVEL PORTALS",
       description:
-        "High-performance flight, hotel, and holiday booking engines built from the ground up. We integrate leading Global Distribution Systems (GDS) and aggregators with proprietary dynamic margin and ticketing systems.",
+        "High-performance flight, hotel, and holiday booking engines built from the ground up. We integrate leading GDS and wholesale aggregators with proprietary dynamic margin and ticketing systems.",
       features: [
-        "Amadeus, Sabre, Galileo, & Hotelbeds API integrations",
-        "Sub-second Redis in-memory search caching",
-        "Dynamic rule-based markup engine for B2B sub-agents",
-        "Automated PNR generation and e-ticket issuance",
+        "Multi-supplier flight & hotel combinations with live seat maps",
+        "Sub-second Redis in-memory search caching (< 280ms)",
+        "Dynamic rule-based markup engine for B2B sub-agent tiers",
+        "Automated PNR generation and instant e-ticket/voucher issuance",
         "Multi-currency payment gateways (Stripe, Razorpay, etc.)",
-        "Corporate travel desk with credit ledger & approvals",
+        "Corporate travel desk with credit ledger, approvals & invoicing",
       ],
     },
     {
@@ -91,35 +110,19 @@ export default function ServicesPage() {
       ],
     },
     {
-      icon: <Globe className="h-7 w-7" />,
-      title: "High-Performance Web Platforms & MVPs",
-      image: "/images/luxury-destination.jpg",
-      badge: "RAPID DELIVERY",
-      description:
-        "Lightning-fast, search-engine-optimized web applications delivered in days, not months. Crafted with modern full-stack architectures built to convert visitors into loyal clients.",
-      features: [
-        "Next.js, React, and Tailwind CSS responsive architecture",
-        "Sub-second Lighthouse performance & core web vitals",
-        "Enterprise search engine optimization (SEO) architecture",
-        "Headless CMS integration for effortless content updates",
-        "Robust authentication & role-based access management",
-        "Scalable cloud deployments on Vercel, AWS, and GCP",
-      ],
-    },
-    {
       icon: <Shield className="h-7 w-7" />,
       title: "Architecture Consulting & Cloud Optimization",
       image: "/images/salon-crm.jpg",
       badge: "STRATEGIC ADVISORY",
       description:
-        "Senior architectural guidance to future-proof your digital infrastructure. We audit bottlenecks, reduce cloud hosting overhead, and strengthen platform security.",
+        "Senior architectural guidance to future-proof your digital infrastructure. We audit bottlenecks, optimize look-to-book query patterns, and ensure zero-downtime scalability.",
       features: [
-        "Comprehensive infrastructure and codebase audits",
-        "Database query optimization and caching strategies",
-        "Cloud cost reduction and serverless migration",
+        "Comprehensive travel API and codebase architecture audits",
+        "Look-to-book ratio analysis and search caching strategies",
+        "Database query optimization and distributed Redis clustering",
+        "Cloud cost reduction and Kubernetes microservice orchestration",
         "High-availability and zero-downtime failover setup",
-        "Security compliance and penetration hardening",
-        "Dedicated fractional CTO & technical advisory sessions",
+        "Partner supplier certification preparation (TBO, Verteil, GDS)",
       ],
     },
   ];
@@ -153,7 +156,7 @@ export default function ServicesPage() {
               Our Capabilities &amp; <span className="text-gradient-gold">Services</span>
             </h1>
             <p className="text-lg md:text-xl text-[#c5b29c] font-light leading-relaxed">
-              From bespoke B2B/B2C travel engines and branded mobile apps to intelligent AI pipelines, we engineer software that generates commercial momentum.
+              From enterprise B2B travel aggregation and direct NDC/wholesale API normalization to custom booking engines, mobile apps, and intelligent data systems, we engineer software that generates commercial momentum.
             </p>
           </div>
         </div>

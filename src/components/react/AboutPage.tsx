@@ -16,44 +16,49 @@ import {
   Sparkles,
   ArrowRight,
   MessageCircle,
+  Network,
+  RefreshCw,
+  Building2,
 } from "lucide-react";
 
 export default function AboutPage() {
   const brand = {
     name: "NeuroDyn Tech Solutions",
-    tagline: "Innovate. Integrate. Elevate.",
+    tagline: "B2B Travel Technology Aggregator & Enterprise SaaS",
     phone: "8004339331",
     email: "info@neurodyn.in",
   };
 
   const coreValues = [
     {
-      icon: <Plane className="h-6 w-6" />,
-      title: "Domain Precision in Travel",
+      icon: <Network className="h-6 w-6" />,
+      title: "B2B Aggregator & Normalization",
       description:
-        "Deep architectural mastery of travel distribution protocols (Amadeus, Sabre, Hotelbeds), multi-currency markups, and high-concurrency booking flows.",
+        "Normalizing disparate wholesale feeds (direct Verteil NDC airline content, TBO global hotels, flights, and transfers) into a unified, high-performance RESTful API schema.",
     },
     {
-      icon: <Smartphone className="h-6 w-6" />,
-      title: "Mobile-First Craftsmanship",
+      icon: <RefreshCw className="h-6 w-6" />,
+      title: "Look-to-Book (L2B) Integrity",
       description:
-        "Engineering fluid, high-converting iOS and Android companion apps that delight travelers with instant offline vouchers and real-time gate updates.",
+        "Protecting upstream supplier bandwidth with smart multi-tier Redis caching, dynamic TTLs, and search pruning specifically designed to maintain tight look-to-book ratios.",
     },
     {
       icon: <Cpu className="h-6 w-6" />,
-      title: "Architectural Rigor & AI",
+      title: "In-House Engineering Rigor",
       description:
-        "Building resilient backend foundations using Postgres, Redis in-memory concurrency locks, and automated AI workflows built for zero-downtime scale.",
+        "A dedicated in-house technical team skilled in direct XML/JSON parsing, session keep-alives, atomic concurrency locks, and enterprise 99.95% uptime cloud architecture.",
     },
   ];
 
   const strengths = [
-    "Proprietary Travel Booking Engine Architecture (Flights, Hotels, Tours)",
+    "B2B Travel Technology Aggregator Platform (Unified RESTful APIs)",
+    "Direct Verteil NDC Airline Integration (IATA NDC 17.2/21.3 standard)",
+    "TBO Global Wholesale Ingestion (1M+ Hotels, Flights & Transfers)",
+    "Proprietary Look-to-Book (L2B) Optimization (< 120:1 Target)",
+    "Multi-Tenant B2B Sub-Agent Desks with Credit Ledgers & Markup Engines",
+    "Automated PNR Issuance, Instant Vouchers & WhatsApp Booking Dispatch",
     "Bespoke White-Label Travel Mobile Apps for iOS & Android",
-    "Real-Time Concurrency State Management with Redis & Postgres",
-    "Automated Enterprise ETL Pipelines replacing manual spreadsheets",
-    "Turnkey Delivery in Days, Not Months with strict engineering standards",
-    "Direct Senior Engineering Consultation & Post-Launch Support",
+    "In-House Engineering Team Ready for Sandbox Certification & Live Testing",
   ];
 
   function handleWhatsAppClick() {
@@ -85,7 +90,7 @@ export default function AboutPage() {
               About <span className="text-gradient-gold">NeuroDyn</span>
             </h1>
             <p className="text-lg md:text-xl text-[#c5b29c] font-light leading-relaxed">
-              We are specialized software architects engineering custom travel booking engines, travel business mobile applications, and high-concurrency AI systems.
+              We are specialized travel software architects and B2B technology aggregators, engineering unified travel distribution platforms, direct NDC/wholesale API normalization, and low-latency cloud infrastructure.
             </p>
           </div>
         </div>
@@ -98,31 +103,31 @@ export default function AboutPage() {
             
             <div className="lg:col-span-6 space-y-6">
               <span className="font-mono text-[11px] tracking-[0.25em] uppercase text-[#d4af37] block">
-                OUR ENGINEERING PHILOSOPHY
+                OUR ENGINEERING PHILOSOPHY &amp; B2B AGGREGATION MODEL
               </span>
               <h2 className="text-3xl md:text-4xl font-serif text-[#fdfbf7]">
-                Bridging commercial ambition with robust, unshakeable software.
+                Bridging global wholesale supply with high-performance downstream distribution.
               </h2>
               <p className="text-sm md:text-base text-[#c5b29c] leading-relaxed font-light">
-                NeuroDyn was founded to solve a critical industry bottleneck: businesses are forced to choose between rigid, royalty-heavy legacy software or fragile freelance prototypes that break under production traffic.
+                NeuroDyn operates as a modern B2B travel technology aggregator and SaaS platform. We normalize high-quality wholesale inventory feeds—including direct airline NDC content via Verteil and global hotels, flights, and transfers via TBO—to distribute seamlessly to our downstream network of independent OTAs, retail sub-agents, and corporate travel desks.
               </p>
               <p className="text-sm md:text-base text-[#c5b29c] leading-relaxed font-light">
-                We take a different approach. By combining deep domain knowledge in travel distribution (GDS APIs, airline ticketing, hotel aggregation) with modern cloud architecture (Next.js, Postgres, Redis, and custom AI agents), we deliver bespoke software platforms that our clients own outright and scale indefinitely.
+                Our in-house engineering team is specialized in direct XML/JSON integrations, handling complex caching layers, optimizing lookup loads to minimize look-to-book (L2B) ratios, and scaling cloud server infrastructure to guarantee 99.95% uptime and sub-second normalized search speeds.
               </p>
 
               {/* Numerical Highlights */}
               <div className="grid grid-cols-3 gap-6 pt-4 border-t border-[#d4af37]/15">
                 <div>
-                  <div className="text-3xl font-serif text-[#fae8b2] font-semibold">50+</div>
-                  <div className="text-[11px] font-mono tracking-wider uppercase text-[#a99583] mt-1">Platforms Shipped</div>
+                  <div className="text-3xl font-serif text-[#fae8b2] font-semibold">&lt; 120:1</div>
+                  <div className="text-[11px] font-mono tracking-wider uppercase text-[#a99583] mt-1">Look-to-Book Target</div>
                 </div>
                 <div>
-                  <div className="text-3xl font-serif text-[#fae8b2] font-semibold">&lt; 350ms</div>
-                  <div className="text-[11px] font-mono tracking-wider uppercase text-[#a99583] mt-1">Engine Response</div>
+                  <div className="text-3xl font-serif text-[#fae8b2] font-semibold">&lt; 280ms</div>
+                  <div className="text-[11px] font-mono tracking-wider uppercase text-[#a99583] mt-1">Normalized Latency</div>
                 </div>
                 <div>
-                  <div className="text-3xl font-serif text-[#fae8b2] font-semibold">100%</div>
-                  <div className="text-[11px] font-mono tracking-wider uppercase text-[#a99583] mt-1">Client IP Ownership</div>
+                  <div className="text-3xl font-serif text-[#fae8b2] font-semibold">99.95%</div>
+                  <div className="text-[11px] font-mono tracking-wider uppercase text-[#a99583] mt-1">Platform Uptime</div>
                 </div>
               </div>
             </div>
@@ -160,7 +165,7 @@ export default function AboutPage() {
               </div>
               <h3 className="text-2xl font-serif text-[#fdfbf7] mb-3">Our Mission</h3>
               <p className="text-sm text-[#c5b29c] leading-relaxed font-light">
-                To equip travel enterprises, high-growth startups, and modern businesses with custom, high-velocity digital infrastructure. We eliminate dependency on bloated third-party aggregators and empower our partners with proprietary travel engines, apps, and automated workflows.
+                To build next-generation B2B travel technology aggregation infrastructure that unifies global inventory—from direct airline NDC connections (Verteil) to worldwide hotel wholesale feeds (TBO)—and empowers travel agencies, independent OTAs, and corporate travel desks with low-latency APIs and turnkey booking platforms.
               </p>
             </div>
 
@@ -170,7 +175,7 @@ export default function AboutPage() {
               </div>
               <h3 className="text-2xl font-serif text-[#fdfbf7] mb-3">Our Vision</h3>
               <p className="text-sm text-[#c5b29c] leading-relaxed font-light">
-                To stand as the premier technology powerhouse for travel innovation, custom mobile platforms, and intelligent automation across global markets, recognized for unwavering technical elegance, speed of execution, and measurable commercial return.
+                To establish NeuroDyn as a leading B2B travel technology aggregator and distribution SaaS platform, recognized by global wholesale suppliers (TBO, Verteil, airlines) for uncompromising technical integrity, optimized look-to-book conversion ratios, and scalable cloud performance.
               </p>
             </div>
 

@@ -21,7 +21,7 @@ export default function Logo({ className = "", showTagline = true }: LogoProps) 
             NeuroDyn
           </span>
           <span className="font-mono text-[9px] tracking-[0.22em] uppercase text-[#d4af37]/80 -mt-0.5">
-            Travel Tech & AI Systems
+            Travel Tech & B2B Aggregator
           </span>
         </div>
       )}

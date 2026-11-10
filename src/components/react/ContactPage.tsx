@@ -27,7 +27,7 @@ export default function ContactPage() {
     email: "info@neurodyn.in",
   };
 
-  const [selectedService, setSelectedService] = useState("Travel Booking Engine");
+  const [selectedService, setSelectedService] = useState("B2B Aggregator & API Partnership");
 
   function handleContact(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -72,10 +72,10 @@ export default function ContactPage() {
               Direct Engineering Dispatch
             </div>
             <h1 className="text-4xl md:text-6xl font-serif text-[#fdfbf7] leading-tight">
-              Initiate Your <span className="text-gradient-gold">Project</span>
+              Initiate Your <span className="text-gradient-gold">Project or Partnership</span>
             </h1>
             <p className="text-lg md:text-xl text-[#c5b29c] font-light leading-relaxed">
-              Have a custom travel engine, travel mobile app, or AI data requirement? Let's architect a solution that drives measurable enterprise outcomes.
+              Whether you are an API supply partner (TBO, Verteil, GDS) discussing aggregator certification, or an OTA building a scalable travel platform, let's architect a solution that drives measurable outcomes.
             </p>
           </div>
         </div>
@@ -209,11 +209,11 @@ export default function ContactPage() {
                     </label>
                     <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
                       {[
+                        "B2B Aggregator & API Partnership",
                         "Travel Booking Engine",
                         "Travel Mobile App",
                         "AI & Custom CRM",
                         "Data Pipelines / ETL",
-                        "Custom Web Platform",
                         "General Inquiry",
                       ].map((item) => (
                         <button
@@ -279,7 +279,7 @@ export default function ContactPage() {
                     </label>
                     <Textarea
                       name="message"
-                      placeholder="Please share details: What suppliers or GDS do you need (Amadeus, Sabre, Hotelbeds)? Do you require iOS/Android mobile apps? Target timeline and milestones..."
+                      placeholder="Please share details: What suppliers or APIs are in scope (TBO, Verteil NDC, GDS)? Are you vetting as an upstream supplier or building downstream OTA/B2B distribution? Target timelines and milestones..."
                       rows={5}
                       required
                       className="bg-[#180e08]/90 border-[#d4af37]/25 text-[#fcf8ee] placeholder:text-[#786656] rounded-lg focus:border-[#d4af37] focus:ring-0 focus-visible:ring-0 text-sm resize-none"

@@ -17,10 +17,12 @@ export default function Navigation() {
 
   const navLinks = [
     { href: "/", label: "Home" },
+    { href: "/#aggregator", label: "B2B Aggregator" },
+    { href: "/#travel-engine", label: "Travel Engines" },
     { href: "/#products", label: "Products" },
-    { href: "/about", label: "About" },
     { href: "/services", label: "Services & Solutions" },
-    { href: "/contact", label: "Contact" },
+    { href: "/about", label: "About" },
+    { href: "/contact", label: "Contact & Partnerships" },
   ];
 
   return (
