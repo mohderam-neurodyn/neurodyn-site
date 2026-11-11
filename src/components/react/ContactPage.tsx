@@ -75,7 +75,7 @@ export default function ContactPage() {
               Initiate Your <span className="text-gradient-gold">Project or Partnership</span>
             </h1>
             <p className="text-lg md:text-xl text-[#c5b29c] font-light leading-relaxed">
-              Whether you are an API supply partner (TBO, Verteil, GDS) discussing aggregator certification, or an OTA building a scalable travel platform, let's architect a solution that drives measurable outcomes.
+              Whether you are an API supply partner discussing aggregator certification, or an OTA building a scalable multimodal travel platform, let's architect a solution that drives measurable outcomes.
             </p>
           </div>
         </div>
@@ -279,7 +279,7 @@ export default function ContactPage() {
                     </label>
                     <Textarea
                       name="message"
-                      placeholder="Please share details: What suppliers or APIs are in scope (TBO, Verteil NDC, GDS)? Are you vetting as an upstream supplier or building downstream OTA/B2B distribution? Target timelines and milestones..."
+                      placeholder="Please share details: What inventory or APIs are in scope (Flights, Hotels, Trains, Buses, Cabs)? Are you vetting as an upstream supplier or building downstream OTA/B2B distribution? Target timelines and milestones..."
                       rows={5}
                       required
                       className="bg-[#180e08]/90 border-[#d4af37]/25 text-[#fcf8ee] placeholder:text-[#786656] rounded-lg focus:border-[#d4af37] focus:ring-0 focus-visible:ring-0 text-sm resize-none"

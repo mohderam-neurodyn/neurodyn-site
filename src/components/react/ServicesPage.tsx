@@ -31,18 +31,18 @@ export default function ServicesPage() {
   const services = [
     {
       icon: <Network className="h-7 w-7" />,
-      title: "B2B Travel Tech Aggregator & API Normalization",
+      title: "Multimodal Travel Tech Aggregator & API Normalization",
       image: "/images/travel-engine.jpg",
       badge: "FLAGSHIP AGGREGATOR PLATFORM",
       description:
-        "Enterprise-grade B2B travel aggregation engine normalizing heterogeneous wholesale feeds into unified RESTful APIs. Built specifically for seamless integration with direct airline NDC aggregators (Verteil) and global wholesale suppliers (TBO).",
+        "Enterprise-grade multimodal travel aggregation engine normalizing heterogeneous wholesale feeds into unified RESTful APIs. Built for high-volume ingestion across direct airline NDC, global hotel beds, rail networks, intercity buses, and on-demand cabs.",
       features: [
-        "Verteil NDC airline connect (IATA NDC 17.2/21.3) with rich ancillaries",
-        "TBO wholesale feed integration (1M+ hotels, flights & transfers)",
-        "Look-to-Book (L2B) ratio optimization with multi-tier Redis caching",
-        "Canonical RESTful JSON schema eliminating multi-supplier mapping friction",
-        "Downstream distribution to independent OTAs, sub-agents & corporate desks",
-        "High-throughput XML/JSON parsing, session pooling & 99.95% uptime SLA",
+        "Direct airline NDC connect (IATA NDC 17.2/21.3) with unbundled dynamic pricing",
+        "Global hotel wholesale ingestion (1M+ properties with live room mapping)",
+        "Train & Rail network APIs with live schedules, seat availability & PNR sync",
+        "Intercity bus aggregation with multi-operator feeds & interactive seat layouts",
+        "Point-to-point airport transfers, cabs & outstation fleet dispatch APIs",
+        "Look-to-Book (L2B) ratio optimization (< 120:1) with sub-280ms Redis caching",
       ],
     },
     {
@@ -51,9 +51,9 @@ export default function ServicesPage() {
       image: "/images/luxury-destination.jpg",
       badge: "TURNKEY TRAVEL PORTALS",
       description:
-        "High-performance flight, hotel, and holiday booking engines built from the ground up. We integrate leading GDS and wholesale aggregators with proprietary dynamic margin and ticketing systems.",
+        "High-performance multimodal booking engines for flights, hotels, trains, buses, and cabs built from the ground up with proprietary dynamic margin and automated ticketing systems.",
       features: [
-        "Multi-supplier flight & hotel combinations with live seat maps",
+        "Unified search across flights, hotels, trains, buses, and airport cabs",
         "Sub-second Redis in-memory search caching (< 280ms)",
         "Dynamic rule-based markup engine for B2B sub-agent tiers",
         "Automated PNR generation and instant e-ticket/voucher issuance",
@@ -122,7 +122,7 @@ export default function ServicesPage() {
         "Database query optimization and distributed Redis clustering",
         "Cloud cost reduction and Kubernetes microservice orchestration",
         "High-availability and zero-downtime failover setup",
-        "Partner supplier certification preparation (TBO, Verteil, GDS)",
+        "Supplier API certification preparation & sandbox testing",
       ],
     },
   ];
@@ -156,7 +156,7 @@ export default function ServicesPage() {
               Our Capabilities &amp; <span className="text-gradient-gold">Services</span>
             </h1>
             <p className="text-lg md:text-xl text-[#c5b29c] font-light leading-relaxed">
-              From enterprise B2B travel aggregation and direct NDC/wholesale API normalization to custom booking engines, mobile apps, and intelligent data systems, we engineer software that generates commercial momentum.
+              From enterprise multimodal travel aggregation and normalized APIs (Flights, Hotels, Trains, Buses, Cabs) to custom booking engines, mobile apps, and intelligent data systems, we engineer software that generates commercial momentum.
             </p>
           </div>
         </div>

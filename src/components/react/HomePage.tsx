@@ -31,6 +31,10 @@ import {
   Lock,
   RefreshCw,
   FileCode2,
+  Train,
+  Bus,
+  Car,
+  Hotel,
 } from "lucide-react";
 
 export default function NeuroDynSite() {
@@ -80,18 +84,18 @@ export default function NeuroDynSite() {
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#24140c] border border-[#d4af37]/30 shadow-[0_2px_12px_rgba(212,175,55,0.15)]">
                 <span className="w-2 h-2 rounded-full bg-[#d4af37] animate-pulse" />
                 <span className="font-mono text-[11px] font-medium tracking-[0.2em] uppercase text-[#fae8b2]">
-                  B2B Travel Tech Aggregator • Unified Supply APIs • SaaS Platforms
+                  Multimodal Travel Tech Aggregator • Flights • Hotels • Trains • Buses • Cabs
                 </span>
               </div>
 
               {/* Title */}
               <h1 className="text-4xl sm:text-6xl lg:text-[68px] font-serif font-normal tracking-tight text-[#fdfbf7] leading-[1.1]">
-                Next-Gen <span className="italic font-normal text-gradient-gold">B2B Travel Aggregator</span> &amp; Enterprise Distribution.
+                Full-Stack <span className="italic font-normal text-gradient-gold">Travel Tech Solutions</span> &amp; Multimodal Aggregator.
               </h1>
 
               {/* Subheadline */}
               <p className="text-lg md:text-xl text-[#d4c3b0] leading-relaxed max-w-2xl font-light">
-                We engineer mission-critical travel aggregation infrastructure—normalizing wholesale inventory feeds across NDC airlines, global hotels, and transfers into unified, ultra-low latency APIs and turnkey distribution platforms for OTAs, sub-agents, and corporate travel desks.
+                We engineer enterprise-grade travel technology infrastructure—normalizing comprehensive multimodal inventory feeds across direct airline NDC, global wholesale hotels, national rail networks, intercity bus operators, and on-demand cabs into unified, ultra-low latency APIs and turnkey distribution platforms for OTAs, sub-agents, and corporate travel desks.
               </p>
 
               {/* CTA Buttons */}
@@ -110,7 +114,7 @@ export default function NeuroDynSite() {
                   href="#aggregator"
                   className="px-7 py-3.5 border border-[#d4af37]/30 bg-[#22130b]/60 hover:bg-[#2c180e] hover:border-[#d4af37]/60 text-[#f5efe6] font-medium text-sm rounded-lg transition-all duration-300 inline-flex items-center justify-center gap-2 shadow-sm"
                 >
-                  Explore Aggregator Architecture
+                  Explore Multimodal Architecture
                   <ChevronRight size={15} className="text-[#d4af37]" />
                 </a>
               </div>
@@ -126,8 +130,8 @@ export default function NeuroDynSite() {
                   <div className="text-[11px] font-mono tracking-wider uppercase text-[#a99583] mt-0.5">Normalized API Latency</div>
                 </div>
                 <div>
-                  <div className="text-2xl sm:text-3xl font-serif text-[#fae8b2] font-semibold">NDC &amp; Wholesale</div>
-                  <div className="text-[11px] font-mono tracking-wider uppercase text-[#a99583] mt-0.5">Multi-Supplier Feeds</div>
+                  <div className="text-2xl sm:text-3xl font-serif text-[#fae8b2] font-semibold">5 Modalities</div>
+                  <div className="text-[11px] font-mono tracking-wider uppercase text-[#a99583] mt-0.5">Flights • Hotels • Trains • Buses • Cabs</div>
                 </div>
                 <div>
                   <div className="text-2xl sm:text-3xl font-serif text-[#fae8b2] font-semibold">99.95%</div>
@@ -144,7 +148,7 @@ export default function NeuroDynSite() {
                 <div className="relative rounded-xl overflow-hidden aspect-[4/3] border border-[#d4af37]/20">
                   <img
                     src="/images/travel-engine.jpg"
-                    alt="B2B Travel Technology Aggregator and Unified API Normalization Engine"
+                    alt="Multimodal Travel Technology Aggregator and Unified API Normalization Engine"
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#120a06] via-[#120a06]/40 to-transparent" />
@@ -153,18 +157,18 @@ export default function NeuroDynSite() {
                   <div className="absolute top-4 left-4 inline-flex items-center gap-2 px-3 py-1 rounded-md bg-[#180e08]/90 border border-[#d4af37]/40 backdrop-blur-md">
                     <Network size={13} className="text-[#f5d77f]" />
                     <span className="font-mono text-[10px] tracking-wider uppercase text-[#fcf8ee]">
-                      B2B AGGREGATION &amp; NORMALIZATION
+                      MULTIMODAL TRAVEL AGGREGATION
                     </span>
                   </div>
 
                   {/* Bottom Image Overlay Details */}
                   <div className="absolute bottom-4 left-4 right-4 p-3.5 rounded-lg bg-[#180e08]/90 border border-[#d4af37]/30 backdrop-blur-md">
                     <div className="flex items-center justify-between text-xs mb-1">
-                      <span className="font-serif text-[#fae8b2] font-semibold">Multi-Supplier Supply Engine</span>
+                      <span className="font-serif text-[#fae8b2] font-semibold">Unified Multi-Supplier Engine</span>
                       <span className="text-[#d4af37] font-mono text-[10px]">LIVE NORMALIZATION</span>
                     </div>
                     <p className="text-[11px] text-[#bda692] leading-tight">
-                      Aggregating Verteil NDC airline content, TBO global wholesale inventory, and GDS feeds into unified RESTful APIs.
+                      Aggregating direct airline NDC feeds, wholesale hotel beds, rail networks, intercity buses, and airport cabs into unified RESTful APIs.
                     </p>
                   </div>
                 </div>
@@ -200,9 +204,9 @@ export default function NeuroDynSite() {
               <span className="font-mono text-[10px] tracking-[0.25em] uppercase text-[#d4af37] block mb-1">
                 PILLAR 01
               </span>
-              <h3 className="text-lg font-serif font-semibold text-[#fdfbf7] mb-2">B2B Aggregator &amp; Normalization</h3>
+              <h3 className="text-lg font-serif font-semibold text-[#fdfbf7] mb-2">Multimodal Travel Aggregator</h3>
               <p className="text-xs text-[#bda692] leading-relaxed">
-                Ingesting and normalizing wholesale feeds—from direct Verteil NDC airline connections to TBO global hotels, flights, and transfers—into a unified, low-latency RESTful API.
+                Ingesting and normalizing wholesale feeds across 5 key travel verticals—airline NDC &amp; global flights, 1M+ hotels, rail networks, intercity buses, and outstation cabs—into a unified, low-latency RESTful API.
               </p>
             </div>
 
@@ -213,9 +217,9 @@ export default function NeuroDynSite() {
               <span className="font-mono text-[10px] tracking-[0.25em] uppercase text-[#d4af37] block mb-1">
                 PILLAR 02
               </span>
-              <h3 className="text-lg font-serif font-semibold text-[#fdfbf7] mb-2">Sub-Agent &amp; Corporate Desks</h3>
+              <h3 className="text-lg font-serif font-semibold text-[#fdfbf7] mb-2">Turnkey Sub-Agent &amp; Corporate Desks</h3>
               <p className="text-xs text-[#bda692] leading-relaxed">
-                Multi-tenant distribution portals for independent OTAs, retail sub-agents, and corporate desks featuring hierarchical markups, deposit ledgers, and automated invoicing.
+                Multi-tenant distribution portals for independent OTAs, retail sub-agents, and corporate desks featuring hierarchical markups, deposit ledgers, multi-currency invoicing, and custom mobile apps.
               </p>
             </div>
 
@@ -226,7 +230,7 @@ export default function NeuroDynSite() {
               <span className="font-mono text-[10px] tracking-[0.25em] uppercase text-[#d4af37] block mb-1">
                 PILLAR 03
               </span>
-              <h3 className="text-lg font-serif font-semibold text-[#fdfbf7] mb-2">L2B Cache &amp; Concurrency Engine</h3>
+              <h3 className="text-lg font-serif font-semibold text-[#fdfbf7] mb-2">L2B Cache Guard &amp; Concurrency Engine</h3>
               <p className="text-xs text-[#bda692] leading-relaxed">
                 Proprietary Redis multi-tiered caching specifically tuned to minimize Look-to-Book (L2B) ratios, protect upstream supplier quotas, and lock inventory states in real time.
               </p>
@@ -237,26 +241,26 @@ export default function NeuroDynSite() {
       </section>
 
       {/* ══════════════════════════════════════════
-          02A. STRATEGIC SUPPLY FRAMEWORK (VERTEIL NDC, TBO, GDS)
+          02A. MULTIMODAL INVENTORY & SUPPLY FRAMEWORK
       ══════════════════════════════════════════ */}
       <section id="partnerships" className="py-24 border-b border-[#d4af37]/15 relative">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           
           <div className="mb-14">
             <span className="font-mono text-[11px] tracking-[0.25em] uppercase text-[#d4af37] block">
-              SUPPLY ARCHITECTURE &amp; PARTNERSHIP FRAMEWORK
+              COMPREHENSIVE MULTIMODAL INVENTORY FRAMEWORK
             </span>
             <h2 className="text-3xl md:text-5xl font-serif font-normal text-[#fdfbf7] mt-3">
-              Multi-Supplier Ingestion &amp; Normalization Ecosystem
+              One Unified API. 5 Essential Travel Modalities.
             </h2>
             <p className="text-[#c5b29c] text-base md:text-lg max-w-3xl mt-3 font-light">
-              We aggregate and normalize world-class inventory feeds across direct airline NDC aggregators and global wholesale portals into unified, developer-friendly endpoints for downstream travel sellers.
+              NeuroDyn Tech Solutions is a true end-to-end travel technology powerhouse—aggregating, normalizing, and distributing wholesale inventory across flights, hotels, trains, buses, and cabs for downstream travel sellers.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             
-            {/* Feed 1: Verteil NDC Air Connect */}
+            {/* Modality 1: Direct Airline NDC & Global Flights */}
             <div className="rounded-2xl border border-[#d4af37]/25 bg-gradient-to-b from-[#1f110b] to-[#140b07] p-6 hover:border-[#d4af37]/60 transition-all duration-300 flex flex-col justify-between group">
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
@@ -264,17 +268,17 @@ export default function NeuroDynSite() {
                     <Plane size={20} />
                   </div>
                   <span className="px-2.5 py-0.5 rounded bg-[#2e190e] border border-[#d4af37]/30 text-[#f5d77f] font-mono text-[10px] uppercase font-semibold">
-                    NDC Direct
+                    Flights &amp; NDC
                   </span>
                 </div>
 
                 <div>
-                  <h3 className="text-lg font-serif font-semibold text-[#fdfbf7]">Verteil NDC Airline Aggregation</h3>
-                  <p className="text-xs text-[#d4af37] font-mono mt-0.5">IATA NDC 17.2 / 21.3 Schemas</p>
+                  <h3 className="text-lg font-serif font-semibold text-[#fdfbf7]">Airline NDC &amp; Global Flights</h3>
+                  <p className="text-xs text-[#d4af37] font-mono mt-0.5">IATA NDC 17.2 / 21.3 &amp; Global Feeds</p>
                 </div>
 
                 <p className="text-xs text-[#bda692] leading-relaxed font-light">
-                  Direct airline connectivity delivering dynamic carrier offers, continuous pricing, rich ancillaries, preferred seats, and brand fares from tier-1 airlines without legacy GDS distribution surcharges.
+                  Direct airline connectivity delivering dynamic carrier pricing, continuous offers, rich seat maps, baggage ancillaries, and direct airline PNR creation without legacy distribution surcharges.
                 </p>
 
                 <ul className="space-y-2 pt-2 border-t border-[#d4af37]/15 text-[11px] text-[#ebdcc7]">
@@ -294,35 +298,35 @@ export default function NeuroDynSite() {
               </div>
 
               <div className="mt-6 pt-4 border-t border-[#d4af37]/15">
-                <span className="text-[10px] font-mono uppercase tracking-wider text-[#a99583]">Target Integration: Verteil NDC</span>
+                <span className="text-[10px] font-mono uppercase tracking-wider text-[#a99583]">Vertical: Global Air Distribution</span>
               </div>
             </div>
 
-            {/* Feed 2: TBO Global Wholesale Inventory */}
+            {/* Modality 2: Global Wholesale Hotel Inventory */}
             <div className="rounded-2xl border border-[#d4af37]/25 bg-gradient-to-b from-[#1f110b] to-[#140b07] p-6 hover:border-[#d4af37]/60 transition-all duration-300 flex flex-col justify-between group">
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
                   <div className="w-10 h-10 rounded-lg bg-[#301a0f] border border-[#d4af37]/30 flex items-center justify-center text-[#f5d77f]">
-                    <Building2 size={20} />
+                    <Hotel size={20} />
                   </div>
                   <span className="px-2.5 py-0.5 rounded bg-[#2e190e] border border-[#d4af37]/30 text-[#f5d77f] font-mono text-[10px] uppercase font-semibold">
-                    Global Supply
+                    1M+ Properties
                   </span>
                 </div>
 
                 <div>
-                  <h3 className="text-lg font-serif font-semibold text-[#fdfbf7]">TBO Wholesale Inventory Feed</h3>
-                  <p className="text-xs text-[#d4af37] font-mono mt-0.5">Hotels, Flights &amp; Transfers</p>
+                  <h3 className="text-lg font-serif font-semibold text-[#fdfbf7]">Global Hotel &amp; Bedbank Hub</h3>
+                  <p className="text-xs text-[#d4af37] font-mono mt-0.5">Wholesale Feeds &amp; Live Rates</p>
                 </div>
 
                 <p className="text-xs text-[#bda692] leading-relaxed font-light">
-                  Foundational wholesale supply pillar integrating TBO's global inventory of 1,000,000+ hotels, global flight combinations, airport transfers, and sightseeing with instant voucher confirmation.
+                  Extensive worldwide accommodation coverage aggregating over 1,000,000 properties, wholesale bedbanks, boutique resorts, and business hotels with instant confirmation vouchers.
                 </p>
 
                 <ul className="space-y-2 pt-2 border-t border-[#d4af37]/15 text-[11px] text-[#ebdcc7]">
                   <li className="flex items-center gap-2">
                     <CheckCircle2 size={13} className="text-[#d4af37] flex-shrink-0" />
-                    <span>1M+ worldwide hotels with live rates</span>
+                    <span>1M+ worldwide hotels with live room mapping</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <CheckCircle2 size={13} className="text-[#d4af37] flex-shrink-0" />
@@ -330,17 +334,143 @@ export default function NeuroDynSite() {
                   </li>
                   <li className="flex items-center gap-2">
                     <CheckCircle2 size={13} className="text-[#d4af37] flex-shrink-0" />
-                    <span>Multi-currency dynamic rate margins</span>
+                    <span>Dynamic rate margins &amp; refundable tags</span>
                   </li>
                 </ul>
               </div>
 
               <div className="mt-6 pt-4 border-t border-[#d4af37]/15">
-                <span className="text-[10px] font-mono uppercase tracking-wider text-[#a99583]">Target Integration: TBO Global</span>
+                <span className="text-[10px] font-mono uppercase tracking-wider text-[#a99583]">Vertical: Worldwide Accommodations</span>
               </div>
             </div>
 
-            {/* Feed 3: Unified Normalization Layer */}
+            {/* Modality 3: Rail & Train Booking APIs */}
+            <div className="rounded-2xl border border-[#d4af37]/25 bg-gradient-to-b from-[#1f110b] to-[#140b07] p-6 hover:border-[#d4af37]/60 transition-all duration-300 flex flex-col justify-between group">
+              <div className="space-y-4">
+                <div className="flex items-center justify-between">
+                  <div className="w-10 h-10 rounded-lg bg-[#301a0f] border border-[#d4af37]/30 flex items-center justify-center text-[#f5d77f]">
+                    <Train size={20} />
+                  </div>
+                  <span className="px-2.5 py-0.5 rounded bg-[#2e190e] border border-[#d4af37]/30 text-[#f5d77f] font-mono text-[10px] uppercase font-semibold">
+                    Rail Network
+                  </span>
+                </div>
+
+                <div>
+                  <h3 className="text-lg font-serif font-semibold text-[#fdfbf7]">Train &amp; Rail Booking APIs</h3>
+                  <p className="text-xs text-[#d4af37] font-mono mt-0.5">Schedules, PNR &amp; Berth Selection</p>
+                </div>
+
+                <p className="text-xs text-[#bda692] leading-relaxed font-light">
+                  Direct rail network integrations empowering sub-agents and OTAs with live train schedules, seat availability, quota allocations, automated PNR tracking, and instantaneous e-ticket issuance.
+                </p>
+
+                <ul className="space-y-2 pt-2 border-t border-[#d4af37]/15 text-[11px] text-[#ebdcc7]">
+                  <li className="flex items-center gap-2">
+                    <CheckCircle2 size={13} className="text-[#d4af37] flex-shrink-0" />
+                    <span>Real-time train schedules &amp; route mapping</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle2 size={13} className="text-[#d4af37] flex-shrink-0" />
+                    <span>Live berth availability &amp; quota management</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle2 size={13} className="text-[#d4af37] flex-shrink-0" />
+                    <span>Instant e-ticket generation &amp; PNR synching</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="mt-6 pt-4 border-t border-[#d4af37]/15">
+                <span className="text-[10px] font-mono uppercase tracking-wider text-[#a99583]">Vertical: National &amp; Regional Rail</span>
+              </div>
+            </div>
+
+            {/* Modality 4: Intercity Bus & Coach Aggregation */}
+            <div className="rounded-2xl border border-[#d4af37]/25 bg-gradient-to-b from-[#1f110b] to-[#140b07] p-6 hover:border-[#d4af37]/60 transition-all duration-300 flex flex-col justify-between group">
+              <div className="space-y-4">
+                <div className="flex items-center justify-between">
+                  <div className="w-10 h-10 rounded-lg bg-[#301a0f] border border-[#d4af37]/30 flex items-center justify-center text-[#f5d77f]">
+                    <Bus size={20} />
+                  </div>
+                  <span className="px-2.5 py-0.5 rounded bg-[#2e190e] border border-[#d4af37]/30 text-[#f5d77f] font-mono text-[10px] uppercase font-semibold">
+                    Intercity Bus
+                  </span>
+                </div>
+
+                <div>
+                  <h3 className="text-lg font-serif font-semibold text-[#fdfbf7]">Intercity Bus &amp; Coach Feeds</h3>
+                  <p className="text-xs text-[#d4af37] font-mono mt-0.5">Multi-Operator &amp; Seat Layouts</p>
+                </div>
+
+                <p className="text-xs text-[#bda692] leading-relaxed font-light">
+                  Connecting thousands of bus operators into a unified feed. Features interactive live seat layouts, sleeper/seater categorization, boarding/drop-off point selection, and instant SMS/WhatsApp m-tickets.
+                </p>
+
+                <ul className="space-y-2 pt-2 border-t border-[#d4af37]/15 text-[11px] text-[#ebdcc7]">
+                  <li className="flex items-center gap-2">
+                    <CheckCircle2 size={13} className="text-[#d4af37] flex-shrink-0" />
+                    <span>Thousands of private &amp; state bus operators</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle2 size={13} className="text-[#d4af37] flex-shrink-0" />
+                    <span>Live interactive 2D seat layout engine</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle2 size={13} className="text-[#d4af37] flex-shrink-0" />
+                    <span>Automated cancellation &amp; refund workflows</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="mt-6 pt-4 border-t border-[#d4af37]/15">
+                <span className="text-[10px] font-mono uppercase tracking-wider text-[#a99583]">Vertical: Intercity Surface Mobility</span>
+              </div>
+            </div>
+
+            {/* Modality 5: Cabs, Airport Transfers & Outstation */}
+            <div className="rounded-2xl border border-[#d4af37]/25 bg-gradient-to-b from-[#1f110b] to-[#140b07] p-6 hover:border-[#d4af37]/60 transition-all duration-300 flex flex-col justify-between group">
+              <div className="space-y-4">
+                <div className="flex items-center justify-between">
+                  <div className="w-10 h-10 rounded-lg bg-[#301a0f] border border-[#d4af37]/30 flex items-center justify-center text-[#f5d77f]">
+                    <Car size={20} />
+                  </div>
+                  <span className="px-2.5 py-0.5 rounded bg-[#2e190e] border border-[#d4af37]/30 text-[#f5d77f] font-mono text-[10px] uppercase font-semibold">
+                    Cabs &amp; Transfers
+                  </span>
+                </div>
+
+                <div>
+                  <h3 className="text-lg font-serif font-semibold text-[#fdfbf7]">Cabs &amp; Airport Transfers</h3>
+                  <p className="text-xs text-[#d4af37] font-mono mt-0.5">Point-to-Point &amp; Outstation Fleets</p>
+                </div>
+
+                <p className="text-xs text-[#bda692] leading-relaxed font-light">
+                  Seamless ground transportation APIs covering pre-booked airport transfers, point-to-point urban rides, and round-trip outstation cabs with transparent fare breakdowns and driver tracking.
+                </p>
+
+                <ul className="space-y-2 pt-2 border-t border-[#d4af37]/15 text-[11px] text-[#ebdcc7]">
+                  <li className="flex items-center gap-2">
+                    <CheckCircle2 size={13} className="text-[#d4af37] flex-shrink-0" />
+                    <span>Sedan, SUV, and luxury chauffeur classes</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle2 size={13} className="text-[#d4af37] flex-shrink-0" />
+                    <span>Fixed-rate airport pickup &amp; drop packages</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle2 size={13} className="text-[#d4af37] flex-shrink-0" />
+                    <span>Driver allocation &amp; live dispatch telemetry</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="mt-6 pt-4 border-t border-[#d4af37]/15">
+                <span className="text-[10px] font-mono uppercase tracking-wider text-[#a99583]">Vertical: Ground &amp; Airport Transit</span>
+              </div>
+            </div>
+
+            {/* Modality 6: Unified Normalization & L2B Protection */}
             <div className="rounded-2xl border border-[#d4af37]/25 bg-gradient-to-b from-[#1f110b] to-[#140b07] p-6 hover:border-[#d4af37]/60 transition-all duration-300 flex flex-col justify-between group">
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
@@ -348,79 +478,37 @@ export default function NeuroDynSite() {
                     <Workflow size={20} />
                   </div>
                   <span className="px-2.5 py-0.5 rounded bg-[#2e190e] border border-[#d4af37]/30 text-[#f5d77f] font-mono text-[10px] uppercase font-semibold">
-                    Core Schema
+                    Core Engine
                   </span>
                 </div>
 
                 <div>
-                  <h3 className="text-lg font-serif font-semibold text-[#fdfbf7]">Unified Normalization Engine</h3>
-                  <p className="text-xs text-[#d4af37] font-mono mt-0.5">Canonical REST / JSON Layer</p>
+                  <h3 className="text-lg font-serif font-semibold text-[#fdfbf7]">Unified Normalization &amp; L2B Guard</h3>
+                  <p className="text-xs text-[#d4af37] font-mono mt-0.5">Canonical REST &amp; Redis Cache</p>
                 </div>
 
                 <p className="text-xs text-[#bda692] leading-relaxed font-light">
-                  Standardizes disparate SOAP/XML and REST/JSON schemas into a uniform, high-speed API payload, eliminating integration friction and multi-supplier mapping headaches for downstream developers.
+                  Standardizes disparate SOAP/XML and REST/JSON schemas into a single canonical data structure across all modalities, with intelligent Redis caching to keep Look-to-Book ratios below 120:1.
                 </p>
 
                 <ul className="space-y-2 pt-2 border-t border-[#d4af37]/15 text-[11px] text-[#ebdcc7]">
                   <li className="flex items-center gap-2">
                     <CheckCircle2 size={13} className="text-[#d4af37] flex-shrink-0" />
-                    <span>Canonical search, price &amp; book schemas</span>
+                    <span>Single canonical JSON schema for all 5 verticals</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <CheckCircle2 size={13} className="text-[#d4af37] flex-shrink-0" />
-                    <span>Automated hotel room deduplication</span>
+                    <span>Look-to-Book ratio strictly under 120:1</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <CheckCircle2 size={13} className="text-[#d4af37] flex-shrink-0" />
-                    <span>Cross-supplier best fare comparison</span>
+                    <span>Sub-280ms cached response speeds</span>
                   </li>
                 </ul>
               </div>
 
               <div className="mt-6 pt-4 border-t border-[#d4af37]/15">
-                <span className="text-[10px] font-mono uppercase tracking-wider text-[#a99583]">Output: Standardized REST Endpoints</span>
-              </div>
-            </div>
-
-            {/* Feed 4: L2B Look-to-Book Protection Engine */}
-            <div className="rounded-2xl border border-[#d4af37]/25 bg-gradient-to-b from-[#1f110b] to-[#140b07] p-6 hover:border-[#d4af37]/60 transition-all duration-300 flex flex-col justify-between group">
-              <div className="space-y-4">
-                <div className="flex items-center justify-between">
-                  <div className="w-10 h-10 rounded-lg bg-[#301a0f] border border-[#d4af37]/30 flex items-center justify-center text-[#f5d77f]">
-                    <Shield size={20} />
-                  </div>
-                  <span className="px-2.5 py-0.5 rounded bg-[#2e190e] border border-[#d4af37]/30 text-[#f5d77f] font-mono text-[10px] uppercase font-semibold">
-                    SLA Guard
-                  </span>
-                </div>
-
-                <div>
-                  <h3 className="text-lg font-serif font-semibold text-[#fdfbf7]">Look-to-Book Optimization</h3>
-                  <p className="text-xs text-[#d4af37] font-mono mt-0.5">Supplier Quota Protection</p>
-                </div>
-
-                <p className="text-xs text-[#bda692] leading-relaxed font-light">
-                  Engineered with intelligent Redis caching and query pruning to protect upstream partner servers, avoid lookup throttling, and strictly comply with supplier look-to-book ratio thresholds.
-                </p>
-
-                <ul className="space-y-2 pt-2 border-t border-[#d4af37]/15 text-[11px] text-[#ebdcc7]">
-                  <li className="flex items-center gap-2">
-                    <CheckCircle2 size={13} className="text-[#d4af37] flex-shrink-0" />
-                    <span>Target L2B ratio maintained below 120:1</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <CheckCircle2 size={13} className="text-[#d4af37] flex-shrink-0" />
-                    <span>Dynamic TTL cache warming for top routes</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <CheckCircle2 size={13} className="text-[#d4af37] flex-shrink-0" />
-                    <span>Zero redundant lookups to supplier APIs</span>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="mt-6 pt-4 border-t border-[#d4af37]/15">
-                <span className="text-[10px] font-mono uppercase tracking-wider text-[#a99583]">Compliance: Strict Supplier SLAs</span>
+                <span className="text-[10px] font-mono uppercase tracking-wider text-[#a99583]">Output: Unified Developer API</span>
               </div>
             </div>
 
@@ -567,7 +655,7 @@ export default function NeuroDynSite() {
                 Ready for Supplier Certification &amp; Sandbox Testing
               </div>
               <h4 className="text-xl font-serif font-semibold text-[#fdfbf7]">
-                Are you a technical partnership lead at TBO, Verteil, or an airline?
+                Are you a technical partnership lead at an upstream travel inventory supplier, rail/bus network, or airline?
               </h4>
               <p className="text-xs text-[#bda692] max-w-2xl font-light">
                 We have dedicated sandbox environments prepared for commercial certification, XML/JSON validation, and look-to-book testing. Contact our technical team for immediate NDA and developer credentials.
@@ -632,7 +720,7 @@ export default function NeuroDynSite() {
                 <div className="grid grid-cols-2 gap-3 pt-2">
                   <div className="p-3.5 rounded-lg bg-[#24140c]/70 border border-[#d4af37]/15">
                     <div className="font-serif text-[#fae8b2] text-sm font-semibold">Multi-Supplier Core</div>
-                    <div className="text-[11px] text-[#a99583] mt-0.5">Verteil NDC, TBO Global, Amadeus, Sabre</div>
+                    <div className="text-[11px] text-[#a99583] mt-0.5">NDC Air, 1M+ Hotels, Trains, Buses &amp; Cabs</div>
                   </div>
                   <div className="p-3.5 rounded-lg bg-[#24140c]/70 border border-[#d4af37]/15">
                     <div className="font-serif text-[#fae8b2] text-sm font-semibold">Dynamic Markup &amp; L2B</div>
@@ -672,7 +760,7 @@ export default function NeuroDynSite() {
 
                 <div className="pt-4 flex flex-wrap gap-2">
                   <span className="font-mono text-[10px] uppercase text-[#a99583] py-1 mr-2">Core Tech:</span>
-                  {["Next.js", "FastAPI / Node", "PostgreSQL", "Redis Cache", "Amadeus API", "Stripe / Razorpay"].map((t) => (
+                  {["Next.js", "FastAPI / Node", "PostgreSQL", "Redis Cache", "NDC & Multimodal APIs", "Stripe / Razorpay"].map((t) => (
                     <span
                       key={t}
                       className="px-2.5 py-1 rounded bg-[#26150d] border border-[#d4af37]/25 text-[#f5d77f] font-mono text-[11px]"
@@ -983,7 +1071,7 @@ export default function NeuroDynSite() {
                   NeuroDyn Nexus
                 </h3>
                 <p className="text-sm text-[#bda692] leading-relaxed mt-3">
-                  Enterprise B2B travel technology aggregator normalizing wholesale feeds from TBO, Verteil NDC, and GDS into unified APIs, sub-agent credit portals, and corporate travel booking engines.
+                  Enterprise B2B multimodal travel technology platform normalizing wholesale feeds from direct airline NDC, global hotels, trains, buses, and cabs into unified APIs, sub-agent credit portals, and corporate travel booking engines.
                 </p>
               </div>
               <div className="pt-6 mt-6 border-t border-[#d4af37]/15">
@@ -1078,7 +1166,7 @@ export default function NeuroDynSite() {
                   Partner with our engineering team.
                 </h2>
                 <p className="text-[#c5b29c] text-sm md:text-base leading-relaxed mb-8 max-w-md font-light">
-                  Whether you are an API supply partner (TBO, Verteil, GDS) discussing aggregator certification, or a travel business seeking a high-performance B2B aggregation platform, we are ready to connect.
+                  Whether you are an API supply partner discussing aggregator integration and certification, or a travel business seeking a high-performance multimodal aggregation platform, we are ready to connect.
                 </p>
 
                 <div className="space-y-4 mb-8">

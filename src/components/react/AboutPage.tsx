@@ -24,7 +24,7 @@ import {
 export default function AboutPage() {
   const brand = {
     name: "NeuroDyn Tech Solutions",
-    tagline: "B2B Travel Technology Aggregator & Enterprise SaaS",
+    tagline: "Multimodal Travel Technology Solutions & Enterprise SaaS",
     phone: "8004339331",
     email: "info@neurodyn.in",
   };
@@ -32,9 +32,9 @@ export default function AboutPage() {
   const coreValues = [
     {
       icon: <Network className="h-6 w-6" />,
-      title: "B2B Aggregator & Normalization",
+      title: "Multimodal Aggregation & Normalization",
       description:
-        "Normalizing disparate wholesale feeds (direct Verteil NDC airline content, TBO global hotels, flights, and transfers) into a unified, high-performance RESTful API schema.",
+        "Normalizing disparate wholesale feeds (direct airline NDC flights, 1M+ hotels, rail networks, intercity bus operators, and cabs) into a unified, high-performance RESTful API schema.",
     },
     {
       icon: <RefreshCw className="h-6 w-6" />,
@@ -51,14 +51,14 @@ export default function AboutPage() {
   ];
 
   const strengths = [
-    "B2B Travel Technology Aggregator Platform (Unified RESTful APIs)",
-    "Direct Verteil NDC Airline Integration (IATA NDC 17.2/21.3 standard)",
-    "TBO Global Wholesale Ingestion (1M+ Hotels, Flights & Transfers)",
+    "Multimodal Travel Technology Aggregator (Flights, Hotels, Trains, Buses, Cabs)",
+    "Direct Airline NDC Integration (IATA NDC 17.2/21.3 XML/JSON standard)",
+    "Global Hotel & Bedbank Ingestion (1M+ worldwide properties with live rates)",
+    "Train & Intercity Bus APIs with live schedules, seat layouts & PNR sync",
+    "Point-to-Point Cabs, Airport Transfers & Outstation Fleet APIs",
     "Proprietary Look-to-Book (L2B) Optimization (< 120:1 Target)",
     "Multi-Tenant B2B Sub-Agent Desks with Credit Ledgers & Markup Engines",
-    "Automated PNR Issuance, Instant Vouchers & WhatsApp Booking Dispatch",
-    "Bespoke White-Label Travel Mobile Apps for iOS & Android",
-    "In-House Engineering Team Ready for Sandbox Certification & Live Testing",
+    "Automated Multi-Modal E-Ticketing, Instant Vouchers & WhatsApp Dispatch",
   ];
 
   function handleWhatsAppClick() {
@@ -109,7 +109,7 @@ export default function AboutPage() {
                 Bridging global wholesale supply with high-performance downstream distribution.
               </h2>
               <p className="text-sm md:text-base text-[#c5b29c] leading-relaxed font-light">
-                NeuroDyn operates as a modern B2B travel technology aggregator and SaaS platform. We normalize high-quality wholesale inventory feeds—including direct airline NDC content via Verteil and global hotels, flights, and transfers via TBO—to distribute seamlessly to our downstream network of independent OTAs, retail sub-agents, and corporate travel desks.
+                NeuroDyn operates as a modern B2B multimodal travel technology aggregator and SaaS platform. We normalize high-quality wholesale inventory feeds—including direct airline NDC content, global hotel beds, rail networks, intercity buses, and on-demand cabs—to distribute seamlessly to our downstream network of independent OTAs, retail sub-agents, and corporate travel desks.
               </p>
               <p className="text-sm md:text-base text-[#c5b29c] leading-relaxed font-light">
                 Our in-house engineering team is specialized in direct XML/JSON integrations, handling complex caching layers, optimizing lookup loads to minimize look-to-book (L2B) ratios, and scaling cloud server infrastructure to guarantee 99.95% uptime and sub-second normalized search speeds.
@@ -165,7 +165,7 @@ export default function AboutPage() {
               </div>
               <h3 className="text-2xl font-serif text-[#fdfbf7] mb-3">Our Mission</h3>
               <p className="text-sm text-[#c5b29c] leading-relaxed font-light">
-                To build next-generation B2B travel technology aggregation infrastructure that unifies global inventory—from direct airline NDC connections (Verteil) to worldwide hotel wholesale feeds (TBO)—and empowers travel agencies, independent OTAs, and corporate travel desks with low-latency APIs and turnkey booking platforms.
+                To build next-generation multimodal travel technology aggregation infrastructure that unifies global inventory—from direct airline NDC connections to worldwide hotel wholesale feeds, trains, buses, and cabs—and empowers travel agencies, independent OTAs, and corporate travel desks with low-latency APIs and turnkey booking platforms.
               </p>
             </div>
 
@@ -175,7 +175,7 @@ export default function AboutPage() {
               </div>
               <h3 className="text-2xl font-serif text-[#fdfbf7] mb-3">Our Vision</h3>
               <p className="text-sm text-[#c5b29c] leading-relaxed font-light">
-                To establish NeuroDyn as a leading B2B travel technology aggregator and distribution SaaS platform, recognized by global wholesale suppliers (TBO, Verteil, airlines) for uncompromising technical integrity, optimized look-to-book conversion ratios, and scalable cloud performance.
+                To establish NeuroDyn as a premier multimodal travel technology aggregator and distribution SaaS platform, recognized across the travel industry for uncompromising technical integrity, optimized look-to-book conversion ratios, and scalable cloud performance.
               </p>
             </div>
 
